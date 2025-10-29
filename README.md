@@ -7,6 +7,6 @@
 # Clone the code
 git clone https://github.com/scientlabs/minerva-corp.git
 
-cd minerva-corp
-npm install
-npm start
+* cd minerva-corp
+* npm install
+* npm start
