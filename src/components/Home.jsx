@@ -7,7 +7,10 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Section from "./Section";
 import Footer from "./Footer";
-import bgVideo from '../assets/241395_tiny.mp4';
+import VideoSlider from "./VideoSlider";
+import minerva_logo from '../assets/MINERVA透過ロゴ.png';
+
+// VideoSlider moved to ./VideoSlider
 
 const Home = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -53,7 +56,7 @@ const Home = () => {
                           <div className="w-6 h-6 bg-white rounded-sm transform rotate-45"></div>
                         </div> */}
                 <img
-                  src={'https://minerva-corp.com/wp-content/uploads/2024/12/MINERVA%E9%80%8F%E9%81%8E%E3%83%AD%E3%82%B4.png'}
+                  src={minerva_logo}
                   alt="Minerva Logo"
                   className="h-5 sm:h-6 md:h-14 object-contain"
                 />
@@ -133,17 +136,13 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Fixed Background Video - Completely Fixed */}
+      {/* Fixed Background Video Slider (plays one video at a time) */}
       <div className="fixed inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover"
-        >
-          <source src={bgVideo} type="video/mp4" />
-        </video>
+        {/* Video slider component */}
+        {
+          /* Localized component inside Home to keep state simple */
+        }
+        <VideoSlider />
         <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/30">
           <div className="flex w-full justify-between px-4 md:px-20">
             <motion.div
