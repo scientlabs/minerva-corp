@@ -1,21 +1,55 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Section from "./Section";
 import Footer from "./Footer";
 import VideoSlider from "./VideoSlider";
-import minerva_logo from '../assets/MINERVA透過ロゴ.png';
-
-// VideoSlider moved to ./VideoSlider
+import FlipCard from "./FlipCard";
+import ScrollCircularReveal from "./ScrollCircularReveal";
+import FloatingNav from "./FloatingNav";
+import ScrollIndicators from "./ScrollIndicators";
 
 const Home = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
+  const scrollRef = useRef(null);
+  const navRef = useRef(null);
+  const [isContactSectionVisible, setIsContactSectionVisible] = useState(false);
+  // const { scrollYProgress } = useScroll();
+
+  // As you scroll, the circle radius grows (covering more area)
+  // const clipSize = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
+    }
+  };
+
+
+  // Handle clicks outside navigation to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const [currentLang, setCurrentLang] = useState('ja');
   useEffect(() => {
@@ -29,22 +63,90 @@ const Home = () => {
     }
   }, []);
 
-  const navigationItems = [
-    { name: "Home", hasDropdown: false },
-    { name: t("company"), hasDropdown: false },
-    { name: t("services"), hasDropdown: true },
-    { name: t("products"), hasDropdown: true },
-    { name: t("recruit"), hasDropdown: false }
+  const productItems = [
+    { title: t("security_camera_system"), description: "TSP-PT-5M", icon: "🌐", image: "https://www.tspco.jp/wp-content/uploads/top_productimg01.png", color: "from-blue-500 to-blue-600" },
+    { title: t("access_control_system"), description: "TSP-W1-0412", icon: "⚙️", image: "	https://www.tspco.jp/wp-content/uploads/top_productimg02.png", color: "from-green-500 to-green-600" },
+    { title: t("network_equipment"), description: "8ポートギガビットイーサネットPoE+スイッチ", icon: "📱", image: "https://www.tspco.jp/wp-content/uploads/top_productimg03.png", color: "from-purple-500 to-purple-600" },
+    { title: t("solution_products"), description: "TSP-S01", icon: "📱", image: "https://www.tspco.jp/wp-content/uploads/top_productimg04.png", color: "from-purple-500 to-purple-600" },
+    { title: t("other_products"), description: "TSP-S01", icon: "📱", image: "	https://www.tspco.jp/wp-content/uploads/top_productimg05.png", color: "from-purple-500 to-purple-600" }
+  ];
+
+  const serviceItems = [
+    {
+      title: t("mobile_communication"),
+      description: t("mobile_communication_desc"),
+      image: 'https://minerva-corp.com/wp-content/uploads/2025/06/２-1536x1024.jpg',
+      imageAlt: "Mobile Communication"
+    },
+    {
+      title: t("ict_solution"),
+      description: t("ict_solution_desc"),
+      image: 'https://minerva-corp.com/wp-content/uploads/2025/06/４.jpg',
+      imageAlt: "ICT Solution"
+    },
+    {
+      title: t("security"),
+      description: t("security_desc"),
+      image: 'https://minerva-corp.com/wp-content/uploads/2025/10/トップ→セキュリティ.jpg',
+      imageAlt: "Security"
+    },
+    {
+      title: t("engineering"),
+      description: t("engineering_desc"),
+      image: 'https://minerva-corp.com/wp-content/uploads/2025/06/３.jpg',
+      imageAlt: "Engineering"
+    },
+    {
+      title: t("human_resource"),
+      description: t("human_resource_desc"),
+      image: 'https://minerva-corp.com/wp-content/uploads/2025/06/５.jpg',
+      imageAlt: "Human Resource"
+    },
+    {
+      title: t("entertainment"),
+      description: t("entertainment_desc"),
+      image: 'https://minerva-corp.com/wp-content/uploads/2025/06/５－２　エンターテインメント.jpg',
+      imageAlt: "Entertainment"
+    }
   ];
 
   const handleDropdownToggle = (itemName) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 
+  // Scroll detection for Contact section
+  useEffect(() => {
+    const handleScroll = () => {
+      const contactSection = document.getElementById('contactus');
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        const navbar = document.querySelector('nav');
+        const navbarHeight = navbar?.getBoundingClientRect().height || 0;
+        const floatingNavHeight = 56;
+        const totalOffset = navbarHeight + floatingNavHeight + 50;
+
+        // Check if section is visible in viewport (with some threshold)
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const viewportTop = totalOffset;
+        const viewportBottom = window.innerHeight;
+
+        // Section is visible if it's within the viewport
+        const isVisible = sectionTop <= viewportBottom * 0.7 && sectionBottom >= viewportTop;
+        setIsContactSectionVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Check on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <nav ref={navRef} className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Row - Logo, Company Name, and Utility Links */}
           <div className="flex justify-between items-center h-16">
@@ -56,7 +158,7 @@ const Home = () => {
                           <div className="w-6 h-6 bg-white rounded-sm transform rotate-45"></div>
                         </div> */}
                 <img
-                  src={minerva_logo}
+                  src={'https://minerva-corp.com/wp-content/uploads/2024/12/MINERVA%E9%80%8F%E9%81%8E%E3%83%AD%E3%82%B4.png'}
                   alt="Minerva Logo"
                   className="h-5 sm:h-6 md:h-14 object-contain"
                 />
@@ -64,10 +166,34 @@ const Home = () => {
             </div>
 
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">
+              {/* <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">
                 {t("contact_us")}
-              </a>
+              </a> */}
+              <button
+                onClick={() => {
+                  setActiveDropdown(null);
+                  const contactSection = document.getElementById('contactus');
+                  if (contactSection) {
+                    const navbar = document.querySelector('nav');
+                    const navbarHeight = navbar?.getBoundingClientRect().height || 0;
+                    const floatingNavHeight = 56;
+                    const offset = navbarHeight + floatingNavHeight + 20;
+                    const elementPosition = contactSection.getBoundingClientRect().top + window.scrollY;
 
+                    window.scrollTo({
+                      top: elementPosition - offset,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className={`font-medium transition-all duration-300 px-3 py-1 rounded-full ${isContactSectionVisible
+                    ? 'text-white shadow-md'
+                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                style={isContactSectionVisible ? { backgroundColor: '#E02B8A' } : {}}
+              >
+                {t("contact_us")}
+              </button>
               <button
                 type="button"
                 onClick={() => {
@@ -76,7 +202,9 @@ const Home = () => {
                   setCurrentLang(next);
                   localStorage.setItem("language", next);
                 }}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded font-medium flex items-center space-x-2"
+                className="text-gray-700 transition-colors duration-200 focus:outline-none rounded font-medium flex items-center space-x-2 group"
+                onMouseEnter={(e) => e.currentTarget.style.color = '#E02B8A'}
+                onMouseLeave={(e) => e.currentTarget.style.color = ''}
                 aria-pressed={currentLang === "ja" ? "false" : "true"}
                 title="Toggle language"
               >
@@ -87,118 +215,72 @@ const Home = () => {
 
           </div>
 
-          {/* Bottom Row - Navigation Links */}
-          <div className="hidden lg:flex items-center justify-start space-x-8 pb-4">
-            {navigationItems.map((item, index) => (
-              <div key={index} className="relative">
-                <button
-                  onClick={() => item.hasDropdown && handleDropdownToggle(item.name)}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
-                >
-                  <span>{item.name}</span>
-                  {item.hasDropdown && (
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''
-                        }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                </button>
-
-                {/* Dropdown Menu */}
-                {item.hasDropdown && activeDropdown === item.name && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"
-                  >
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
-                      Option 1
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
-                      Option 2
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
-                      Option 3
-                    </a>
-                  </motion.div>
-                )}
-              </div>
-            ))}
-          </div>
 
 
         </div>
       </nav>
 
+      {/* Floating Navigation Bar */}
+      <FloatingNav />
+
       {/* Fixed Background Video Slider (plays one video at a time) */}
       <div className="fixed inset-0 z-0">
         {/* Video slider component */}
-        {
-          /* Localized component inside Home to keep state simple */
-        }
         <VideoSlider />
+
+
+
+
         <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/30">
-          <div className="flex w-full justify-between px-4 md:px-20">
+          <div className="flex flex-col justify-center w-full px-4 md:px-20 py-8 md:py-12 space-y-8">
             <motion.div
-              className="text-center text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg"
-              initial={{ x: -1000, opacity: 0 }}
+              className="text-left leading-relaxed"
+              initial={{ opacity: 0 }}
               animate={{
-                x: 0,
                 opacity: 1,
-                textShadow: [
-                  '0px 0px 0px rgba(255,255,255,0)',
-                  '0px 0px 30px rgba(127,156,245,0.8)',
-                  '0px 0px 10px rgba(255,255,255,0.4)'
-                ]
               }}
               transition={{
                 duration: 2,
                 ease: "easeOut"
               }}
             >
-              {t("empowering_your_future")}
+              <div className="text-5xl md:text-7xl lg:text-9xl font-normal text-white">
+                {t("empowering_your_future")}
+              </div>
             </motion.div>
 
             <motion.div
-              className="text-center text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg"
-              initial={{ x: 1000, opacity: 0 }}
+              className="text-right leading-relaxed"
+              initial={{ opacity: 0 }}
               animate={{
-                x: 0,
                 opacity: 1,
-                textShadow: [
-                  '0px 0px 0px rgba(255,255,255,0)',
-                  '0px 0px 30px rgba(127,156,245,0.8)',
-                  '0px 0px 10px rgba(255,255,255,0.4)'
-                ]
               }}
               transition={{
                 duration: 2,
+                delay: 0.3,
                 ease: "easeOut"
               }}
             >
-              {t("ict_header")}
+              <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal text-white">
+                {t("ict_header")}
+              </div>
             </motion.div>
           </div>
         </div>
       </div>
       <div className="h-[100vh]"></div>
       {/* Scrollable Content Over Fixed Background */}
-      <div className="relative z-20 bg-transparent">
+      <div className="relative z-40 bg-transparent pt-14">
+        {/* Add padding-top to account for floating nav */}
 
         {/* Japanese Text Section */}
-        <Section id="japanese-text" className="py-32 bg-white/80 backdrop-blur-sm">
+        <Section id="japanese-text" className="py-32 bg-white/90 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left Side - Main Headline */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 className="text-center lg:text-left"
               >
@@ -207,14 +289,16 @@ const Home = () => {
                 </h1>
               </motion.div>
 
-              {/* Right Side - Body Text */}
+
+              { /* Right Side - Body Text */}
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-center lg:text-left"
               >
-                <div className="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+
+                <div className="space-y-4 text-xl md:text-2xl leading-relaxed">
                   <p>{t("5g_ai_lead")}</p>
                   <p>{t("various_changes")}</p>
                   <p className="mt-6">{t("make_tomorrow_better")}</p>
@@ -222,256 +306,163 @@ const Home = () => {
                   <p>{t("use_technology")}</p>
                   <p>{t("solving_issues")}</p>
                 </div>
+                <div className="flex justify-end">
+                  <Link
+                    to="/about"
+                    className="mt-8 px-6 py-3 text-white rounded-full transition-colors duration-200"
+                    style={{ backgroundColor: '#E02B8A' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C0257A'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E02B8A'}>
+                    {t("learn_more_about_us")}
+                  </Link>
+                </div>
               </motion.div>
+
             </div>
           </div>
         </Section>
+        <div className="relative">
+          <Section id="services-header" className="bg-white" title={t("services")} bgColor="bg-white">
+          </Section>
+          {/* <div className="absolute right-0 top-0 bottom-0 w-2 md:w-5" style={{ backgroundColor: '#E02B8A' }}></div> */}
+        </div>
 
-        {/* Service Section */}
-
-        <Section id="service" className="py-20 bg-gray-900/90 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-6xl md:text-7xl font-bold text-white mb-16"
-            >
-              {t("services")}
-            </motion.h2>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Service Cards */}
-              <div className="space-y-8">
-                {/* Career Communication Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <h3 className="text-2xl font-bold text-white mb-2">{t("mobile_communication")}</h3>
-                  {/* <p className="text-blue-200 mb-4">Mobile Communication</p> */}
-                  <p className="text-white/90 leading-relaxed mb-6">
-                    {t("mobile_communication_desc")}
-                  </p>
-                  <button className="bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition-colors duration-200">
-                    View all
-                  </button>
-                </motion.div>
-
-              </div>
-
-              {/* Right Side - Network Visualization */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative"
-              >
-                <div className="bg-gray-800 rounded-lg p-8 h-96 flex items-center justify-center">
-                  {/* Network Visualization SVG */}
-                  <img src={'https://minerva-corp.com/wp-content/uploads/2025/06/２-1536x1024.jpg'} alt="Network Visualization" className="w-full h-full object-contain" />
-                </div>
-              </motion.div>
+        {serviceItems.map((item, index) => (
+          <section key={index} id={item.title} className="w-full overflow-x-hidden backdrop-blur-sm py-2 px-4 sm:px-6 lg:px-8">
+            <div>
+              <FlipCard
+                title={item.title}
+                description={item.description}
+                image={item.image}
+                imageAlt={item.imageAlt}
+                linkTo="/services"
+              />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Service Cards */}
-              <div className="space-y-8">
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="relative"
-                >
-                  <div className="bg-gray-800 rounded-lg p-8 h-96 flex items-center justify-center">
-                    {/* Network Visualization SVG */}
-                    <img src={'https://minerva-corp.com/wp-content/uploads/2025/06/４.jpg'} alt="Network Visualization" className="w-full h-full object-contain" />
-                  </div>
-                </motion.div>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-bold text-white mb-2">{t("ict_solution")}</h3>
-                {/* <p className="text-blue-200 mb-4">ICT Solution</p> */}
-                <p className="text-white/90 leading-relaxed mb-6">
-                  {t("ict_solution_desc")}
-                </p>
-                <button className="bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition-colors duration-200">
-                  View all
-                </button>
-              </motion.div>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Service Cards */}
-              <div className="space-y-8">
-                {/* Career Communication Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <h3 className="text-2xl font-bold text-white mb-2">{t("security")}</h3>
-                  {/* <p className="text-blue-200 mb-4">Security</p> */}
-                  <p className="text-white/90 leading-relaxed mb-6">
-                    {t("security_desc")}
-                  </p>
-                  <button className="bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition-colors duration-200">
-                    View all
-                  </button>
-                </motion.div>
+          </section>
+        ))}
 
-              </div>
-
-              {/* Right Side - Network Visualization */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative"
-              >
-                <div className="bg-gray-800 rounded-lg p-8 h-96 flex items-center justify-center">
-                  {/* Network Visualization SVG */}
-                  <img src={'https://minerva-corp.com/wp-content/uploads/2025/10/トップ→セキュリティ.jpg'} alt="Network Visualization" className="w-full h-full object-contain" />
-                </div>
-              </motion.div>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Service Cards */}
-              <div className="space-y-8">
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="relative"
-                >
-                  <div className="bg-gray-800 rounded-lg p-8 h-96 flex items-center justify-center">
-                    {/* Network Visualization SVG */}
-                    <img src={'https://minerva-corp.com/wp-content/uploads/2025/06/３.jpg'} alt="Network Visualization" className="w-full h-full object-contain" />
-                  </div>
-                </motion.div>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-bold text-white mb-2">{t("engineering")}</h3>
-                {/* <p className="text-blue-200 mb-4">Engineering</p> */}
-                <p className="text-white/90 leading-relaxed mb-6">
-                  {t("engineering_desc")}
-                </p>
-                <button className="bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition-colors duration-200">
-                  View all
-                </button>
-              </motion.div>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Service Cards */}
-              <div className="space-y-8">
-                {/* Career Communication Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <h3 className="text-2xl font-bold text-white mb-2">{t("human_resource")}</h3>
-                  {/* <p className="text-blue-200 mb-4">Human Resources Solutions</p> */}
-                  <p className="text-white/90 leading-relaxed mb-6">
-                    {t("human_resource_desc")}
-                  </p>
-                  <button className="bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition-colors duration-200">
-                    View all
-                  </button>
-                </motion.div>
-
-              </div>
-
-              {/* Right Side - Network Visualization */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative"
-              >
-                <div className="bg-gray-800 rounded-lg p-8 h-96 flex items-center justify-center">
-                  {/* Network Visualization SVG */}
-                  <img src={'https://minerva-corp.com/wp-content/uploads/2025/06/５.jpg'} alt="Network Visualization" className="w-full h-full object-contain" />
-                </div>
-              </motion.div>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Service Cards */}
-              <div className="space-y-8">
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className="relative"
-                >
-                  <div className="bg-gray-800 rounded-lg p-8 h-96 flex items-center justify-center">
-                    {/* Network Visualization SVG */}
-                    <img src={'https://minerva-corp.com/wp-content/uploads/2025/06/５－２　エンターテインメント.jpg'} alt="Network Visualization" className="w-full h-full object-contain" />
-                  </div>
-                </motion.div>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-bold text-white mb-2">{t("entertainment")}</h3>
-                {/* <p className="text-blue-200 mb-4">Entertainment</p> */}
-                <p className="text-white/90 leading-relaxed mb-6">
-                  {t("entertainment_desc")}
-                </p>
-                <button className="bg-gray-700 text-white px-6 py-2 rounded-md hover:bg-gray-600 transition-colors duration-200">
-                  View all
-                </button>
-              </motion.div>
-            </div>
-          </div>
-
-        </Section>
 
         {/* Products Section */}
-        <Section id="products" className="py-20 bg-gradient-to-br from-blue-900/90 to-purple-900/90 backdrop-blur-md">
-          <div className="max-w-6xl mx-auto px-4">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-center mb-12 text-white"
+        <section id="products" className="w-full py-16 md:py-20 bg-white/90 backdrop-blur-sm">
+          <div className="w-full relative">
+            {/* Title and More Button */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex justify-between items-center">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-5xl md:text-6xl font-bold"
+                // style={{ color: '#E02B8A' }}
+              >
+                {t("products")}
+              </motion.h2>
+              <Link
+                to="/products"
+                className="px-6 py-3 text-white rounded-full transition-colors duration-200"
+                style={{ backgroundColor: '#E02B8A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C0257A'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E02B8A'}>
+                <span className="flex items-center gap-2">
+                  {t("view_all")} <FaChevronRight className="text-white text-sm" />
+                </span>
+              </Link>
+            </div>
+
+            {/* Scroll Buttons */}
+            <button
+              onClick={scrollLeft}
+              className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-4 rounded-full z-20 transition backdrop-blur-sm shadow-lg"
+              aria-label="Scroll left"
             >
-              {t("products")}
-            </motion.h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { title: "Product #01", description: "Network infrastructure construction", icon: "🌐", color: "from-blue-500 to-blue-600" },
-                { title: "Product #02", description: "Solution Products", icon: "⚙️", color: "from-green-500 to-green-600" },
-                { title: "Product #03", description: "Devices", icon: "📱", color: "from-purple-500 to-purple-600" }
-              ].map((product, index) => (
+              <FaChevronLeft size={24} />
+            </button>
+
+            <button
+              onClick={scrollRight}
+              className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-4 rounded-full z-20 transition backdrop-blur-sm shadow-lg"
+              aria-label="Scroll right"
+            >
+              <FaChevronRight size={24} />
+            </button>
+
+            {/* Horizontal Scroll Container - Full Width */}
+            <div
+              ref={scrollRef}
+              className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory px-4 md:px-8 lg:px-12 py-8"
+              style={{ 
+                WebkitOverflowScrolling: 'touch'
+              }}
+            >
+              {productItems.map((product, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  className={`bg-gradient-to-br ${product.color} rounded-xl p-8 text-center text-white shadow-xl hover:shadow-2xl transition-all duration-300`}
+                  whileHover={{ scale: 1.02 }}
+                  className="flex-shrink-0 w-80 md:w-96 lg:w-[450px] bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 snap-center overflow-hidden"
                 >
-                  <div className="text-6xl mb-6">{product.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4">{product.title}</h3>
-                  <p className="text-lg opacity-90">{product.description}</p>
+                  {/* Product Image */}
+                  <div className="w-full h-64 md:h-80 bg-white flex items-center justify-center p-6">
+                    <img 
+                      src={product.image} 
+                      alt={product.title} 
+                      className="w-full h-full object-contain" 
+                    />
+                  </div>
+                  
+                  {/* Separator Line */}
+                  <div className="border-t border-gray-200 mx-4"></div>
+                  
+                  {/* Text Content */}
+                  <div className="p-4 md:p-6">
+                    
+                    {/* Title with Link and Navigation Icon */}
+                    <Link 
+                      to="/products"
+                      className="flex items-center justify-between group"
+                    >
+                      <h3 
+                        className="text-lg md:text-xl font-bold flex-1"
+                        style={{ color: '#E02B8A' }}
+                      >
+                        {product.title}
+                      </h3>
+                      <div 
+                        className="w-8 h-8 rounded-full flex items-center justify-center ml-3 flex-shrink-0 transition-transform group-hover:translate-x-1"
+                        style={{ backgroundColor: '#E02B8A' }}
+                      >
+                        <FaChevronRight className="text-white text-sm" />
+                      </div>
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+        <Section id="contactus" className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold text-center mb-12 text-gray-900"
+            >
+              {t("inquiry")}
+              <p className="text-xl flex justify-end">TEL: 03-5738-7123</p>
+            </motion.h2>
+            <p className="text-xl md:text-2xl text-center">{t("inquiry_desc")}</p>
+            <div className="flex justify-end">
+
+              <Link
+                to="/inquiry"
+                className="mt-8 px-6 py-3 text-white rounded-full transition-colors duration-200"
+                style={{ backgroundColor: '#E02B8A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C0257A'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E02B8A'}>
+                {t("inquiry_here")}
+              </Link>
             </div>
           </div>
         </Section>
@@ -479,6 +470,7 @@ const Home = () => {
         <Footer />
       </div>
 
+      <ScrollIndicators />
     </div>
   );
 };
