@@ -8,6 +8,8 @@ const Section = ({
   children,
   bgColor = "bg-gray-100",
   className = "",
+  titleStyle = {},
+  textAlign = "center",
 }) => (
   <motion.section
     id={id}
@@ -17,9 +19,10 @@ const Section = ({
     viewport={{ once: true }}
     transition={{ duration: 0.6, ease: "easeOut" }}
   >
-    <div className="w-full text-center overflow-x-hidden">
+    <div className={`w-full overflow-x-hidden ${textAlign === "left" ? "text-left" : textAlign === "right" ? "text-right" : "text-center"}`}>
       <motion.h2
         className="text-5xl md:text-6xl font-bold mb-4"
+        style={titleStyle}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
