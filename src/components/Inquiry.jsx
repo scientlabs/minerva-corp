@@ -7,12 +7,17 @@ import { Link } from "react-router-dom";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
+import { getNavItems } from "../common/navItems";
 
 const Inquiry = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredNavItem, setHoveredNavItem] = useState(null);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const navRef = useRef(null);
+  const [activeNavItem, setActiveNavItem] = useState('contact');
+  
+  const navItems = getNavItems(t);
   
   const [formData, setFormData] = useState({
     contactDestination: '',
@@ -134,11 +139,10 @@ const Inquiry = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
-      <nav ref={navRef} className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <nav ref={navRef} className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Row - Logo, Company Name, and Utility Links */}
           <div className="flex justify-between items-center h-16">
-            {/* Left Section - Logo and Company Name */}
+            {/* Left Section - Logo */}
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-3">
                 <img
@@ -150,12 +154,57 @@ const Inquiry = () => {
             </div>
 
             <div className="flex items-center space-x-6">
-              <Link
-                to="/inquiry"
-                className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
-              >
-                {t("contact_us")}
-              </Link>
+              {navItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredNavItem(item.id)}
+                  onMouseLeave={() => setHoveredNavItem(null)}
+                >
+                  <Link
+                    to={item.path}
+                    className={`font-medium transition-all duration-300 px-3 py-1 rounded-full ${
+                      activeNavItem === item.id
+                        ? 'text-white shadow-md'
+                        : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                    }`}
+                    style={activeNavItem === item.id ? { backgroundColor: '#E02B8A' } : {}}
+                  >
+                    {item.label}
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
+                    <div 
+                      className="absolute top-full left-0 pt-2 w-48 z-50"
+                      onMouseEnter={() => setHoveredNavItem(item.id)}
+                      onMouseLeave={() => setHoveredNavItem(null)}
+                    >
+                      <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                        <ul className="space-y-1">
+                          {item.subItems.map((subItem, index) => {
+                            const isActive = activeNavItem === item.id;
+                            return (
+                              <li key={index}>
+                                <Link
+                                  to={subItem.link}
+                                  className={`block px-4 py-2 text-sm transition-colors ${
+                                    isActive
+                                      ? 'bg-pink-50 text-pink-600 font-medium'
+                                      : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
+                                  }`}
+                                >
+                                  {subItem.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
               <button
                 type="button"
                 onClick={() => {
@@ -164,7 +213,9 @@ const Inquiry = () => {
                   setCurrentLang(next);
                   localStorage.setItem("language", next);
                 }}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded font-medium flex items-center space-x-2"
+                className="text-gray-700 transition-colors duration-200 focus:outline-none rounded font-medium flex items-center space-x-2 group"
+                onMouseEnter={(e) => e.currentTarget.style.color = '#E02B8A'}
+                onMouseLeave={(e) => e.currentTarget.style.color = ''}
                 aria-pressed={currentLang === "ja" ? "false" : "true"}
                 title="Toggle language"
               >
@@ -173,8 +224,6 @@ const Inquiry = () => {
               </button>
             </div>
           </div>
-
-
         </div>
       </nav>
 

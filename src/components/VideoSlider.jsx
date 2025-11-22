@@ -14,6 +14,9 @@ export default function VideoSlider() {
   const touchStartX = useRef(null);
   const containerRef = useRef(null);
   const timeoutRef = useRef(null);
+  const [nextIndex, setNextIndex] = useState(1);
+  const fadeDuration = 2000; // 2s fade overlap
+  const playDuration = 5000; // 5s full play before fade
 
   // keep refs within bounds
   useEffect(() => {
@@ -91,6 +94,51 @@ export default function VideoSlider() {
       }
     };
   }, [currentIndex]);
+
+  useEffect(() => {
+    // Initialize first video
+    const firstVideo = videoRefs.current[0];
+    if (firstVideo) {
+      firstVideo.currentTime = 0;
+      firstVideo.play().catch(() => {});
+      firstVideo.style.opacity = 1;
+    }
+
+    let timer;
+
+    const loop = () => {
+      const current = videoRefs.current[currentIndex];
+      const next = videoRefs.current[nextIndex];
+      if (!current || !next) return;
+
+      // Prepare next video
+      next.currentTime = 0;
+      next.play().catch(() => {});
+      next.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+      current.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+
+      // Wait 5 seconds before starting fade
+      timer = setTimeout(() => {
+        // Start fade overlap
+        next.style.opacity = 1;
+        current.style.opacity = 0;
+
+        // After fade completes, pause the old video and advance index
+        setTimeout(() => {
+          current.pause();
+          const newCurrent = nextIndex;
+          const newNext = (nextIndex + 1) % videos.length;
+          setCurrentIndex(newCurrent);
+          setNextIndex(newNext);
+        }, fadeDuration);
+      }, playDuration);
+    };
+
+    loop();
+
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
+
 
   const handleEnded = () => setCurrentIndex((i) => (i + 1) % videos.length);
   const goPrev = () => setCurrentIndex((i) => (i - 1 + videos.length) % videos.length);

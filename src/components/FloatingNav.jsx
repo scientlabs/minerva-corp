@@ -1,18 +1,23 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { getNavItems } from '../common/navItems';
 
 const FloatingNav = () => {
   const { t } = useTranslation();
   const [activeSection, setActiveSection] = useState('');
   const [navbarHeight, setNavbarHeight] = useState(64);
   
-  const navItems = useMemo(() => [
-    { id: 'company', sectionId: 'japanese-text', label: t("company") },
-    { id: 'services', sectionId: 'services-header', label: t("services") },
-    { id: 'products', sectionId: 'products', label: t("products") },
-    { id: 'recruit', sectionId: 'recruit', label: t("recruit") }
-  ], [t]);
+  const navItems = useMemo(() => {
+    const items = getNavItems(t);
+    // Map to FloatingNav structure (no path, no subItems)
+    // Also update services sectionId to 'services-header' for FloatingNav
+    return items.map(item => ({
+      id: item.id,
+      sectionId: item.id === 'services' ? 'services-header' : item.sectionId,
+      label: item.label
+    }));
+  }, [t]);
 
   useEffect(() => {
     const updateNavHeight = () => {

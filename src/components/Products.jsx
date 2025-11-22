@@ -7,13 +7,18 @@ import { Link } from "react-router-dom";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
+import { getNavItems } from "../common/navItems";
 
 const Products = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredNavItem, setHoveredNavItem] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const navRef = useRef(null);
+  const [activeNavItem, setActiveNavItem] = useState('products');
+  
+  const navItems = getNavItems(t);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -68,7 +73,7 @@ const Products = () => {
             {
               name: "TSP-W1-0415",
               description: t("tsp_w1_0415_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-0415_set.png",
+              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-0415_600.png",
               category: "ワイヤレスカメラシステム"
             }
           ]
@@ -110,19 +115,19 @@ const Products = () => {
             {
               name: "TSP-P1-NVR11",
               description: t("tsp_p1_nvr11_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-P1-NVR11_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/TSP-P1-NVR11_ph01_s.png",
               category: "レコーダー"
             },
             {
               name: "TSP-W1-NVR12",
               description: t("tsp_w1_nvr12_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-NVR12_s.png",
+              image: "	https://www.tspco.jp/wp-content/uploads/TSP-W1-0412_set.png",
               category: "レコーダー"
             },
             {
               name: "TSP-W1-NVR15",
               description: t("tsp_w1_nvr15_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-NVR15_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-NVR15_500.png",
               category: "レコーダー"
             }
           ]
@@ -140,19 +145,19 @@ const Products = () => {
             {
               name: "AC-2200",
               description: t("ac_2200_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/AC-2200_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/AC2200_03-1_s.png",
               category: "生体認証デバイス"
             },
             {
               name: "UBio-X Face Premium",
               description: t("ubio_face_premium_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/UBio-X-Face-Pro_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/230905_UBio-X-Face-Pro_02_s-1.png",
               category: "生体認証デバイス"
             },
             {
               name: "UBio-X Face Pro",
               description: t("ubio_face_pro_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/UBio-X-Face-Pro_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/230905_UBio-X-Face-Pro_02_s.png",
               category: "生体認証デバイス"
             }
           ]
@@ -188,7 +193,7 @@ const Products = () => {
             {
               name: "VIPORE",
               description: t("vipore_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/VIPORE_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/top_productimg04-e1747103985344.png",
               category: "ソリューション商材"
             }
           ]
@@ -218,9 +223,10 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
-      <nav ref={navRef} className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <nav ref={navRef} className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
+            {/* Left Section - Logo */}
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-3">
                 <img
@@ -232,12 +238,57 @@ const Products = () => {
             </div>
 
             <div className="flex items-center space-x-6">
-              <Link
-                to="/inquiry"
-                className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
-              >
-                {t("contact_us")}
-              </Link>
+              {navItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredNavItem(item.id)}
+                  onMouseLeave={() => setHoveredNavItem(null)}
+                >
+                  <Link
+                    to={item.path}
+                    className={`font-medium transition-all duration-300 px-3 py-1 rounded-full ${
+                      activeNavItem === item.id
+                        ? 'text-white shadow-md'
+                        : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                    }`}
+                    style={activeNavItem === item.id ? { backgroundColor: '#E02B8A' } : {}}
+                  >
+                    {item.label}
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
+                    <div 
+                      className="absolute top-full left-0 pt-2 w-48 z-50"
+                      onMouseEnter={() => setHoveredNavItem(item.id)}
+                      onMouseLeave={() => setHoveredNavItem(null)}
+                    >
+                      <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                        <ul className="space-y-1">
+                          {item.subItems.map((subItem, index) => {
+                            const isActive = activeNavItem === item.id;
+                            return (
+                              <li key={index}>
+                                <Link
+                                  to={subItem.link}
+                                  className={`block px-4 py-2 text-sm transition-colors ${
+                                    isActive
+                                      ? 'bg-pink-50 text-pink-600 font-medium'
+                                      : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
+                                  }`}
+                                >
+                                  {subItem.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
               <button
                 type="button"
                 onClick={() => {
@@ -246,15 +297,17 @@ const Products = () => {
                   setCurrentLang(next);
                   localStorage.setItem("language", next);
                 }}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded font-medium flex items-center space-x-2"
+                className="text-gray-700 transition-colors duration-200 focus:outline-none rounded font-medium flex items-center space-x-2 group"
+                onMouseEnter={(e) => e.currentTarget.style.color = '#E02B8A'}
+                onMouseLeave={(e) => e.currentTarget.style.color = ''}
+                aria-pressed={currentLang === "ja" ? "false" : "true"}
+                title="Toggle language"
               >
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>{currentLang === "ja" ? t("japanese") : "ENGLISH"}</span>
               </button>
             </div>
           </div>
-
-
         </div>
       </nav>
 
@@ -286,7 +339,7 @@ const Products = () => {
               className={`px-6 py-2 rounded-lg font-medium transition-colors text-white ${
                 selectedCategory === null ? '' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
-              style={selectedCategory === null ? { backgroundColor: '#E02B8A' } : {}}
+              style={selectedCategory === null ? { backgroundColor: '#E02B8A' } : { color: '#E02B8A' }}
             >
               {t("all_products")}
             </button>
@@ -297,7 +350,7 @@ const Products = () => {
                 className={`px-6 py-2 rounded-lg font-medium transition-colors text-white ${
                   selectedCategory === category.id ? '' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
-                style={selectedCategory === category.id ? { backgroundColor: '#E02B8A' } : {}}
+                style={selectedCategory === category.id ? { backgroundColor: '#E02B8A' } : { color: '#E02B8A' }}
               >
                 {category.name}
               </button>
@@ -308,7 +361,7 @@ const Products = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product, index) => (
-            <motion.div
+            <div
               key={`${product.name}-${index}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -333,7 +386,7 @@ const Products = () => {
                   {product.category}
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
