@@ -182,24 +182,24 @@ const Products = () => {
         }
       ]
     },
-    {
-      id: 'solution',
-      name: t("solution_products"),
-      subcategories: [
-        {
-          id: 'solutions',
-          name: t("solutions"),
-          products: [
-            {
-              name: "VIPORE",
-              description: t("vipore_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/top_productimg04-e1747103985344.png",
-              category: "ソリューション商材"
-            }
-          ]
-        }
-      ]
-    }
+    // {
+    //   id: 'solution',
+    //   name: t("solution_products"),
+    //   subcategories: [
+    //     {
+    //       id: 'solutions',
+    //       name: t("solutions"),
+    //       products: [
+    //         {
+    //           name: "VIPORE",
+    //           description: t("vipore_desc"),
+    //           image: "https://www.tspco.jp/wp-content/uploads/top_productimg04-e1747103985344.png",
+    //           category: "ソリューション商材"
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // }
   ];
 
   // Get all products for display

@@ -14,9 +14,9 @@ export default function VideoSlider() {
   const touchStartX = useRef(null);
   const containerRef = useRef(null);
   const timeoutRef = useRef(null);
-  const [nextIndex, setNextIndex] = useState(1);
-  const fadeDuration = 2000; // 2s fade overlap
-  const playDuration = 5000; // 5s full play before fade
+  const autoPlayTimeoutRef = useRef(null);
+  const fadeDuration = 2000; // 2s fade transition
+  const playDuration = 5000; // 5s play before fade
 
   // keep refs within bounds
   useEffect(() => {
@@ -60,89 +60,113 @@ export default function VideoSlider() {
     touchStartX.current = null;
   };
 
-  // Play the active video and pause others whenever index changes
+  // Auto-advance videos with fade
   useEffect(() => {
     // Clear any existing timeout
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+    if (autoPlayTimeoutRef.current) {
+      clearTimeout(autoPlayTimeoutRef.current);
     }
 
+    const current = videoRefs.current[currentIndex];
+    if (!current) return;
+
+    // Play current video
+    current.currentTime = 0;
+    current.style.opacity = '1';
+    current.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+    current.play().catch(() => {});
+
+    // Pause all other videos and set their opacity
     videoRefs.current.forEach((v, idx) => {
-      if (!v) return;
-      if (idx === currentIndex) {
-        try {
-          v.currentTime = 0;
-          const p = v.play();
-          if (p && p.catch) p.catch(() => {});
-          
-          // Set timeout to advance to next video after 5 seconds
-          timeoutRef.current = setTimeout(() => {
-            setCurrentIndex((i) => (i + 1) % videos.length);
-          }, 5000);
-        } catch (e) {
-          // ignore play errors (autoplay policies)
-        }
-      } else {
-        try { v.pause(); } catch (e) {}
+      if (v && idx !== currentIndex) {
+        v.pause();
+        v.style.opacity = '0';
+        v.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
       }
     });
 
-    // Cleanup timeout on unmount or index change
+    // Auto-advance after playDuration
+    autoPlayTimeoutRef.current = setTimeout(() => {
+      const nextIndex = (currentIndex + 1) % videos.length;
+      const next = videoRefs.current[nextIndex];
+      
+      if (!next) return;
+
+      // Prepare next video
+      next.currentTime = 0;
+      next.style.opacity = '0';
+      next.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+      next.play().catch(() => {});
+
+      // Start fade transition
+      requestAnimationFrame(() => {
+        next.style.opacity = '1';
+        current.style.opacity = '0';
+
+        // After fade completes, pause old video and update index
+        setTimeout(() => {
+          current.pause();
+          setCurrentIndex(nextIndex);
+        }, fadeDuration);
+      });
+    }, playDuration);
+
+    // Cleanup
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+      if (autoPlayTimeoutRef.current) {
+        clearTimeout(autoPlayTimeoutRef.current);
       }
     };
   }, [currentIndex]);
 
-  useEffect(() => {
-    // Initialize first video
-    const firstVideo = videoRefs.current[0];
-    if (firstVideo) {
-      firstVideo.currentTime = 0;
-      firstVideo.play().catch(() => {});
-      firstVideo.style.opacity = 1;
+  // Smooth fade transition between videos
+  const transitionToVideo = (newIndex) => {
+    const current = videoRefs.current[currentIndex];
+    const next = videoRefs.current[newIndex];
+    
+    if (!current || !next) return;
+
+    // Clear auto-play timeout when manually navigating
+    if (autoPlayTimeoutRef.current) {
+      clearTimeout(autoPlayTimeoutRef.current);
     }
 
-    let timer;
+    // Prepare next video
+    next.currentTime = 0;
+    next.style.opacity = '0';
+    next.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+    next.play().catch(() => {});
 
-    const loop = () => {
-      const current = videoRefs.current[currentIndex];
-      const next = videoRefs.current[nextIndex];
-      if (!current || !next) return;
+    // Set current video transition
+    current.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
 
-      // Prepare next video
-      next.currentTime = 0;
-      next.play().catch(() => {});
-      next.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
-      current.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+    // Start fade transition
+    requestAnimationFrame(() => {
+      next.style.opacity = '1';
+      current.style.opacity = '0';
 
-      // Wait 5 seconds before starting fade
-      timer = setTimeout(() => {
-        // Start fade overlap
-        next.style.opacity = 1;
-        current.style.opacity = 0;
+      // After fade completes, pause old video and update index
+      setTimeout(() => {
+        current.pause();
+        setCurrentIndex(newIndex);
+      }, fadeDuration);
+    });
+  };
 
-        // After fade completes, pause the old video and advance index
-        setTimeout(() => {
-          current.pause();
-          const newCurrent = nextIndex;
-          const newNext = (nextIndex + 1) % videos.length;
-          setCurrentIndex(newCurrent);
-          setNextIndex(newNext);
-        }, fadeDuration);
-      }, playDuration);
-    };
+  const handleEnded = () => {
+    const nextIndex = (currentIndex + 1) % videos.length;
+    transitionToVideo(nextIndex);
+  };
 
-    loop();
+  const goPrev = () => {
+    const prevIndex = (currentIndex - 1 + videos.length) % videos.length;
+    transitionToVideo(prevIndex);
+  };
 
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
-
-
-  const handleEnded = () => setCurrentIndex((i) => (i + 1) % videos.length);
-  const goPrev = () => setCurrentIndex((i) => (i - 1 + videos.length) % videos.length);
-  const goNext = () => setCurrentIndex((i) => (i + 1) % videos.length);
+  const goNext = () => {
+    const nextIndex = (currentIndex + 1) % videos.length;
+    transitionToVideo(nextIndex);
+  };
 
   return (
     <div 
@@ -160,8 +184,15 @@ export default function VideoSlider() {
           src={src}
           muted
           playsInline
+          loop={false}
           onEnded={handleEnded}
-          className={`absolute w-full h-full object-cover transition-opacity duration-700 ${idx === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className="absolute w-full h-full object-cover"
+          style={{
+            opacity: idx === currentIndex ? 1 : 0,
+            transition: `opacity ${fadeDuration}ms ease-in-out`,
+            pointerEvents: idx === currentIndex ? 'auto' : 'none',
+            zIndex: idx === currentIndex ? 1 : 0
+          }}
         />
       ))}
 
