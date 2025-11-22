@@ -193,37 +193,43 @@ const Home = () => {
       title: t("mobile_communication"),
       description: t("mobile_communication_desc"),
       image: MobileCommunicationImage,
-      imageAlt: "Mobile Communication"
+      imageAlt: "Mobile Communication",
+      link: "/services#mobile-communication"
     },
     {
       title: t("ict_solution"),
       description: t("ict_solution_desc"),
       image: ICTSolutionImage,
-      imageAlt: "ICT Solution"
+      imageAlt: "ICT Solution",
+      link: "/services#ict-solution"
     },
     {
       title: t("security"),
       description: t("security_desc"),
       image: SecurityImage,
-      imageAlt: "Security"
+      imageAlt: "Security",
+      link: "/services#engineering"
     },
     {
       title: t("engineering"),
       description: t("engineering_desc"),
       image: EngineeringImage,
-      imageAlt: "Engineering"
+      imageAlt: "Engineering",
+      link: "/services#engineering"
     },
     {
       title: t("human_resource"),
       description: t("human_resource_desc"),
       image: HumanResourceImage,
-      imageAlt: "Human Resource"
+      imageAlt: "Human Resource",
+      link: "/services#human-resource"
     },
     {
       title: t("entertainment"),
       description: t("entertainment_desc"),
       image: EntertainmentImage,
-      imageAlt: "Entertainment"
+      imageAlt: "Entertainment",
+      link: "/services#entertainment"
     }
   ];
 
@@ -373,14 +379,14 @@ const Home = () => {
                             return (
                               <li key={index}>
                                 <Link
-                                  to={item.path}
+                                  to={subItem.link}
                                   className={`block px-4 py-2 text-sm transition-colors ${
                                     isActive
                                       ? 'bg-pink-50 text-pink-600 font-medium'
                                       : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
                                   }`}
                                 >
-                                  {subItem}
+                                  {subItem.label}
                                 </Link>
                               </li>
                             );
@@ -531,27 +537,6 @@ const Home = () => {
         <motion.div className="h-16 md:h-24" style={{ backgroundColor }}></motion.div>
         
           <div ref={servicesRef} id="services" className="relative">
-           {/* <motion.div style={{ backgroundColor }}>
-             <Section 
-               id="services-header" 
-               className="bg-transparent" 
-               title={t("services")} 
-               bgColor="bg-transparent"
-               titleStyle={{ 
-                 color: titleColor, 
-                 paddingLeft: '1.5rem',       // base padding (24px)
-                 paddingRight: '1.5rem',
-                 // Responsive paddings
-                 // For larger screens, increase left padding
-                 ...(window.innerWidth >= 640 && { paddingLeft: '3rem' }),    // sm: 48px
-                 ...(window.innerWidth >= 1024 && { paddingLeft: '5rem' }),   // lg: 80px
-                 ...(window.innerWidth >= 1280 && { paddingLeft: '8rem' }),   // xl: 128px
-                 ...(window.innerWidth >= 1536 && { paddingLeft: '12rem' }),  // 2xl: 192px
-               }}
-               textAlign="left"
-             >
-             </Section>
-           </motion.div> */}
 
            {/* Arrange services into 2 rows, each with 3 columns */}
            <motion.div
@@ -575,7 +560,7 @@ const Home = () => {
                   key={index}
                   item={item}
                   index={index}
-                  to="/services"
+                  to={item.link}
                 />
               ))}
             </div>
@@ -585,7 +570,7 @@ const Home = () => {
                   key={index + 4}
                   item={item}
                   index={index + 4}
-                  to="/services"
+                  to={item.link}
                 />
               ))}
             </div>
@@ -652,7 +637,7 @@ const Home = () => {
               }}
             >
               {productItems.map((product, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 30, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -694,7 +679,7 @@ const Home = () => {
                       </div>
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

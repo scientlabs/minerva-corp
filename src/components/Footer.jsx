@@ -7,13 +7,36 @@ import MinervaLogo from "../assets/MINERVA-logo.png";
 
 const Footer = () => {
     const { t } = useTranslation();
-    const company = [t('greeting'), t('company_overview'), t('company_history'), t('security_policy'), t('privacy_policy'), t('environmental_policy')];
-    const services = [t('mobile_communication'), t('ict_solution'), t('security'), t('engineering'), t('human_resource'), t('entertainment')];
-    const products = [t('product_survillence_camera_system'), t('product_iot')];
+    
+    // Company items with links to About.jsx sections
+    const companyItems = [
+        { label: t('greeting'), link: '/about#greeting' },
+        { label: t('company_overview'), link: '/about#company-overview' },
+        { label: t('company_history'), link: '/about#company-history' },
+        { label: t('security_policy'), link: '/about#security-policy' },
+        { label: t('privacy_policy'), link: '/about#privacy-policy' },
+        { label: t('environmental_policy'), link: '/about#environmental-policy' }
+    ];
+    
+    // Services items with links to Services.jsx sections
+    const servicesItems = [
+        { label: t('mobile_communication'), link: '/services#mobile-communication' },
+        { label: t('ict_solution'), link: '/services#ict-solution' },
+        { label: t('security'), link: '/services#engineering' },
+        { label: t('engineering'), link: '/services#engineering' },
+        { label: t('human_resource'), link: '/services#human-resource' },
+        { label: t('entertainment'), link: '/services#entertainment' }
+    ];
+    
+    // Products items
+    const productsItems = [
+        { label: t('product_survillence_camera_system'), link: '/products' },
+        { label: t('product_iot'), link: '/products' }
+    ];
 
 
     return (
-        <footer className="bg-gray-900 text-white w-full py-12">
+        <footer className="bg-gray-900 text-white w-full py-12 relative z-50">
             <div className="container mx-auto px-4">
                 {/* Logo */}
                 <div className="flex justify-center mb-8">
@@ -32,10 +55,10 @@ const Footer = () => {
                             <h3 className="text-lg font-semibold mb-4 text-white hover:text-pink-400 transition-colors cursor-pointer">{t('company')}</h3>
                         </Link>
                         <ul className="space-y-2">
-                            {company.map((item) => (
-                                <li key={item}>
-                                    <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                                        {item}
+                            {companyItems.map((item) => (
+                                <li key={item.label}>
+                                    <Link to={item.link} className="text-gray-300 hover:text-white transition-colors">
+                                        {item.label}
                                     </Link>
                                 </li>
                             ))}
@@ -48,10 +71,10 @@ const Footer = () => {
                             <h3 className="text-lg font-semibold mb-4 text-white hover:text-pink-400 transition-colors cursor-pointer">{t('services')}</h3>
                         </Link>
                         <ul className="space-y-2">
-                            {services.map((service) => (
-                                <li key={service}>
-                                    <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                                        {service}
+                            {servicesItems.map((service) => (
+                                <li key={service.label}>
+                                    <Link to={service.link} className="text-gray-300 hover:text-white transition-colors">
+                                        {service.label}
                                     </Link>
                                 </li>
                             ))}
@@ -64,10 +87,10 @@ const Footer = () => {
                             <h3 className="text-lg font-semibold mb-4 text-white hover:text-pink-400 transition-colors cursor-pointer">{t('products')}</h3>
                         </Link>
                         <ul className="space-y-2">
-                            {products.map((product) => (
-                                <li key={product}>
-                                    <Link to="/products" className="text-gray-300 hover:text-white transition-colors">
-                                        {product}
+                            {productsItems.map((product) => (
+                                <li key={product.label}>
+                                    <Link to={product.link} className="text-gray-300 hover:text-white transition-colors">
+                                        {product.label}
                                     </Link>
                                 </li>
                             ))}
@@ -121,7 +144,7 @@ const Footer = () => {
 
                 {/* Footer Bottom */}
                 <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-                    <p className="text-sm text-gray-400">© 2025 MINERVA_HP All rights reserved.</p>
+                    <p className="text-sm text-gray-400">© 2025 MINERVA All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

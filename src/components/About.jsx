@@ -3,11 +3,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
 import { getNavItems } from "../common/navItems";
+import companyInfoImage from "../assets/company-info.jpg";
 
 const About = () => {
   const { i18n } = useTranslation();
@@ -16,7 +17,9 @@ const About = () => {
   const [currentLang, setCurrentLang] = useState('ja');
   const [activeNavItem, setActiveNavItem] = useState('company');
   const [hoveredNavItem, setHoveredNavItem] = useState(null);
-  
+  const [activeSection, setActiveSection] = useState('greeting');
+  const location = useLocation();
+
   const navItems = getNavItems(t);
 
   useEffect(() => {
@@ -30,6 +33,33 @@ const About = () => {
     }
   }, [i18n]);
 
+  // Handle hash navigation on page load and hash changes
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      // Wait for the page to fully render
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          const navHeight = navRef.current?.offsetHeight || 0;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - navHeight - 20;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Update active section
+          setActiveSection(hash.substring(1));
+        }
+      }, 100);
+    }
+  }, [location]);
+
+  // Section IDs (static, never change)
+  const sectionIds = ["greeting", "company-overview", "company-history", "security-policy", "privacy-policy", "environmental-policy"];
+
   // Table of contents items
   const tocItems = [
     { id: "greeting", label: t("greeting") },
@@ -39,6 +69,55 @@ const About = () => {
     { id: "privacy-policy", label: t("privacy_policy") },
     { id: "environmental-policy", label: t("environmental_policy") }
   ];
+
+  // Intersection Observer to track active section
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Handle TOC click with smooth scroll
+  const handleTocClick = (e, itemId) => {
+    e.preventDefault();
+    setActiveSection(itemId);
+    const element = document.getElementById(itemId);
+    if (element) {
+      const navHeight = navRef.current?.offsetHeight || 0;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navHeight - 20;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,19 +146,18 @@ const About = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`font-medium transition-all duration-300 px-3 py-1 rounded-full ${
-                      activeNavItem === item.id
-                        ? 'text-white shadow-md'
-                        : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-                    }`}
+                    className={`font-medium transition-all duration-300 px-3 py-1 rounded-full ${activeNavItem === item.id
+                      ? 'text-white shadow-md'
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                      }`}
                     style={activeNavItem === item.id ? { backgroundColor: '#E02B8A' } : {}}
                   >
                     {item.label}
                   </Link>
-                  
+
                   {/* Dropdown Menu */}
                   {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
-                    <div 
+                    <div
                       className="absolute top-full left-0 pt-2 w-48 z-50"
                       onMouseEnter={() => setHoveredNavItem(item.id)}
                       onMouseLeave={() => setHoveredNavItem(null)}
@@ -91,14 +169,13 @@ const About = () => {
                             return (
                               <li key={index}>
                                 <Link
-                                  to={item.path}
-                                  className={`block px-4 py-2 text-sm transition-colors ${
-                                    isActive
-                                      ? 'bg-pink-50 text-pink-600 font-medium'
-                                      : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
-                                  }`}
+                                  to={subItem.link}
+                                  className={`block px-4 py-2 text-sm transition-colors ${isActive
+                                    ? 'bg-pink-50 text-pink-600 font-medium'
+                                    : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
+                                    }`}
                                 >
-                                  {subItem}
+                                  {subItem.label}
                                 </Link>
                               </li>
                             );
@@ -131,6 +208,56 @@ const About = () => {
         </div>
       </nav>
 
+      {/* Fixed Table of Contents */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="fixed left-8 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
+      >
+
+        <ul className="space-y-3">
+          {tocItems.map((item, index) => {
+            const isActive = activeSection === item.id;
+            return (
+              <li key={index} className="flex items-center">
+                <span 
+                  className={`mr-2 w-2 h-2 rounded-full flex-shrink-0 transition-all duration-200 ${
+                    isActive ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  style={{ backgroundColor: '#E02B8A' }}
+                />
+                <a
+                  href={`#${item.id}`}
+                  onClick={(e) => handleTocClick(e, item.id)}
+                  className={`block transition-all duration-200 text-sm py-1 ${
+                    isActive
+                      ? 'font-bold'
+                      : 'hover:underline'
+                  }`}
+                  style={{
+                    color: '#E02B8A'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.color = '#C0257A';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.color = '#E02B8A';
+                    }
+                  }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+
+      </motion.div>
+
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Title */}
@@ -140,34 +267,16 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#E02B8A' }}>
-            {t("company")}
-          </h1>
-        </motion.div>
-
-        {/* Table of Contents */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-gray-50 rounded-lg p-6 md:p-8 mb-12"
-        >
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t("table_of_contents")}</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {tocItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={`#${item.id}`}
-                  className="hover:underline transition-colors"
-                  style={{ color: '#E02B8A' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#C0257A'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#E02B8A'}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-6 mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold" style={{ color: '#E02B8A' }}>
+              {t("company")}
+            </h1>
+            <img
+              src={companyInfoImage}
+              alt="Company Information"
+              // className="h-16 md:h-20 lg:h-24 object-cover rounded-lg shadow-md flex-shrink-0"
+            />
+          </div>
         </motion.div>
 
         {/* Greeting Section */}

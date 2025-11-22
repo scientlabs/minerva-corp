@@ -11,21 +11,38 @@ export const getNavItems = (t) => {
       sectionId: 'japanese-text', 
       label: t("company") || "Company",
       path: "/about",
-      subItems: [t('greeting'), t('company_overview'), t('company_history'), t('security_policy'), t('privacy_policy'), t('environmental_policy')]
+      subItems: [
+        { label: t('greeting'), link: '/about#greeting' },
+        { label: t('company_overview'), link: '/about#company-overview' },
+        { label: t('company_history'), link: '/about#company-history' },
+        { label: t('security_policy'), link: '/about#security-policy' },
+        { label: t('privacy_policy'), link: '/about#privacy-policy' },
+        { label: t('environmental_policy'), link: '/about#environmental-policy' }
+      ]
     },
     { 
       id: 'services', 
       sectionId: 'services', 
       label: t("services") || "Services",
       path: "/services",
-      subItems: [t('mobile_communication'), t('ict_solution'), t('security'), t('engineering'), t('human_resource'), t('entertainment')]
+      subItems: [
+        { label: t('mobile_communication'), link: '/services#mobile-communication' },
+        { label: t('ict_solution'), link: '/services#ict-solution' },
+        { label: t('security'), link: '/services#engineering' },
+        { label: t('engineering'), link: '/services#engineering' },
+        { label: t('human_resource'), link: '/services#human-resource' },
+        { label: t('entertainment'), link: '/services#entertainment' }
+      ]
     },
     { 
       id: 'products', 
       sectionId: 'products', 
       label: t("products") || "Products",
       path: "/products",
-      subItems: [t('product_survillence_camera_system'), t('product_iot')]
+      subItems: [
+        { label: t('product_survillence_camera_system'), link: '/products' },
+        { label: t('product_iot'), link: '/products' }
+      ]
     },
     { 
       id: 'contact', 

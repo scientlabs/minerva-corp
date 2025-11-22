@@ -73,7 +73,7 @@ const Products = () => {
             {
               name: "TSP-W1-0415",
               description: t("tsp_w1_0415_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-0415_set.png",
+              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-0415_600.png",
               category: "ワイヤレスカメラシステム"
             }
           ]
@@ -115,19 +115,19 @@ const Products = () => {
             {
               name: "TSP-P1-NVR11",
               description: t("tsp_p1_nvr11_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-P1-NVR11_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/TSP-P1-NVR11_ph01_s.png",
               category: "レコーダー"
             },
             {
               name: "TSP-W1-NVR12",
               description: t("tsp_w1_nvr12_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-NVR12_s.png",
+              image: "	https://www.tspco.jp/wp-content/uploads/TSP-W1-0412_set.png",
               category: "レコーダー"
             },
             {
               name: "TSP-W1-NVR15",
               description: t("tsp_w1_nvr15_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-NVR15_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/TSP-W1-NVR15_500.png",
               category: "レコーダー"
             }
           ]
@@ -145,19 +145,19 @@ const Products = () => {
             {
               name: "AC-2200",
               description: t("ac_2200_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/AC-2200_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/AC2200_03-1_s.png",
               category: "生体認証デバイス"
             },
             {
               name: "UBio-X Face Premium",
               description: t("ubio_face_premium_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/UBio-X-Face-Pro_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/230905_UBio-X-Face-Pro_02_s-1.png",
               category: "生体認証デバイス"
             },
             {
               name: "UBio-X Face Pro",
               description: t("ubio_face_pro_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/UBio-X-Face-Pro_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/230905_UBio-X-Face-Pro_02_s.png",
               category: "生体認証デバイス"
             }
           ]
@@ -193,7 +193,7 @@ const Products = () => {
             {
               name: "VIPORE",
               description: t("vipore_desc"),
-              image: "https://www.tspco.jp/wp-content/uploads/VIPORE_s.png",
+              image: "https://www.tspco.jp/wp-content/uploads/top_productimg04-e1747103985344.png",
               category: "ソリューション商材"
             }
           ]
@@ -271,14 +271,14 @@ const Products = () => {
                             return (
                               <li key={index}>
                                 <Link
-                                  to={item.path}
+                                  to={subItem.link}
                                   className={`block px-4 py-2 text-sm transition-colors ${
                                     isActive
                                       ? 'bg-pink-50 text-pink-600 font-medium'
                                       : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
                                   }`}
                                 >
-                                  {subItem}
+                                  {subItem.label}
                                 </Link>
                               </li>
                             );
@@ -339,7 +339,7 @@ const Products = () => {
               className={`px-6 py-2 rounded-lg font-medium transition-colors text-white ${
                 selectedCategory === null ? '' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
-              style={selectedCategory === null ? { backgroundColor: '#E02B8A' } : {}}
+              style={selectedCategory === null ? { backgroundColor: '#E02B8A' } : { color: '#E02B8A' }}
             >
               {t("all_products")}
             </button>
@@ -350,7 +350,7 @@ const Products = () => {
                 className={`px-6 py-2 rounded-lg font-medium transition-colors text-white ${
                   selectedCategory === category.id ? '' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
-                style={selectedCategory === category.id ? { backgroundColor: '#E02B8A' } : {}}
+                style={selectedCategory === category.id ? { backgroundColor: '#E02B8A' } : { color: '#E02B8A' }}
               >
                 {category.name}
               </button>
@@ -361,7 +361,7 @@ const Products = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product, index) => (
-            <motion.div
+            <div
               key={`${product.name}-${index}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -386,7 +386,7 @@ const Products = () => {
                   {product.category}
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

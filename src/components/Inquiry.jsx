@@ -187,14 +187,14 @@ const Inquiry = () => {
                             return (
                               <li key={index}>
                                 <Link
-                                  to={item.path}
+                                  to={subItem.link}
                                   className={`block px-4 py-2 text-sm transition-colors ${
                                     isActive
                                       ? 'bg-pink-50 text-pink-600 font-medium'
                                       : 'text-gray-700 hover:bg-gray-100 hover:text-pink-600'
                                   }`}
                                 >
-                                  {subItem}
+                                  {subItem.label}
                                 </Link>
                               </li>
                             );
