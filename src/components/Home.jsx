@@ -182,7 +182,7 @@ const Home = () => {
     { title: t("security_camera_system"), description: "TSP-PT-5M", icon: "🌐", image: "https://www.tspco.jp/wp-content/uploads/top_productimg01.png", color: "from-blue-500 to-blue-600" },
     { title: t("access_control_system"), description: "TSP-W1-0412", icon: "⚙️", image: "	https://www.tspco.jp/wp-content/uploads/top_productimg02.png", color: "from-green-500 to-green-600" },
     { title: t("network_equipment"), description: "8ポートギガビットイーサネットPoE+スイッチ", icon: "📱", image: "https://www.tspco.jp/wp-content/uploads/top_productimg03.png", color: "from-purple-500 to-purple-600" },
-    { title: t("solution_products"), description: "TSP-S01", icon: "📱", image: "https://www.tspco.jp/wp-content/uploads/top_productimg04.png", color: "from-purple-500 to-purple-600" },
+    // { title: t("solution_products"), description: "TSP-S01", icon: "📱", image: "https://www.tspco.jp/wp-content/uploads/top_productimg04.png", color: "from-purple-500 to-purple-600" },
     { title: t("other_products"), description: "TSP-S01", icon: "📱", image: "	https://www.tspco.jp/wp-content/uploads/top_productimg05.png", color: "from-purple-500 to-purple-600" }
   ];
 
@@ -448,7 +448,12 @@ const Home = () => {
               }}
             >
               <div className="text-5xl md:text-7xl lg:text-9xl font-normal text-white">
-                {t("empowering_your_future")}
+                Empowering <br/> 
+                Your&nbsp;
+                <span className="bg-gradient-to-r from-pink-600 via-pink-500 to-white bg-clip-text text-transparent transition-colors duration-700">
+                  Future
+                </span>
+
               </div>
             </motion.div>
 

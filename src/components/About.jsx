@@ -344,7 +344,7 @@ const About = () => {
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("contact_label")}</td>
-                    <td className="p-4">{t("contact_value")}</td>
+                    <td className="p-4">TEL 03-5738-7123 <br/> FAX 03-5738-7674</td>
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("banks_label")}</td>
