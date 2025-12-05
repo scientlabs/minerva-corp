@@ -1,0 +1,33 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# Vite build output
+dist/
+
+# VS Code
+.vscode/
+
+# dotenv environment files
+.env
+.env.*.local
+
+# macOS
+.DS_Store
+
+# Log files
+*.log
+
+# Optional: OS & IDE-specific
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+
+# Optional: Linux & system
+*.swp
