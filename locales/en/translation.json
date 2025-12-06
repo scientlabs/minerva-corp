@@ -44,6 +44,7 @@
     "submit": "Submit",
     "submitting": "Submitting...",
     "form_submitted_successfully": "Your inquiry has been submitted successfully",
+    "form_submission_error": "Failed to submit form. Please try again later.",
     "other": "Other",
     "services_title": "Business",
     "table_of_contents": "Table of Contents",

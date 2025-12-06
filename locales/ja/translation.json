@@ -44,6 +44,7 @@
     "submit": "送信",
     "submitting": "送信中...",
     "form_submitted_successfully": "お問い合わせを送信しました",
+    "form_submission_error": "送信に失敗しました。しばらくしてから再度お試しください。",
     "other": "その他",
     "services_title": "事業内容",
     "table_of_contents": "目次",
