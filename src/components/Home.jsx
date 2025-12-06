@@ -397,7 +397,7 @@ const Home = () => {
                   )}
                 </div>
               ))}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   const next = currentLang === "ja" ? "en" : "ja";
@@ -413,7 +413,7 @@ const Home = () => {
               >
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>{currentLang === "ja" ? t("japanese") : "ENGLISH"}</span>
-              </button>
+              </button> */}
             </div>
 
           </div>

@@ -2,6 +2,7 @@
   "name": "minerva-corp",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://scientlabs.github.io/minerva-corp",
   "scripts": {
     "dev": "vite",
     "start": "npx vite",
@@ -23,6 +24,9 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-tailwind/react": "^2.1.10",
     "@react-three/drei": "^10.4.0",
     "@react-three/fiber": "^9.1.4",
@@ -34,21 +38,18 @@
     "clsx": "^2.1.1",
     "dotted-map": "^2.2.3",
     "framer-motion": "^12.20.1",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
     "motion": "^12.20.1",
     "next-themes": "^0.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^14.1.2",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.14.2",
     "tailwind-merge": "^3.3.1",
     "three": "^0.178.0",
-    "three-globe": "^2.43.0",
-    "i18next": "^23.11.5",
-    "i18next-browser-languagedetector": "^8.0.0",
-    "react-i18next": "^14.1.2",
-    "i18next-http-backend": "^2.5.2",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0"
+    "three-globe": "^2.43.0"
   }
 }

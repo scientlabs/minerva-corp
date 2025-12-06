@@ -21,6 +21,7 @@ import engineeringNetworkCameraImage from "../assets/engineering_network_camera.
 import engineeringAccessControlSystemImage from "../assets/engineering_access_control.jpg";
 import engineeringLanElectricalWorkImage from "../assets/engineering_lan.jpg";
 
+
 const Services = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredNavItem, setHoveredNavItem] = useState(null);
@@ -274,14 +275,8 @@ const Services = () => {
                 <a
                   href={`#${item.id}`}
                   onClick={(e) => handleTocClick(e, item.id)}
-                  className={`block transition-all duration-200 text-sm py-1 ${
-                    isActive
-                      ? 'font-bold'
-                      : 'hover:underline'
-                  }`}
-                  style={{
-                    color: '#E02B8A'
-                  }}
+                  className={`block transition-all duration-200 text-xl py-2 ${isActive ? 'font-extrabold' : 'font-semibold hover:underline'}`}
+                  style={{ color: '#E02B8A' }}
                   onMouseEnter={(e) => {
                     if (!isActive) {
                       e.currentTarget.style.color = '#C0257A';
@@ -302,7 +297,7 @@ const Services = () => {
       </motion.div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-28 py-12">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

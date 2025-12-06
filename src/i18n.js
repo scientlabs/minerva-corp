@@ -12,14 +12,17 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['en', 'ja'], // Add your supported languages here
+    supportedLngs: ['ja'], // Add your supported languages here
     fallbackLng: 'ja',
     detection: {
       order: ['localStorage', 'cookie', 'htmlTag', 'path', 'subdomain'],
       caches: ['localStorage', 'cookie']
     },
+    // backend: {
+    //   loadPath: '/locales/{{lng}}/translation.json',
+    // },
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: `${import.meta.env.BASE_URL}/locales/{{lng}}/translation.json`
     },
     react: { useSuspense: false },
   });

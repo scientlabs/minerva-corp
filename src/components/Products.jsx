@@ -289,7 +289,7 @@ const Products = () => {
                   )}
                 </div>
               ))}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   const next = currentLang === "ja" ? "en" : "ja";
@@ -305,7 +305,7 @@ const Products = () => {
               >
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>{currentLang === "ja" ? t("japanese") : "ENGLISH"}</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
