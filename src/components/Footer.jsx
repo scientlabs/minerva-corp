@@ -107,7 +107,7 @@ const Footer = () => {
                         <Link to="/inquiry">
                             <h3 className="text-lg font-semibold mb-4 text-white hover:text-pink-400 transition-colors cursor-pointer">{t('contact_us')}</h3>
                         </Link>
-                        <ul className="space-y-2">
+                        {/* <ul className="space-y-2">
                             <li>
                                 <Link to="/inquiry" className="text-gray-300 hover:text-white transition-colors">
                                     Safety&Quality
@@ -118,27 +118,29 @@ const Footer = () => {
                                     Governance
                                 </Link>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
 
                     {/* Address + Map Column */}
                     <div className="space-y-4">
-                        <div className="space-y-2 mb-4">
-                            <p className="text-sm text-gray-300">
-                                MINERVA Co., Ltd. 2-7-14-202 Kitazawa, Setagaya-ku, Tokyo 155-0031
-                            </p>
-                            <p className="text-sm text-gray-300">TEL: 03-5738-7123</p>
-                            <p className="text-sm text-gray-300">FAX: 03-5738-7674</p>
-                        </div>
-                        <div className="w-full h-64 md:h-60 rounded overflow-hidden shadow">
-                            <iframe
-                                title="location-map"
-                                src="https://maps.google.com/maps?q=35.661668,139.669585&z=13&output=embed"
-                                className="w-full h-full border-0"
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
-                        </div>
+                      <div className="space-y-2 mb-4">
+                        <address className="not-italic text-sm text-gray-300 space-y-1" aria-label="company address">
+                          <div>株式会社MINERVA</div>
+                          <div>〒155-0031 東京都世田谷区北沢2丁目7-14</div>
+                          <div>kawano shimokitazawa south 202</div>
+                        </address>
+                        <p className="text-sm text-gray-300">TEL: 03-5738-7123</p>
+                        <p className="text-sm text-gray-300">FAX: 03-5738-7674</p>
+                      </div>
+                      <div className="w-full h-64 md:h-60 rounded overflow-hidden shadow">
+                        <iframe
+                          title="location-map"
+                          src="https://maps.google.com/maps?q=35.661668,139.669585&z=13&output=embed"
+                          className="w-full h-full border-0"
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                        />
+                      </div>
                     </div>
                 </div>
 

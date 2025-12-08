@@ -12,7 +12,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['en', 'ja'], // Add your supported languages here
+    supportedLngs: ['ja'], // Add your supported languages here
     fallbackLng: 'ja',
     detection: {
       order: ['localStorage', 'cookie', 'htmlTag', 'path', 'subdomain'],
@@ -21,6 +21,9 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/translation.json',
     },
+    // backend: {
+    //   loadPath: `https://minerva-corp.com/locales/{{lng}}/translation.json`
+    // },
     react: { useSuspense: false },
   });
 i18n.on("languageChanged", () => {

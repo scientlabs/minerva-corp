@@ -9,11 +9,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
 import { getNavItems } from "../common/navItems";
 import companyInfoImage from "../assets/company-info.jpg";
+import MinervaLogo from "../assets/MINERVA-logo.png";
+
 
 const About = () => {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const navRef = useRef(null);
+  const titleRef = useRef(null);
+  const offsetRef = useRef(0);
+  const lastScrollY = useRef(typeof window !== 'undefined' ? window.scrollY : 0);
   const [currentLang, setCurrentLang] = useState('ja');
   const [activeNavItem, setActiveNavItem] = useState('company');
   const [hoveredNavItem, setHoveredNavItem] = useState(null);
@@ -119,6 +124,39 @@ const About = () => {
     }
   };
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const factor = 0.5;       // sensitivity: higher => bigger movement per scroll
+    const maxOffset = 120;    // max pixels the title can move down/up
+    let ticking = false;
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const dy = currentY - lastScrollY.current; // positive when scrolling down
+      lastScrollY.current = currentY;
+
+      // offset decreases by dy*factor. So when dy < 0 (scroll up), offset increases -> title moves down
+      offsetRef.current = Math.max(
+        -maxOffset,
+        Math.min(maxOffset, offsetRef.current - dy * factor)
+      );
+
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          if (titleRef.current) {
+            titleRef.current.style.transform = `translateY(${offsetRef.current}px)`;
+          }
+          ticking = false;
+        });
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
@@ -129,7 +167,7 @@ const About = () => {
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-3">
                 <img
-                  src={'https://minerva-corp.com/wp-content/uploads/2024/12/MINERVA%E9%80%8F%E9%81%8E%E3%83%AD%E3%82%B4.png'}
+                  src={MinervaLogo}
                   alt="Minerva Logo"
                   className="h-5 sm:h-6 md:h-14 object-contain"
                 />
@@ -186,7 +224,7 @@ const About = () => {
                   )}
                 </div>
               ))}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   const next = currentLang === "ja" ? "en" : "ja";
@@ -201,8 +239,10 @@ const About = () => {
                 title="Toggle language"
               >
                 <FontAwesomeIcon icon={faGlobe} />
-                <span>{currentLang === "ja" ? t("japanese") : "ENGLISH"}</span>
-              </button>
+                <span className="text-sm md:text-base lg:text-lg">
+                  {currentLang === "ja" ? t("japanese") : "ENGLISH"}
+                </span>
+              </button> */}
             </div>
           </div>
         </div>
@@ -215,7 +255,6 @@ const About = () => {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="fixed left-8 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
       >
-
         <ul className="space-y-3">
           {tocItems.map((item, index) => {
             const isActive = activeSection === item.id;
@@ -230,14 +269,8 @@ const About = () => {
                 <a
                   href={`#${item.id}`}
                   onClick={(e) => handleTocClick(e, item.id)}
-                  className={`block transition-all duration-200 text-sm py-1 ${
-                    isActive
-                      ? 'font-bold'
-                      : 'hover:underline'
-                  }`}
-                  style={{
-                    color: '#E02B8A'
-                  }}
+                  className={`block transition-all duration-200 text-xl py-2 ${isActive ? 'font-extrabold' : 'font-semibold hover:underline'}`}
+                  style={{ color: '#E02B8A' }}
                   onMouseEnter={(e) => {
                     if (!isActive) {
                       e.currentTarget.style.color = '#C0257A';
@@ -255,7 +288,6 @@ const About = () => {
             );
           })}
         </ul>
-
       </motion.div>
 
       {/* Main Content */}
@@ -267,15 +299,28 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <div className="flex items-center gap-6 mb-4">
-            <h1 className="text-5xl md:text-6xl font-bold" style={{ color: '#E02B8A' }}>
+          <div className="flex items-start gap-10 mb-4">
+            <h1
+              ref={titleRef}
+              className="flex-none text-4xl md:text-5xl lg:text-6xl font-bold"
+              style={{
+                color: '#E02B8A',
+                writingMode: 'vertical-rl',
+                textOrientation: 'upright',
+                lineHeight: 1,
+                textAlign: 'center',
+                display: 'inline-block',
+              }}
+            >
               {t("company")}
             </h1>
-            <img
-              src={companyInfoImage}
-              alt="Company Information"
-              // className="h-16 md:h-20 lg:h-24 object-cover rounded-lg shadow-md flex-shrink-0"
-            />
+
+            <div className="flex-1">
+              <img
+                src={companyInfoImage}
+                alt="Company Information"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -348,11 +393,14 @@ const About = () => {
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("banks_label")}</td>
-                    <td className="p-4">{t("banks_value")}</td>
+                    <td className="p-4">{t("banks_value1")} <br/> {t("banks_value2")}</td>
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("licenses_label")}</td>
-                    <td className="p-4">{t("licenses_value")}</td>
+                    <td className="p-4">
+                      <div>{t("licenses_value1")}</div>
+                      <div>{t("licenses_value2")}</div>
+                      </td>
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("affiliations_label")}</td>
@@ -479,6 +527,12 @@ const About = () => {
               <div>
                 <h3 className="font-bold text-xl mb-2">{t("privacy_policy_contact")}</h3>
                 <p>{t("privacy_policy_contact_desc")}</p>
+                <ul className="list-inside ml-4 mt-2">
+                  <li>{t("privacy_policy_contact_desc1")}</li>
+                  <li>{t("privacy_policy_contact_desc2")}</li>
+                  <li>{t("privacy_policy_contact_desc3")}</li>
+                  <li>{t("privacy_policy_contact_desc4")}</li>
+                </ul> 
               </div>
             </div>
           </div>
@@ -504,7 +558,7 @@ const About = () => {
                 <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("environmental_policy_policy")}</h3>
                 <p>{t("environmental_policy_policy_desc1")}</p>
                 <p className="mt-4">{t("environmental_policy_policy_desc2")}</p>
-                <ul className="list-disc list-inside space-y-2 ml-4 mt-4">
+                <ul className="space-y-2 ml-4 mt-4">
                   <li>{t("environmental_policy_item_a")}</li>
                   <li>{t("environmental_policy_item_b")}</li>
                   <li>{t("environmental_policy_item_c")}</li>

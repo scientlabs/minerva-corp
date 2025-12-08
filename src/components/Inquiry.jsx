@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MinervaLogo from "../assets/MINERVA-logo.png";
 import Footer from "./Footer";
 import { getNavItems } from "../common/navItems";
 
@@ -30,6 +31,10 @@ const Inquiry = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+  // API endpoint for sending emails via SMTP
+  const API_URL = 'http://minmail.scient-labs.com:3001';
 
   // Handle clicks outside navigation to close dropdown
   useEffect(() => {
@@ -119,11 +124,41 @@ const Inquiry = () => {
     }
 
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Prepare email data
+      const emailData = {
+        contact_destination: formData.contactDestination,
+        company_name: formData.companyName || 'N/A',
+        name: formData.name,
+        phone_number: formData.phoneNumber || 'N/A',
+        email: formData.email,
+        inquiry_content: formData.inquiryContent,
+      };
+
+      // Send email via backend API
+      const response = await fetch(`${API_URL}/api/send-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Failed to send email');
+      }
+
+      // Success
+      setSubmitStatus('success');
       setIsSubmitting(false);
+      
+      // Show success message
       alert(t("form_submitted_successfully") || "Form submitted successfully!");
+      
       // Reset form
       setFormData({
         contactDestination: '',
@@ -133,7 +168,25 @@ const Inquiry = () => {
         email: '',
         inquiryContent: ''
       });
-    }, 1000);
+      
+      // Clear status message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+      
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      
+      // Show error message
+      alert(t("form_submission_error") || "Failed to submit form. Please try again later.");
+      
+      // Clear error status after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+    }
   };
 
   return (
@@ -146,7 +199,7 @@ const Inquiry = () => {
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-3">
                 <img
-                  src={'https://minerva-corp.com/wp-content/uploads/2024/12/MINERVA%E9%80%8F%E9%81%8E%E3%83%AD%E3%82%B4.png'}
+                  src={MinervaLogo}
                   alt="Minerva Logo"
                   className="h-5 sm:h-6 md:h-14 object-contain"
                 />
@@ -205,7 +258,7 @@ const Inquiry = () => {
                   )}
                 </div>
               ))}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   const next = currentLang === "ja" ? "en" : "ja";
@@ -221,7 +274,7 @@ const Inquiry = () => {
               >
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>{currentLang === "ja" ? t("japanese") : "ENGLISH"}</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -359,6 +412,22 @@ const Inquiry = () => {
                 <p className="mt-1 text-sm text-red-500">{errors.inquiryContent}</p>
               )}
             </div>
+
+            {/* Status Message */}
+            {submitStatus === 'success' && (
+              <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-sm text-green-800">
+                  {t("form_submitted_successfully") || "Form submitted successfully!"}
+                </p>
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-sm text-red-800">
+                  {t("form_submission_error") || "Failed to submit form. Please try again later."}
+                </p>
+              </div>
+            )}
 
             {/* Submit Button */}
             <div className="pt-4">
