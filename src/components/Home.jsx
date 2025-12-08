@@ -88,14 +88,6 @@ const Home = () => {
     offset: ["start 0.9", "start 0.1"]
   });
 
-  // Interpolate background color from white to #1E2635 (for services section)
-  // #1E2635 = rgb(30, 38, 53)
-  const servicesBackgroundColor = useTransform(
-    servicesScrollProgress,
-    [0, 1],
-    ["rgb(255, 255, 255)", "rgb(30, 38, 53)"]
-  );
-
   // Immediate background color switch to white/80 when products section is active
   // white/80 = rgba(255, 255, 255, 0.8)
   const productsBackgroundColor = useTransform(
@@ -130,13 +122,6 @@ const Home = () => {
     servicesScrollProgress,
     [0, 1],
     ["rgb(17, 24, 39)", "rgb(255, 255, 255)"] // gray-900 to white
-  );
-
-  // Interpolate text color from white back to dark (for products section)
-  const productsTextColor = useTransform(
-    productsScrollProgress,
-    [0, 1],
-    ["rgb(255, 255, 255)", "rgb(17, 24, 39)"] // white to gray-900
   );
 
   // As you scroll, the circle radius grows (covering more area)
@@ -232,10 +217,6 @@ const Home = () => {
       link: "/services#entertainment"
     }
   ];
-
-  const handleDropdownToggle = (itemName) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
 
   // Scroll detection for active section and Contact section
   useEffect(() => {

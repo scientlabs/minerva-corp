@@ -18,12 +18,12 @@ i18n
       order: ['localStorage', 'cookie', 'htmlTag', 'path', 'subdomain'],
       caches: ['localStorage', 'cookie']
     },
-    // backend: {
-    //   loadPath: '/locales/{{lng}}/translation.json',
-    // },
     backend: {
-      loadPath: `${import.meta.env.BASE_URL}/locales/{{lng}}/translation.json`
+      loadPath: '/locales/{{lng}}/translation.json',
     },
+    // backend: {
+    //   loadPath: `https://minerva-corp.com/locales/{{lng}}/translation.json`
+    // },
     react: { useSuspense: false },
   });
 i18n.on("languageChanged", () => {

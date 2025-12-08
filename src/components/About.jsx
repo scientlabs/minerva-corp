@@ -393,7 +393,7 @@ const About = () => {
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("banks_label")}</td>
-                    <td className="p-4">{t("banks_value2")}</td>
+                    <td className="p-4">{t("banks_value1")} <br/> {t("banks_value2")}</td>
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("licenses_label")}</td>

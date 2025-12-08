@@ -20,7 +20,7 @@ import entertainmentImage from "../assets/entertainment_event.jpg";
 import engineeringNetworkCameraImage from "../assets/engineering_network_camera.jpg";
 import engineeringAccessControlSystemImage from "../assets/engineering_access_control.jpg";
 import engineeringLanElectricalWorkImage from "../assets/engineering_lan.jpg";
-
+import MinervaLogo from "../assets/MINERVA-logo.png";
 
 const Services = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -173,7 +173,7 @@ const Services = () => {
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-3">
                 <img
-                  src={'https://minerva-corp.com/wp-content/uploads/2024/12/MINERVA%E9%80%8F%E9%81%8E%E3%83%AD%E3%82%B4.png'}
+                  src={MinervaLogo}
                   alt="Minerva Logo"
                   className="h-5 sm:h-6 md:h-14 object-contain"
                 />
@@ -232,7 +232,7 @@ const Services = () => {
                   )}
                 </div>
               ))}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   const next = currentLang === "ja" ? "en" : "ja";
@@ -248,7 +248,7 @@ const Services = () => {
               >
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>{currentLang === "ja" ? t("japanese") : "ENGLISH"}</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -359,6 +359,7 @@ const Services = () => {
                   <div className="w-20 h-1 mb-6" style={{ backgroundColor: '#1e3a8a' }}></div>
                   <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
                     <p>{t("optimization_desc")}</p>
+                    <p>{t("optimization_desc1")}</p>
                     <p>{t("optimization_desc2")}</p>
                   </div>
                 </div>
@@ -380,6 +381,7 @@ const Services = () => {
                   <div className="w-20 h-1 mb-6" style={{ backgroundColor: '#1e3a8a' }}></div>
                   <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
                     <p>{t("network_desc")}</p>
+                    <p>{t("network_desc1")}</p>
                     <p>{t("network_desc2")}</p>
                   </div>
                 </div>

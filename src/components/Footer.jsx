@@ -37,7 +37,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-gray-900 text-white w-full py-12 relative z-50">
-            <div className="container mx-auto px-3">
+            <div className="container mx-auto px-4">
                 {/* Logo */}
                 <div className="flex justify-center mb-8">
                     <img
@@ -103,11 +103,11 @@ const Footer = () => {
                     </div> */}
 
                     {/* Contact Us Column */}
-                    {/* <div className="space-y-4">
+                    <div className="space-y-4">
                         <Link to="/inquiry">
                             <h3 className="text-lg font-semibold mb-4 text-white hover:text-pink-400 transition-colors cursor-pointer">{t('contact_us')}</h3>
                         </Link>
-                        <ul className="space-y-2">
+                        {/* <ul className="space-y-2">
                             <li>
                                 <Link to="/inquiry" className="text-gray-300 hover:text-white transition-colors">
                                     Safety&Quality
@@ -118,8 +118,8 @@ const Footer = () => {
                                     Governance
                                 </Link>
                             </li>
-                        </ul>
-                    </div> */}
+                        </ul> */}
+                    </div>
 
                     {/* Address + Map Column */}
                     <div className="space-y-4">
