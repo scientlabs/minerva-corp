@@ -364,6 +364,7 @@ const Services = () => {
                   <div className="w-20 h-1 mb-6" style={{ backgroundColor: '#1e3a8a' }}></div>
                   <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
                     <p>{t("optimization_desc")}</p>
+                    <p>{t("optimization_desc1")}</p>
                     <p>{t("optimization_desc2")}</p>
                   </div>
                 </div>
@@ -385,6 +386,7 @@ const Services = () => {
                   <div className="w-20 h-1 mb-6" style={{ backgroundColor: '#1e3a8a' }}></div>
                   <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
                     <p>{t("network_desc")}</p>
+                    <p>{t("network_desc1")}</p>
                     <p>{t("network_desc2")}</p>
                   </div>
                 </div>
