@@ -34,7 +34,9 @@ const Inquiry = () => {
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
   // API endpoint for sending emails via SMTP
-  const API_URL = 'http://minmail.scient-labs.com:3001';
+  //const API_URL = 'https://minmail.minerva.corp.com:3001';
+  const API_URL = 'https://minmail.scient-labs.com:3443';
+ // const API_URL = 'http://183.77.255.47:3001';
 
   // Handle clicks outside navigation to close dropdown
   useEffect(() => {

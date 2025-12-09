@@ -18,15 +18,22 @@ i18n
       order: ['localStorage', 'cookie', 'htmlTag', 'path', 'subdomain'],
       caches: ['localStorage', 'cookie']
     },
-    backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
-    },
     // backend: {
-    //   loadPath: `https://minerva-corp.com/locales/{{lng}}/translation.json`
+    //   loadPath: '/locales/{{lng}}/translation.json',
     // },
+
+    // Comment the following line to run in local to run in production 
+    // comment the above and uncomment the below 3 lines then push to the git repo
+
+    backend: {
+      loadPath: `https://minerva-corp.com/locales/{{lng}}/translation.json`
+    },
+
     react: { useSuspense: false },
   });
 i18n.on("languageChanged", () => {
   refreshUI();
 });
 export default i18n;
+
+

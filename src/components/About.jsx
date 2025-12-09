@@ -393,7 +393,10 @@ const About = () => {
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("banks_label")}</td>
-                    <td className="p-4">{t("banks_value1")} <br/> {t("banks_value2")}</td>
+                    <td className="p-4">
+                      <div>{t("banks_value1")} </div>
+                      <div>{t("banks_value2")}</div>
+                    </td>
                   </tr>
                   <tr className="border-b border-gray-300">
                     <td className="border-r border-gray-300 p-4 font-bold bg-gray-50">{t("licenses_label")}</td>
@@ -461,15 +464,15 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">{t("security_policy")}</h2>
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("security_policy_purpose")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("security_policy_purpose")}</h3>
                 <p>{t("security_policy_purpose_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("security_policy_scope")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("security_policy_scope")}</h3>
                 <p>{t("security_policy_scope_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("security_policy_basic")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("security_policy_basic")}</h3>
                 <ol className="list-decimal list-inside space-y-3 ml-4">
                   <li>{t("security_policy_item1")}</li>
                   <li>{t("security_policy_item2")}</li>
@@ -478,7 +481,14 @@ const About = () => {
                   <li>{t("security_policy_item5")}</li>
                 </ol>
               </div>
-              <p className="text-sm text-gray-600 mt-8">{t("security_policy_date")}</p>
+               <div>
+                <ol className="list-inside left-side space-y-3 ml-4 text-right">
+                  <li>{t("security_policy_date1")}</li>
+                  <li>{t("security_policy_date2")}</li>
+                  <li>{t("security_policy_date3")}</li>
+                  <li>{t("security_policy_date4")}</li>
+                </ol>
+              </div>
             </div>
           </div>
         </motion.section>
@@ -496,15 +506,15 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">{t("privacy_policy")}</h2>
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_management")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("privacy_policy_management")}</h3>
                 <p>{t("privacy_policy_management_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_usage")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("privacy_policy_usage")}</h3>
                 <p>{t("privacy_policy_usage_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_disclosure")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("privacy_policy_disclosure")}</h3>
                 <p>{t("privacy_policy_disclosure_desc")}</p>
                 <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
                   <li>{t("privacy_policy_disclosure_item1")}</li>
@@ -513,25 +523,25 @@ const About = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_security")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("privacy_policy_security")}</h3>
                 <p>{t("privacy_policy_security_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_inquiry")}</h3>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("privacy_policy_inquiry")}</h3>
                 <p>{t("privacy_policy_inquiry_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_compliance")}</h3>
+                <h3 className="font-bold text-xl mb-2"  style={{ color: '#E02B8A' }}>{t("privacy_policy_compliance")}</h3>
                 <p>{t("privacy_policy_compliance_desc")}</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">{t("privacy_policy_contact")}</h3>
-                <p>{t("privacy_policy_contact_desc")}</p>
+                <h3 className="font-bold text-xl mb-2" style={{ color: '#E02B8A' }}>{t("privacy_policy_contact")}</h3>
                 <ul className="list-inside ml-4 mt-2">
                   <li>{t("privacy_policy_contact_desc1")}</li>
                   <li>{t("privacy_policy_contact_desc2")}</li>
                   <li>{t("privacy_policy_contact_desc3")}</li>
                   <li>{t("privacy_policy_contact_desc4")}</li>
+                  <li>{t("privacy_policy_contact_desc5")}</li>
                 </ul> 
               </div>
             </div>
