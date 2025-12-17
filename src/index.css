@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Continuous horizontal scroll for process steps in Services */
+.process-steps-marquee {
+  animation: process-steps-scroll 45s linear infinite;
+}
+
+@keyframes process-steps-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Hide scrollbar for webkit browsers */
 @layer utilities {
   .scrollbar-hide {
