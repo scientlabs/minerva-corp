@@ -26,7 +26,7 @@ i18n
     // Comment the following line to run in local to run in production 
     // comment the above and uncomment the below 3 lines then push to the git repo
 
-   //backend: {
+   backend: {
      loadPath: `https://minerva-corp.com/locales/{{lng}}/translation.json`
    },
 
@@ -36,6 +36,7 @@ i18n.on("languageChanged", () => {
   refreshUI();
 });
 export default i18n;
+
 
 
 
