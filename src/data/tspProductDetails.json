@@ -1,0 +1,855 @@
+{
+  "509220": {
+    "pageUrl": "https://www.tspco.jp/products/outdoor_poeswitch/",
+    "detailTitle": "超長距離 屋外用防水PoEスイッチ",
+    "productName": "屋外用 PoE給電5ポート ギガビットスイッチ / 4ポートPoE+エクステンダー",
+    "model": "509220",
+    "supportedFunction": "超長距離PoE給電 防水屋外PoEスイッチ AC電源不要 PoEパススルー機能",
+    "detailHtml": "<p class=\"txts\">【ネットワークカメラに最適！AC電源不要、PoEパススルー機能で超長距離PoE給電が可能な防水屋外PoEスイッチ】<br /> <br /> ◎屋外用設計<br /> ◎PoE エクステンダーとして使用でき、配線コストを削減<br /> ◎PoE 802.3bt 準拠<br /> ◎壁面やポール取付もOK<br /> <br /> ■ IPカメラやその他の屋外PoEアプリケーションに最適な耐候性筐体のPoE給電スイッチ<br /> ■ IEEE 802.3bt PoE++ インジェクタまたはスイッチから最大90Wの電力入力をサポートし、最大85WのPoEパワーバジェットを実現<br /> ■ 最大４台のPoEネットワークデバイスに電力とデータを供給<br /> ■ 防塵・防水、動作温度-40～80℃対応<br /> ■ PoEソースとデバイス間の接続距離を100mから200mに倍増</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/509220/max_509220pro_1000s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/509220/max_509220pro_1000s-300x200.png",
+      "/assets/products/509220/max_509220pro_9-300x200.jpg",
+      "/assets/products/509220/max_509220pro_6-300x200.jpg",
+      "/assets/products/509220/max_509220pro_7-300x200.jpg",
+      "/assets/products/509220/max_509220pro_12_1000-300x200.jpg",
+      "/assets/products/509220/max_509220pro_10-300x200.jpg",
+      "/assets/products/509220/max_509220pro_8-300x200.jpg",
+      "/assets/products/509220/max_509220pro_11-300x200.jpg"
+    ],
+    "cardImage": "/assets/products/509220/max_509220pro_1000s.png"
+  },
+  "561235": {
+    "pageUrl": "https://www.tspco.jp/products/poeinjector/",
+    "detailTitle": "インターネットに60ワットの電力を供給",
+    "productName": "ギガビット ウルトラ PoE インジェクター",
+    "model": "561235",
+    "supportedFunction": "既存のIEEE 802.3af/at PoE 対応機器との完全な互換性 既存のネットワークケーブルを介してデータと電力を供給",
+    "detailHtml": "<p class=\"txts\">【インターネット（IoT）に60ワットの電力を供給】<br /> <br /> ◎既存のIEEE 802.3af/at PoE 対応機器との完全な互換性<br /> ◎配線コストの削減<br /> ◎過電流、高電圧などの電源トラブルから機器を保護<br /> ◎壁掛けオプションで設置の柔軟性を最大限に<br /> <br /> ■ 既存のネットワークケーブルを介してデータと電力を供給することで時間とコストを節約<br /> ■ ４ペアのCatまたはCatoネットワークケーブルで最大60ワットの電力出力<br /> ■ IEEE 802.3at およびIEEE 802.3af 準拠のすべてのPoE デバイス（無線LANアクセスポイントおよびブリッジ、VoIP電話、IP監視カメラ）をサポート<br /> ■ サポート距離：最大100m（328フィート）<br /> ■ 内部電源</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/561235/max_561235pro_800r.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/561235/max_561235pro_800r-300x200.png",
+      "/assets/products/561235/max_561235pro_4-300x200.png",
+      "/assets/products/561235/max_561235pro_7r-300x200.png"
+    ],
+    "cardImage": "/assets/products/561235/max_561235pro_800r.png"
+  },
+  "561402": {
+    "pageUrl": "https://www.tspco.jp/products/8portgigabitethernetpoe/",
+    "detailTitle": "自己修復ネットワークで信頼性と安定性を向上",
+    "productName": "8ポートギガビットイーサネットPoE+スイッチ",
+    "model": "561402",
+    "supportedFunction": "自己修復PoE機能 ８つのGigabit Ethernetポート 最大1,000 Mbpsのネットワーク速度",
+    "detailHtml": "<p class=\"txts\">【自己修復ネットワークで信頼性と安定性を向上　RJ45ギガビットアップリンクポート2基搭載】<br /> <br /> ◎自己修復PoE機能 PDM（Powered Device Monitoring）搭載<br /> ◎PoE 802.3at<br /> ◎８つのGigabit Ethernetポート搭載<br /> ◎最大1,000 Mbpsのネットワーク速度を実現<br /> <br /> ■ 最大8台のPoEネットワークデバイスに電源とデータ接続を提供<br /> ■ 2つのRJ45ギガビット・アップリンク・ポート<br /> ■ PoE電力供給量120ワット<br /> ■ 自己修復ネットワーク-Powered Device Monitor機能（PDM）により、応答しない、またはネットワーク・トラフィックを送信しない接続PoEデバイスを再起動<br /> ■ IEEE 802.3at/af 準拠のRJ45 PoE/PoE+ 出力ポート<br /> ■ ポートあたり最大32ワットの電力出力<br /> ■ 手動PoE拡張モード（ネットワーク速度を低下させ、PoEサポートを250mまで延長）</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/561402/max_561402pro_800_r.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/561402/max_561402pro_800_r-300x200.png",
+      "/assets/products/561402/max_561402pro_3_r-300x200.png",
+      "/assets/products/561402/max_561402pro_4_r-300x200.png"
+    ],
+    "cardImage": "/assets/products/561402/max_561402pro_800_r.png"
+  },
+  "561952": {
+    "pageUrl": "https://www.tspco.jp/products/ultralongrange_extenderkit/",
+    "detailTitle": "最大1,000mの超長距離PoE延長　過酷な屋外環境にも対応",
+    "productName": "超長距離屋外高速イーサネットPoE+ エクステンダーキット",
+    "model": "561952",
+    "supportedFunction": "PoE を最大1000mまで延長 防水・防塵仕様 追加電源不要",
+    "detailHtml": "<p class=\"txts\">【最大1,000mまでのPoE範囲に対応した超長距離PoE延長/リピータ/アンプ　過酷な屋外環境にも対応】<br /> <br /> ◎屋外用設計<br /> ◎PoE802.3bt準拠入力、802.3at/af準拠出力<br /> ◎配線コストの削減<br /> ◎過電流、高電圧などの電源問題から高価なネットワーク機器を安全に保護<br /> ◎カスケード接続による簡単な設置<br /> <br /> ■ IPカメラの設置に最適な、非常に長いPoE伝送距離と耐候性ハウジング<br /> ■ IP67 準拠、防塵・防水仕様•パケットロスなしで最大1000mまでデータを伝送<br /> ■ ネットワークカメラ、ワイヤレスアクセスポイント、VoIP電話など、IEEE 802.3bt/at/af準拠の受電機器(PD）との互換性あり<br /> ■ 10/100 Mbps のデータレートをサポート<br /> ■ 短絡、過負荷、高電圧保護機能付き<br /> ■ 追加の電源不要　PoE入力から直接電源を供給</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/561952/max_561952pro_800_r.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/561952/max_561952pro_800_r-300x200.png",
+      "/assets/products/561952/561952-fig-jpn-300x200.jpg",
+      "/assets/products/561952/max_561952pro_6-300x200.jpg",
+      "/assets/products/561952/max_561952pro_11-300x200.jpg",
+      "/assets/products/561952/max_561952pro_10-300x200.jpg"
+    ],
+    "cardImage": "/assets/products/561952/max_561952pro_800_r.png"
+  },
+  "AC-2200": {
+    "pageUrl": "https://www.tspco.jp/products/ac-2200/",
+    "detailTitle": "IP65防塵防水、Bluetoothをサポートするプレミアム屋外指紋認識端末",
+    "productName": "AC-2200",
+    "model": "AC-2200",
+    "supportedFunction": "入退管理システム",
+    "detailHtml": "<h3> IP65防塵防水</h3><figure class=\"block1\"><img src=\"/assets/products/ac-2200/ac2200wp_s.png\"><p class=\"txtstyle02\"></p><figcaption>防塵・防湿の筐体により、 悪条件下でも問題なく動作し、ほこりや湿気を遮断します。 屋外での使用に最適です。</figcaption></figure><h3>ライブ指紋検出テクノロジー</h3><figure class=\"block1\"><img src=\"/assets/products/ac-2200/ac2200fp2_s.jpg\"><p class=\"txtstyle02\"></p><figcaption>ライブ指紋検出テクノロジーにより、 ゼラチン、ゴム、シリコン、紙など、様々な素材で作られた偽の指紋を区別できます。</figcaption></figure><h3>高度なデジタルカメラ</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/ac-2200/ac2200_10_b.png\" alt=\"AC2200 指紋認証\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>高画質カメラを搭載しており、認証後すぐに画像ログを保存できます。</p></div></div></div></div><h3>資料ダウンロード</h3><ul class=\"list link-lists\"><li><a href=\"/assets/products/ac-2200/ad7e3f9af8b32b8f6ed218b2f3b2c6a1.pdf.pdf\"><span> 簡易カタログ AC-2200</span></a></li></ul> \t</div>",
+    "detailImages": [
+      "/assets/products/ac-2200/ac2200_03-1_s.png",
+      "/assets/products/ac-2200/ac2200wp_s.png",
+      "/assets/products/ac-2200/ac2200fp2_s.jpg",
+      "/assets/products/ac-2200/ac2200_10_b.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/ac-2200/ac2200_03-1_s-300x200.png",
+      "/assets/products/ac-2200/ac-2200_2-300x200.png"
+    ],
+    "cardImage": "/assets/products/ac-2200/ac2200_03-1_s.png"
+  },
+  "PLC220-12M": {
+    "pageUrl": "https://www.tspco.jp/products/carcamera360/",
+    "detailTitle": "カメラ側面360度全周を高解像度で撮影",
+    "productName": "TSP-DLC012U",
+    "model": "PLC220-12M",
+    "supportedFunction": "映像記録、高画質撮影",
+    "detailHtml": "<figure class=\"block1\"><img src=\"/assets/products/plc220-12m/no-image-logo.png\" /></p> <p class=\"txtstyle02\"><figcaption></figcaption></figure> <div class=\"card01_wrap\"> <div class=\"card01_inner\"> <ul class=\"card01_list col2_list\"> <li> <div class=\"imgarea\"><img src=\"/assets/products/plc220-12m/no-image-logo.png\" alt=\"ロゴ：株式会社TSP\" /></div> <div class=\"txtarea\"> <p class=\"txtstyle02\">俯角付き魚眼レンズ</p> <p>一般的な360°カメラとは取付場所、使用用途が異なります。</p> </div> </li> <li> <div class=\"imgarea\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4gQc5FqDePU?si=u1f7znIe72QIEDdY\" frameborder=\"0\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"allowfullscreen\"></iframe></div> <div class=\"txtarea\"> <p class=\"txtstyle02\">プロモーション動画</p> <p>&nbsp;</p> </div> </li> <li> <div class=\"imgarea\"><img src=\"/assets/products/plc220-12m/no-image-logo.png\" alt=\"ロゴ：株式会社TSP\" /></div> <div class=\"txtarea\"> <p class=\"txtstyle02\">撮影レンズ</p> <p>&nbsp;</p> </div> </li> <li> <div class=\"imgarea\"><img src=\"/assets/products/plc220-12m/no-image-logo.png\" alt=\"ロゴ：株式会社TSP\" /></div> <div class=\"txtarea\"> <p class=\"txtstyle02\">寸法</p> <p>&nbsp;</p> </div> </li> </ul> </div> </div> <h2>製品仕様</h2> <h3>製品名称</h3> <table class=\"responsive table_style02\"> <tbody> <tr> <th>製品名称</th> <td>車上用360°カメラ</td> </tr> </tbody> </table> <h3>カメラ部</h3> <table class=\"responsive table_style02\"> <tbody> <tr> <th>映像素子</th> <td>1/2.3型プログレッシブCMOSセンサ　SONY IMX477</td> </tr> <tr> <th>有効画素数</th> <td>4056（H）×3040（V）（1230</td> </tr> </tbody> </table> <h3>レンズ部</h3> <table class=\"responsive table_style02\"> <tbody> <tr> <th>レンズタイプ</th> <td>超広角魚眼レンズ</td> </tr> <tr> <th>焦点距離 / 最大口径比</th> <td>f=0.85mm / F2.8以下（画角180°　レンズ換算値：実力値はF1.8）</td> </tr> <tr> <th>画角</th> <td>水平：360° / 垂直：220°（俯角20°）</td> </tr> <tr> <th>アイリス / フォーカス</th> <td>固定</td> </tr> </tbody> </table> <h3>ビデオ部</h3> <table class=\"responsive table_style02\"> <tbody> <tr> <th>電源</th> <td>USB 5V±5%、300mA</td> </tr> <tr> <th>本体質量</th> <td>700g（USBケーブルを除く）</td> </tr> <tr> <th>本体外形寸法</th> <td>Φ132×89（H）mm</td> </tr> <tr> <th>設置方法</th> <td>両面テープ / マグネット（オプション）</td> </tr> <tr> <th>動作環境</th> <td>温度：-20 ～ ＋50℃<br /> 湿度：20 ～ 80%（結露なきこと）</td> </tr> <tr> <th>保存環境</th> <td>温度：-30 ～ ＋70℃<br /> 湿度：20 ～ 90%（結露なきこと）</td> </tr> <tr> <th>対応OS</th> <td>Windows8.1、10、11</td> </tr> <tr> <th>対応規格</th> <td>IP66（防水防塵）、IK10（耐衝撃性）、JIS D 1601 1種 / B種 準拠</td> </tr> </tbody> </table> <h2>IPユニット</h2> <h3>一般</h3> <table class=\"responsive table_style02\"> <tbody> <tr> <th>型番</th> <td>PLC220-12M</td> </tr> <tr> <th>カメラインターフェイス</th> <td>USB3.0 / USB2.0</td> </tr> <tr> <th>イーサネット</th> <td>10 / 100 / 1000 Base-T RJ45</td> </tr> <tr> <th>電源</th> <td>USB Type-C 5V3A /<br /> PoE（IEEE802.3af Class3）※要変換器</td> </tr> <tr> <th>本体質量</th> <td>140g</td> </tr> <tr> <th>本体外形寸法</th> <td>93（W）×80（D）×37（H）mm</td> </tr> <tr> <th>ケース</th> <td>アルミ合金（AL100）t=1.0<br /> アルマイト加工処理（加工・切断面を除く）</td> </tr> <tr> <th>動作環境</th> <td>湿度：0 ～ +50℃<br /> 湿度：10 ～ 85%（結露なきこと）</td> </tr> <tr> <th>保存環境</th> <td>湿度：-20 ～ +60℃<br /> 湿度：10 ～ 95%（結露なきこと）</td> </tr> <tr> <th>対応ブラウザ</th> <td>Internet Explorer、Microsoft Edge、<br /> Chrome、Firefox、Safari</td> </tr> </tbody> </table> <p class=\"note_comments\"><span>製品改良にともない予告なく仕様・外観などを変更させていただく場合があります。</span></p> <div class=\"wyswig-content\"></div> \t</div>",
+    "detailImages": [
+      "/assets/products/plc220-12m/faddef4614d1c3beb81d127e870f1820.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/plc220-12m/faddef4614d1c3beb81d127e870f1820-300x200.png"
+    ],
+    "cardImage": "/assets/products/plc220-12m/faddef4614d1c3beb81d127e870f1820.png"
+  },
+  "TB-401": {
+    "pageUrl": "https://www.tspco.jp/products/tb-401/",
+    "detailTitle": "バレットカメラ",
+    "productName": "TB-401",
+    "model": "TB-401",
+    "supportedFunction": "2MP アナログ 固定焦点",
+    "detailHtml": "<p class=\"txts\">■\tHD1080Pの高いビデオ品質<br /> ■\tビデオ品質の損失＆遅延のないHDビデオ伝送<br /> ■\t固定焦点:3.6mm<br /> ■\t2D\tDNR,3D\tDNR<br /> ■\tOSDメニューを操作するCoC（UTC）をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tb-401/tb-401_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tb-401/tb-401_s2-300x200.png",
+      "/assets/products/tb-401/tb-401_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tb-401/tb-401_s2.png"
+  },
+  "TB-402": {
+    "pageUrl": "https://www.tspco.jp/products/tb-402/",
+    "detailTitle": "バレットカメラ",
+    "productName": "TB-402",
+    "model": "TB-402",
+    "supportedFunction": "2MP アナログ バリフォーカル",
+    "detailHtml": "<p class=\"txts\">■\tHD1080Pの高いビデオ品質<br /> ■\t画質劣化や遅延のないHD映像伝送<br /> ■\tバリフォーカルレンズ : 2.8mm〜12mm<br /> ■\t2D\tDNR,3D\tDNR<br /> ■\tOSDメニューを操作するCoC（UTC）をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tb-402/tb-402_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tb-402/tb-402_s2.png"
+  },
+  "TD-401": {
+    "pageUrl": "https://www.tspco.jp/products/td-401/",
+    "detailTitle": "ドームカメラ",
+    "productName": "TD-401",
+    "model": "TD-401",
+    "supportedFunction": "2MP アナログ 固定焦点",
+    "detailHtml": "<p class=\"txts\">■\tHD1080Pの高いビデオ品質<br /> ■\tビデオ品質の損失や遅延のないHDビデオ伝送<br /> ■\t固定焦点：3.6mm<br /> ■\t2D\tDNR,3D\tDNR<br /> ■\tOSDメニューを操作するCoC（UTC）をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/td-401/td-401_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/td-401/td-401_s.png"
+  },
+  "TD-402": {
+    "pageUrl": "https://www.tspco.jp/products/td-402/",
+    "detailTitle": "ドームカメラ",
+    "productName": "TD-402",
+    "model": "TD-402",
+    "supportedFunction": "2MP アナログ バリフォーカル",
+    "detailHtml": "<p class=\"txts\">■\tHD1080Pの高いビデオ品質<br /> ■\tビデオ品質の損失や遅延のないHDビデオ伝送<br /> ■\t長い伝送距離<br /> ■\tバリフォーカルレンズ : 2.8mm〜12mm<br /> ■\t2D\tDNR,3D\tDNR<br /> ■\tOSDメニューを操作するCoC（UTC）をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/td-402/td-402_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/td-402/td-402_s-300x200.png",
+      "/assets/products/td-402/td-402_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/td-402/td-402_s.png"
+  },
+  "TENC-401": {
+    "pageUrl": "https://www.tspco.jp/products/tenc-401/",
+    "detailTitle": "ビデオエンコーダ",
+    "productName": "TENC-401",
+    "model": "TENC-401",
+    "supportedFunction": "5MP HD",
+    "detailHtml": "<p class=\"txts\">■\t最大\t5MP（2592×1944）リアルタイムコーディング<br /> ■\t最大解像度　2592×1944<br /> ■\tH.264，H.265，MJPEG<br /> ■\tサポート5MP，4MP，2MP\tAHD，TVI，CVI，CVBS<br /> ■\tマイクロSDカードによる画像と録画のローカル保存、プレアラーム録画、自動サイクル録画機能付<br /> ■\t8 ROIコーディング<br /> ■\t本体電源　DC12V、またはPoE対応<br /> ■\t8CHアラーム入力、4CHアラーム出力<br /> ■\t3ストリームをサポート<br /> ■\tCoCコントロール</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tenc-401/tenc-401_front_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tenc-401/tenc-401_front_s-300x200.png",
+      "/assets/products/tenc-401/tenc-401_back_s-300x200.png"
+    ],
+    "cardImage": "/assets/products/tenc-401/tenc-401_front_s.png"
+  },
+  "TIB-401": {
+    "pageUrl": "https://www.tspco.jp/products/tib-401/",
+    "detailTitle": "IP　AIバレットカメラ",
+    "productName": "TIB-401",
+    "model": "TIB-401",
+    "supportedFunction": "2MP 固定焦点 IR搭載",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG<br /> ■\t2MP（1920×1080）<br /> ■\t赤外線照射距離\t20～30ｍ<br /> ■\t3D\tDNR，DWDR，HLC，BLC\t搭載<br /> ■\tフルカラーモード、赤外線モードの自動切り替え対応<br /> ■\tマイクロSDカードスロット搭載,最大256GB<br /> ■\tROIコーディングをサポート<br /> ■\t2ストリームでの出力が可能<br /> ■\t保護等級　IP67 <br /> ■\t高度分析:例外検知、線超え検知、侵入検知</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tib-401/tib-401_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tib-401/tib-401_s2-300x200.png",
+      "/assets/products/tib-401/tib-401_gaikeisunpouzu-246x200.png"
+    ],
+    "cardImage": "/assets/products/tib-401/tib-401_s2.png"
+  },
+  "TIB-402": {
+    "pageUrl": "https://www.tspco.jp/products/tib-402/",
+    "detailTitle": "IP　バレットカメラ",
+    "productName": "TIB-402",
+    "model": "TIB-402",
+    "supportedFunction": "2MP バリフォーカル IR搭載",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG<br /> ■\t2MP（1920×1080）<br /> ■\t赤外線照射距離\t30～50ｍ<br /> ■\t3D\tDNR，DWDR，HLC，BLC\t搭載<br /> ■\tフルカラーモード、赤外線モードの自動切り替え対応<br /> ■\tマイクロSDカードスロット搭載,最大256GB<br /> ■\tROIコーディングをサポート<br /> ■\t2ストリームでの出力が可能<br /> ■\t保護等級　IP67<br /> ■\t高度分析：例外検知、線超え検知、侵入検知</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tib-402/tib-402_2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tib-402/tib-402_2-300x200.png",
+      "/assets/products/tib-402/tib-402_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tib-402/tib-402_2.png"
+  },
+  "TIB-403": {
+    "pageUrl": "https://www.tspco.jp/products/tib-403/",
+    "detailTitle": "IP　AIバレットカメラ",
+    "productName": "TIB-403",
+    "model": "TIB-403",
+    "supportedFunction": "2MP 電動バリフォーカル",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG 各種圧縮形式対応<br /> ■\t2MP（1920×1080）<br /> ■\t赤外線照射距離\t50〜70m<br /> ■\t3D\tDNR,TWDR,HLC,BLC,Smart IR\t搭載<br /> ■\tフルカラーモード、赤外線モードの自動切り替え対応<br /> ■\tマイクロSDカードスロット搭載、最大256GB<br /> ■\tROIコーディングをサポート<br /> ■\t3ストリームでの出力に対応<br /> ■\tスピーカー・マイク内蔵<br /> ■\t保護等級　IP67<br /> ■\tAI機能：ラインクロス（入退出）、エリアへの侵入検知、顔検知</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tib-403/tib-403_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tib-403/tib-403_s2-300x200.png",
+      "/assets/products/tib-403/tib-403_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tib-403/tib-403_s2.png"
+  },
+  "TID-401": {
+    "pageUrl": "https://www.tspco.jp/products/tid-401/",
+    "detailTitle": "IP　ドームカメラ",
+    "productName": "TID-401",
+    "model": "TID-401",
+    "supportedFunction": "2MP 固定焦点 IR搭載",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG<br /> ■\t2MP（1920×1080）<br /> ■\t赤外線照射距離\t20～30ｍ<br /> ■\t3D\tDNR，DWDR, HLC，BLC 搭載<br /> ■\tフルカラーモード、赤外線モードの自動切り替え対応<br /> ■\tマイクロSDカードスロット搭載、最大256GB<br /> ■\t1CHマイク内蔵<br /> ■\tROIコーディングをサポート<br /> ■\t2ストリームでの出力が可能<br /> ■\t保護等級　IP67</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tid-401/tid-401_2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tid-401/tid-401_2-300x200.png",
+      "/assets/products/tid-401/tid-401_gaikeisunpouzu-274x200.png"
+    ],
+    "cardImage": "/assets/products/tid-401/tid-401_2.png"
+  },
+  "TID-402": {
+    "pageUrl": "https://www.tspco.jp/products/tid-402/",
+    "detailTitle": "IP バリフォーカル ドームカメラ",
+    "productName": "TID-402",
+    "model": "TID-402",
+    "supportedFunction": "2MP バリフォーカル",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG<br /> ■\t2MP（1920×1080）<br /> ■\t赤外線照射距離\t30～50ｍ<br /> ■\t3D DNR，DWDR，HLC，BLC 搭載<br /> ■\tフルカラーモード、赤外線モードの自動切り替え対応<br /> ■\tマイクロSDカードスロット搭載、最大256GB<br /> ■\tROIコーディングをサポート<br /> ■\t2ストリームでの出力が可能<br /> ■\t保護等級　IP67</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tid-402/tid-402.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tid-402/tid-402-300x200.png",
+      "/assets/products/tid-402/tid-402_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tid-402/tid-402.png"
+  },
+  "TID-403": {
+    "pageUrl": "https://www.tspco.jp/products/tid-403/",
+    "detailTitle": "電動バリフォーカル ドームカメラ",
+    "productName": "TID-403",
+    "model": "TID-403",
+    "supportedFunction": "2MP 電動 バリフォーカル",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG 各種圧縮形式対応<br /> ■\t2MP（1920×1080）<br /> ■\t赤外線照射距離\t30〜50m<br /> ■\t3D\tDNR,TWDR,HLC,BLC,Defog, Smart\tIR搭載<br /> ■\tICRオートスイッチ、昼/夜切替<br /> ■\tマイクロSDカードスロット搭載、最大256GB<br /> ■\tROIコーディングをサポート<br /> ■\t3ストリームでの出力に対応<br /> ■\tスピーカー、マイク内蔵<br /> ■\t保護等級　IP67,IK10<br /> ■\tAI機能:ラインクロス(入退出)、エリアへの侵入検知、顔検知、顔キャプチャ機能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tid-403/tid-403_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tid-403/tid-403_s2-300x200.png",
+      "/assets/products/tid-403/tid-403_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tid-403/tid-403_s2.png"
+  },
+  "TIZ-402": {
+    "pageUrl": "https://www.tspco.jp/products/tiz-402/",
+    "detailTitle": "IP　魚眼カメラ",
+    "productName": "TIZ-402",
+    "model": "TIZ-402",
+    "supportedFunction": "2MP 電動 バリフォーカル",
+    "detailHtml": "<p class=\"txts\">■\tH.265、H.264、MJPEG<br /> ■\t赤外線照射距離　10～20ｍ<br /> ■\t12MPセンサー　9MP　1:1（3000×3000）@30fps<br /> ■\t3D\tDNR,DWDR,HLC,BLC　搭載<br /> ■\tフルカラーモード、赤外線モードの自動切り替え対応<br /> ■\tマイクロSDカードスロット搭載、最大256GB<br /> ■\tROIコーディングをサポート<br /> ■\t2ストリームでの出力が可能<br /> ■\t保護等級　IP67</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tiz-402/tiz-402_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tiz-402/tiz-402_s2-300x200.png",
+      "/assets/products/tiz-402/tiz-402_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tiz-402/tiz-402_s2.png"
+  },
+  "TNVR-162H": {
+    "pageUrl": "https://www.tspco.jp/products/tnvr-162h/",
+    "detailTitle": "ネットワークビデオレコーダー",
+    "productName": "TNVR-162H",
+    "model": "TNVR-162H",
+    "supportedFunction": "NVR 16CH",
+    "detailHtml": "<p class=\"txts\">■\tマルチストリームサポート<br /> ■\tモバイルリモート監視（iPhone,iPad,Android）<br /> ■\t録画保存機能対応<br /> ■\t同時再生最大16CH<br /> ■\tUSB、リモートファームウェアのアップグレードをサポート<br /> ■\tネットワークオンラインユーザー管理<br /> ■\tマルチユーザーが同時にオンライン<br /> ■\t録画ファイルの保護に対応<br /> ■\tブラウザのサポート<br /> ■\tONVIF\tプロファイルG,T,Sをサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tnvr-162h/tnvr-162h_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tnvr-162h/tnvr-162h_s2-300x200.png",
+      "/assets/products/tnvr-162h/tnvr-162h_s-300x200.png",
+      "/assets/products/tnvr-162h/tnvr-162h-haimentanshi-300x120.png",
+      "/assets/products/tnvr-162h/tnvr-162h_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tnvr-162h/tnvr-162h_s2.png"
+  },
+  "TNVR-321H": {
+    "pageUrl": "https://www.tspco.jp/products/tnvr-321h/",
+    "detailTitle": "ネットワークビデオレコーダー",
+    "productName": "TNVR-321H",
+    "model": "TNVR-321H",
+    "supportedFunction": "NVR 32CH",
+    "detailHtml": "<p class=\"txts\">■\t12MP,8MP,6MP,5MP,4MP,3MP,1080P,1280×1024,720P,960H,D1,CIFのIP\tCAM入力をサポート<br /> ■\t顔検出と比較をサポート<br /> ■\tプラグ＆プレイ対応<br /> ■\tマルチストリーム対応<br /> ■\tモバイル遠隔監視（iPhone,iPad,Android）<br /> ■\t録画保持機能対応<br /> ■\tUSBまたはリモートでのファームウェアアップグレードに対応<br /> ■\t同時再生最大16CH対応　画面分割1,4,9,16ch対応<br /> ■\tネットワークのオンラインユーザー管理<br /> ■\tマルチユーザー同時オンライン<br /> ■\t録画ファイルの保護に対応<br /> ■\tEdge,Chrome,Firefox（Windows）,Safari（iOS）ブラウザに対応<br /> ■\tONVIF,RTSP接続をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tnvr-321h/tnvr-321h-ph-1_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tnvr-321h/tnvr-321h-ph-1_s-300x200.png",
+      "/assets/products/tnvr-321h/tnvr-321h-ph-1-300x200.png",
+      "/assets/products/tnvr-321h/tnvr-321h-ph-2-300x200.png",
+      "/assets/products/tnvr-321h/tnvr-321h-haimentanshi-300x200.png",
+      "/assets/products/tnvr-321h/tnvr-321h_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tnvr-321h/tnvr-321h-ph-1_s.png"
+  },
+  "TNVR-324H": {
+    "pageUrl": "https://www.tspco.jp/products/tnvr-324h/",
+    "detailTitle": "ネットワークビデオレコーダー",
+    "productName": "TNVR-324H",
+    "model": "TNVR-324H",
+    "supportedFunction": "NVR 32CH",
+    "detailHtml": "<p class=\"txts\">■\t顔検出と比較をサポート<br /> ■\tプラグ＆プレイ対応<br /> ■\tマルチストリーム対応<br /> ■\t録画保持機能対応<br /> ■\t16MP，12MP，6MP，8MP，5MP，4MP，3MP，1080P，1280×1024，720P，960H，D1，CIFのIPCAM入力をサポート<br /> ■\tモバイル遠隔監視（iPhone，iPad，Android）<br /> ■\t同時再生最大16CH対応　画面分割1，4，9，16ch対応<br /> ■\tネットワークのオンラインユーザー管理<br /> ■\tマルチユーザー同時オンライン<br /> ■\t録画ファイルの保護に対応<br /> ■\tEdge，Chrome，Firefox（Windows），Safari（iOS）ブラウザに対応<br /> ■\tONVIF，RTSP接続をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tnvr-324h/tnvr-324h_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tnvr-324h/tnvr-324h_s-300x200.png",
+      "/assets/products/tnvr-324h/tnvr-324h-300x200.png",
+      "/assets/products/tnvr-324h/tnvr-324h-haimentanshi-300x200.png"
+    ],
+    "cardImage": "/assets/products/tnvr-324h/tnvr-324h_s.png"
+  },
+  "TNVR-401HP": {
+    "pageUrl": "https://www.tspco.jp/products/tnvr-401hp/",
+    "detailTitle": "PoE　ネットワークビデオレコーダー",
+    "productName": "TNVR-401HP",
+    "model": "TNVR-401HP",
+    "supportedFunction": "PoE NVR 4CH",
+    "detailHtml": "<p class=\"txts\">■\t独立した4ポートPoEをサポート<br /> ■\tプラグアンドプレイをサポート<br /> ■\tマルチストリーム対応<br /> ■\t2方向オーディオ<br /> ■\t録音保持機能対応<br /> ■\tモバイル遠隔監視（iPhone,iPad,Android）<br /> ■\tUSB,リモートからのファームウェア・アップグレード対応<br /> ■\t4CH再生をサポート　\t1,4CH<br /> ■\tネットワークオンラインユーザー管理<br /> ■\t多人数同時オンライン<br /> ■\t録画ファイル保護<br /> ■\tIEブラウザ対応（Windows）<br /> ■\tONVIF,RTSP接続をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tnvr-401hp/tnvr-401hp_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tnvr-401hp/tnvr-401hp_s-300x200.png",
+      "/assets/products/tnvr-401hp/tnvr-401hp-300x200.png",
+      "/assets/products/tnvr-401hp/tnvr-401-haimentanshi-300x200.png",
+      "/assets/products/tnvr-401hp/tnvr-401hp_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tnvr-401hp/tnvr-401hp_s.png"
+  },
+  "TNVR-641H": {
+    "pageUrl": "https://www.tspco.jp/products/tnvr-641h/",
+    "detailTitle": "ネットワークビデオレコーダー",
+    "productName": "TNVR-641H",
+    "model": "TNVR-641H",
+    "supportedFunction": "NVR 6CH",
+    "detailHtml": "<p class=\"txts\">■16MP,12MP,8MP,6MP,5MP,4MP,3MP,1080P,1280×1024,720P,960H,D1,CIFのIPCAM入力をサポート<br /> ■\t顔検出と比較をサポート<br /> ■\tマルチストリーム対応<br /> ■\tモバイル遠隔監視（iPhone,iPad,Android）<br /> ■\tUSBまたはリモートでのファームウェアアップグレードに対応<br /> ■\t同時再生最大16CH対応　画面分割1,4,9,16ch対応<br /> ■\tネットワークのオンラインユーザー管理<br /> ■\tマルチユーザー同時オンライン<br /> ■\t録画ファイルの保護に対応<br /> ■\tEdge,Chrome,Firefox（Windows）, Safari（iOS）ブラウザに対応<br /> ■\tONVIF,RTSP接続をサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tnvr-641h/tnvr-641h_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tnvr-641h/tnvr-641h_s-300x200.png",
+      "/assets/products/tnvr-641h/tnvr-641h-300x200.png",
+      "/assets/products/tnvr-641h/tnvr-641h-haimentanshi-300x200.png",
+      "/assets/products/tnvr-641h/tnvr-641h_gaikeisunpouzu-300x93.png"
+    ],
+    "cardImage": "/assets/products/tnvr-641h/tnvr-641h_s.png"
+  },
+  "TNVR-802H": {
+    "pageUrl": "https://www.tspco.jp/products/tnvr-802h/",
+    "detailTitle": "ネットワークビデオレコーダー",
+    "productName": "TNVR-802H",
+    "model": "TNVR-802H",
+    "supportedFunction": "NVR 8CH",
+    "detailHtml": "<p class=\"txts\">■\tマルチストリームサポート<br /> ■\tモバイルリモート監視（iPhone,iPad,Android）<br /> ■\t録画保存機能対応<br /> ■\tUSB,リモート\tファームウェアのアップグレードをサポート<br /> ■\t同時再生最大8CHをサポート　画面分割1,4,6,8,9ch対応<br /> ■\tネットワークオンラインユーザー管理<br /> ■\tマルチユーザーが同時にオンライン<br /> ■\t録画ファイルの保護に対応<br /> ■\tブラウザのサポート<br /> ■\tONVIF\tプロファイルG,T,Sをサポート</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tnvr-802h/tnvr-802h_s2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tnvr-802h/tnvr-802h_s2-300x200.png",
+      "/assets/products/tnvr-802h/tnvr-802h_s-300x200.png",
+      "/assets/products/tnvr-802h/tnvr-802h-haimentanshi-300x200.png",
+      "/assets/products/tnvr-802h/tnvr-802h_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/tnvr-802h/tnvr-802h_s2.png"
+  },
+  "TSP-P1-0411/0211": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-p1-0411_0211/",
+    "detailTitle": "TSPインスタント防犯ソリューション　有線PoEカメラセット",
+    "productName": "TSP-P1-0411/0211",
+    "model": "TSP-P1-0411/0211",
+    "supportedFunction": "モニターレコーダー＋有線PoEカメラ4台/2台セット",
+    "detailHtml": "<h3>ワンケーブル接続で安定通信と簡単設定を実現　有線PoEカメラセット</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_set.png\" alt=\"TSP-P1-0411_0211_set\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>主な特長</h3><p>◎PoE対応<br> 　IEEE 802.3af 規格準拠のPoE給電方式採用、安定した通信と給電を実現<br> ◎より効果的な防犯対策<br> 　人体検知AI機能・白色LED・内蔵マイク+スピーカー搭載カメラ採用<br> ◎必要に応じた増設<br> 　カメラは最大16台まで、ドームカメラ・タレットカメラも選択可能<br> ◎高機能<br> 　2TB の大容量HDDを標準搭載、防塵防水にも対応<br> ◎遠隔監視対応<br> 　インターネット接続でアプリケーション経由での遠隔監視が可能</p></div></div></div></div><h3>AI機能搭載でより効果的な防犯対策</h3><figure class=\"block1\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_ai.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_yk.png\" alt=\"防犯カメラ白色LED夜間監視モード TSP-P1-0411_0211_set\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>選べる夜間監視モード</h3><p>白色LED搭載で、AI機能と相まって３つのモードを利用可能です。<br> <br> ●赤外線モード<br> 赤外線のみで夜間監視を行うモード<br> <br> ●フルカラーモード<br> 夜間は常に白色LEDを照射し、フルカラーで撮影するモード<br> <br> ●スマートモード<br> 通常は赤外線で夜間監視を行い、人体検知を行った場合のみ白色LEDを照射してフルカラー撮影を行うモード</p></div></div></div> <div class=\"flexbox rev column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_at.png\" alt=\"防犯カメラオートトラッキング機能 TSP-P1-0411_0211_set\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>オートトラッキング機能搭載</h3><p>選べるカメラのうちタレットカメラは、オートトラッキング対応です。<br> <br> 人体検知されると、検知した人物を追尾して自動でカメラの向きを動かします。<br> 玄関先などに来た人物の行動を効率よく監視することができます。</p></div></div></div></div><h3>セット内容</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col2_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-p1-nvr11/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-p1-nvr11_ph01_s.png\" alt=\"TSP-P1-NVR11\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">モニターレコーダー</p><p>○モニター・スピーカー・マイク一体型のオールインワンレコーダー <br> ○11インチ フルハイビジョン <br> ○HDD標準2TB内蔵</p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/tsp-p1-0411-0211/optioncamera_p1.png\" alt=\"TSP-P1-0411_0211_set\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">有線PoEカメラ</p><p>○標準セット：バレットカメラ4台または2台 <br> 　※レコーダー1台に対してカメラは最大16台まで <br> ●AI機能搭載<br> ●白色LED搭載<br> ○防水防塵設計で屋外使用が可能　※軒下推奨 <br> ○オプションでドームカメラ・タレットカメラも選択可能</p></div></li></ul></div></div><h3>有線PoEカメラ詳細</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-pb-5m/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-pb-5m_s.png\" alt=\"TSP-PB-5M\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-PB-5M</p><p>【標準セット】<br> バレット型固定有線PoEカメラ<br> TSP-P1-0411：4台セット<br> TSP-P1-0211：2台セット</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-pd-5m/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-pd-5m_s812.png\" alt=\"TSP-PD-5M\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-PD-5M</p><p>【オプション】<br> ドーム型固定有線PoEカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-pt-5m/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-p1-0411-0211/tsp-pt-5m_s812.png\" alt=\"TSP-PT-5M\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-PT-5M</p><p>【オプション】<br> タレット型PT有線PoEカメラ<br> PT機能・オートトラッキング機能搭載</p></div></li></ul></div></div> \t</div>",
+    "detailImages": [
+      "/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_set.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_ai.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_yk.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_at.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-p1-nvr11_ph01_s.png",
+      "/assets/products/tsp-p1-0411-0211/optioncamera_p1.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-pb-5m_s.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-pd-5m_s812.png",
+      "/assets/products/tsp-p1-0411-0211/tsp-pt-5m_s812.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-p1-0411-0211/tsp-p1-0411_0211_set.png"
+  },
+  "TSP-P1-NVR11": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-p1-nvr11/",
+    "detailTitle": "モニターレコーダー（TSP-P1-0411/0211構成対象品）",
+    "productName": "TSP-P1-NVR11",
+    "model": "TSP-P1-NVR11",
+    "supportedFunction": "11インチ PoE8CH HDD2TB",
+    "detailHtml": "<p class=\"txts\">■ 11インチ高精細モニター一体型レコーダー<br> 　約11インチのFHDモニターとHDD内蔵レコーダーが一体化<br> 　カメラ映像をケーブル一本でレコーダーへ直接伝送、設置・操作も簡単<br> ■ プラグ&amp;プレイ対応で複雑なネットワーク設定不要<br> 　LANケーブルを接続するだけで使用可能<br> 　PoE機能を備えた8つのポートで、データ伝送・カメラへの電力供給を同時に<br> ■ PoE対応<br> 　IEEE 802.3af 規格準拠のPoE給電方式を採用、安定した通信と給電が可能<br> ■ 最大16台のカメラを同時接続<br> 　PoEポート8台、LAN接続8台で最大16台まで同時接続可能<br> ■ HDD標準２TB搭載<br> 　2TB の大容量HDDを標準搭載、長期の連続録画が可能<br> ■ 遠隔監視対応<br> 　スマートフォン・タブレットからアプリケーション経由で遠隔監視が可能<br> （アプリケーションのダウンロードが必要　Android/iOS対応）<br> ■ ONVIF対応の有線ネットワークカメラと互換性あり<br> 　※接続を約束するものではありません。<br> ■ HDDビデオの確認再生が可能<br> ■ HDMI・VGA各ポートから同時出力が可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-p1-0411-0211/tsp-p1-nvr11_ph01_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-p1-nvr11/tsp-p1-nvr11_ph01_s-300x200.png",
+      "/assets/products/tsp-p1-nvr11/tsp-p1-nvr11_line_s-300x200.png",
+      "/assets/products/tsp-p1-nvr11/tsp-p1-nvr11_line2_s-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-p1-0411-0211/tsp-p1-nvr11_ph01_s.png"
+  },
+  "TSP-PB-5M": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-pb-5m/",
+    "detailTitle": "PoEバレットカメラ（TSP-P1-0411/0211構成対象品）",
+    "productName": "TSP-PB-5M",
+    "model": "TSP-PB-5M",
+    "supportedFunction": "固定有線 PoE 白色LED搭載",
+    "detailHtml": "<p class=\"txts\">■ PoE対応<br> 　IEEE 802.3af 規格準拠・PoE給電・DC12V電源対応で安定した通信が可能<br> ■ AI人体検知機能搭載<br> 　AI技術によって動体検知のみの場合より効率的な監視が可能<br> ■ マイク・スピーカー搭載<br> 　マイクでの音声の取得、スピーカーからの音声警告が可能<br> 　アプリケーション経由で遠隔からの声掛けも可能<br> ■ 白色LED搭載<br> 　赤外線LEDに加え、白色LEDも搭載<br> 　ライトの発光による威嚇や、フルカラーでの夜間監視に対応<br> ■ 保護等級IP66<br> 　屋外設置でも安心　※軒下設置推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-p1-0411-0211/tsp-pb-5m_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-pb-5m/tsp-pb-5m_s-300x200.png",
+      "/assets/products/tsp-pb-5m/tsp-pb-5m_line_s-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-p1-0411-0211/tsp-pb-5m_s.png"
+  },
+  "TSP-PD-5M": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-pd-5m/",
+    "detailTitle": "PoEドームカメラ（TSP-P1-0411/0211オプション品）",
+    "productName": "TSP-PD-5M",
+    "model": "TSP-PD-5M",
+    "supportedFunction": "固定有線 PoE 白色LED搭載",
+    "detailHtml": "<p class=\"txts\">■ PoE対応<br> 　IEEE 802.3af 規格準拠・PoE給電・DC12V電源対応で安定した通信が可能<br> ■ AI人体検知機能搭載<br> 　AI技術によって動体検知のみの場合より効率的な監視が可能<br> ■ マイク・スピーカー搭載<br> 　マイクでの音声の取得、スピーカーからの音声警告が可能<br> 　アプリケーション経由で遠隔からの声掛けも可能<br> ■ 白色LED搭載<br> 　赤外線LEDに加え、白色LEDも搭載<br> 　ライトの発光による威嚇や、フルカラーでの夜間監視に対応<br> ■ 保護等級IP66<br> 　屋外設置でも安心　※軒下設置推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-p1-0411-0211/tsp-pd-5m_s812.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-pd-5m/tsp-pd-5m_s812-300x200.png",
+      "/assets/products/tsp-pd-5m/tsp-pd-5m_line-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-p1-0411-0211/tsp-pd-5m_s812.png"
+  },
+  "TSP-PM1418": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-pm1418/",
+    "detailTitle": "ポータブルモニター（TWCS-5101オプション品）",
+    "productName": "TSP-PM1418",
+    "model": "TSP-PM1418",
+    "supportedFunction": "14インチ液晶パネル スピーカー内蔵",
+    "detailHtml": "<p class=\"txts\">■ 14インチ液晶　1080P高解像度<br> 　液晶サイズ14インチ、FULLHD高画質解像度でデバイスからの映像を精細に表示<br> 　リフレッシュレート最大60HzでPCやゲームなど幅広い用途で使用可能<br> ■ 簡単接続<br> 　入力信号を自動認識し、ほとんどのデバイスでケーブルを挿すだけで接続完了<br> ■ 主要な調整に対応<br> 　コンパクトながら通常のPCモニターと同様主要な画面表示の調整機能に対応<br> 　輝度・色温度・コントラスト・シャープネス・ブルーライトカット他<br> ■ スピーカー搭載<br> 　内蔵スピーカー標準搭載<br> 　3.5ｍｍステレオ出力端子を備え、外部スピーカーやヘッドフォンへも出力可能<br> ■ 2種類の入力に対応<br> 　USB type-C、HDMIの信号入力に対応<br> 　USB3.0ポートもあり、USB type-C接続の場合はマウスやキーボードも接続可能<br> ■ 軽量・薄型<br> 　本体重量約700ｇ、厚さ12.5ｍｍのコンパクト設計で持ち運びにも便利</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-pm1418/tsp-pm1418_2.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-pm1418/tsp-pm1418_2-300x200.png",
+      "/assets/products/tsp-pm1418/tsp-pm1418_3s-300x200.jpg"
+    ],
+    "cardImage": "/assets/products/tsp-pm1418/tsp-pm1418_2.png"
+  },
+  "TSP-PT-5M": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-pt-5m/",
+    "detailTitle": "PoEタレットカメラ（TSP-P1-0411/0211オプション品）",
+    "productName": "TSP-PT-5M",
+    "model": "TSP-PT-5M",
+    "supportedFunction": "PT有線 PoE 白色LED搭載",
+    "detailHtml": "<p class=\"txts\">■ PoE対応<br /> 　IEEE 802.3af 規格準拠・PoE給電・DC12V電源対応で安定した通信が可能<br /> ■ AI人体検知機能搭載<br /> 　AI技術によって動体検知のみの場合より効率的な監視が可能<br /> ■ マイク・スピーカー搭載<br /> 　マイクでの音声の取得、スピーカーからの音声警告が可能<br /> 　アプリケーション経由で遠隔からの声掛けも可能<br /> ■ 白色LED搭載<br /> 　赤外線LEDに加え、白色LEDも搭載<br /> 　ライトの発光による威嚇や、フルカラーでの夜間監視に対応<br /> ■ 保護等級IP66<br /> 　屋外設置でも安心　※軒下設置推奨<br /> ■ オートトラッキング機能搭載<br /> 　PT機能・オートトラッキング機能で人体検知した人物の行動を効率よく監視</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-pt-5m/tsp-pt-5m_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-pt-5m/tsp-pt-5m_s-300x200.png",
+      "/assets/products/tsp-pt-5m/tsp-pt-5m_line-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-pt-5m/tsp-pt-5m_s.png"
+  },
+  "TSP-S01": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-s01/",
+    "detailTitle": "ソーラーパネル付きワイヤレスカメラ",
+    "productName": "TSP-S01",
+    "model": "TSP-S01",
+    "supportedFunction": "ソーラーパネル給電 ワイヤレス 白色LED搭載",
+    "detailHtml": "<p class=\"txts\">■ ソーラーパネル給電<br /> 　付属のソーラーパネル設置で日照条件次第では充電不要で継続利用可能<br /> 　Type-C USB給電、内部充電池も利用可能<br /> ■ ワイヤレス<br /> 　電源やネットワークの配線工事不要、既存物件にも手軽に導入<br /> ■ 動体検知機能<br /> 　センサーが動体検知した部分のみ録画で効率的<br /> 　Micro SDカード使用（別売 / 128GBで約170時間録画可能）<br /> ■ リアルタイム監視<br /> 　専用アプリで外出先からでもリアルタイムで監視可能<br /> ■ 双方向通話<br /> 　専用アプリを通じてスマホで通話可能<br /> ■ 夜間監視<br /> 　赤外線LEDに加えホワイトLEDも搭載、クリアな夜間監視を実現<br /> ■ 保護等級IP65<br /> 　屋外設置でも安心　※軒下設置推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-s01/tsp-s01_1-_800.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-s01/tsp-s01_1-_800-300x200.png",
+      "/assets/products/tsp-s01/tsp-s01_2-300x200.png",
+      "/assets/products/tsp-s01/tsp-s01_3-300x200.png",
+      "/assets/products/tsp-s01/tsp-s01_ds_1-300x200.png",
+      "/assets/products/tsp-s01/tsp-s01_ds_2-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-s01/tsp-s01_1-_800.png"
+  },
+  "TSP-W1-0412": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-w1-0412/",
+    "detailTitle": "TSPインスタント防犯ソリューション　ワイヤレスカメラセット",
+    "productName": "TSP-W1-0412",
+    "model": "TSP-W1-0412",
+    "supportedFunction": "モニターレコーダー＋ワイヤレスカメラ4台セット",
+    "detailHtml": "<h3>TSPインスタント防犯ソリューション　ワイヤレスカメラセット</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0412_set.png\" alt=\"TSP-W1-0412\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>主な特長</h3><p>◎パワーアップしたカメラ機能<br> 　人体検知・白色LED・内蔵スピーカーでより効果的な防犯対策<br> ◎必要に応じた増設<br> 　カメラは最大8台まで、オプションでドームカメラも選択可能<br> ◎WiFi６対応<br> 　2.4GHz帯/5GHz帯のデュアルバンド対応でより高速・安定した通信<br> ◎高機能<br> 　カメラ4台なら連続40日間録画OK、人体検知・防塵防水にも対応<br> ◎高画質<br> 　フルハイビジョン最大15fpsのカメラ採用<br> ◎設置が簡単<br> 　ワイヤレス接続だからコードの制限なく電源のみで設置可能</p></div></div></div></div><h3>AI機能搭載でより効果的な防犯対策　パワーアップしたカメラ機能</h3><figure class=\"block1\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0415_aijk.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0415_yk_1000.png\" alt=\"TSP-W1-0415　選べる夜間監視モード\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>選べる夜間監視モード</h3><p>ホワイトライト(白色LED)搭載モデルはAI機能と相まって主に３つのモードを利用可能です。<br> <br> ●赤外線モード<br> 赤外線のみで夜間監視を行うモード<br> <br> ●フルカラーモード<br> 夜間は常にホワイトライトを照射し、フルカラーで撮影するモード<br> <br> ●スマートモード<br> 通常は赤外線で夜間監視を行い、人物検知を行った場合のみホワイトライトを照射してフルカラー撮影を行うモード</p></div></div></div> <div class=\"flexbox rev column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0415_at_1000.png\" alt=\"TSP-W1-0415　オートトラッキング機能搭載\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>オートトラッキング機能搭載</h3><p>セット内のタレットPTカメラはオートトラッキング対応です。<br> <br> 人体検知されると、検知した人物を追尾して自動でカメラの向きを動かします。<br> 玄関先などに来た人物の行動を効率よく監視することができます。</p></div></div></div></div><h3>待望のWiFi６対応　同時接続８台までOK</h3><p>WiFi6では同時に複数のデバイスを接続した際の安定性が向上し、データ通信もより高速になり遅延の少ない映像の取得が可能です。<br> <br> 12インチモデルでは、カメラ8台同時接続が可能となりました。<br> <br> 【2.4GHz帯 / 5GHz帯のデュアルバンド対応】<br> 5GHz帯の電波は通信速度が速く、障害物に弱い特徴があり、2.4GHz帯は障害物に比較的強く通信速度は5GHzに比べて遅いという特徴があります。<br> カメラは電波状況を考慮しより安定した通信のできる周波数帯を自動で判別して切り替えるため、より安定した通信が可能です。</p><figure class=\"block1\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0412_set_8.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><h3>セット内容</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col2_list\"><li><div class=\"imgarea\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-nvr12_1s.png\" alt=\"TSP-W1-0412\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">モニターレコーダー</p><p>○モニター一体型レコーダー <br> ●フルハイビジョン <br> ●スピーカー内蔵 <br> ○HDD標準2TB内蔵<br> 　※カメラ4台接続時：約40日間録画可能</p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/tsp-w1-0412/optioncamera0412.png\" alt=\"TSP-W1-0412\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">ワイヤレスカメラ</p><p>○標準セット4台：バレットカメラ3台+タレットカメラ1台 <br> 　※レコーダー1台に対してカメラは最大8台まで <br> ●AI機能搭載<br> ●ホワイトライト(白色LED)搭載<br> ○オートリピーター機能搭載 <br> ○防水防塵設計で屋外使用が可能　※軒下推奨 <br> ○オプションでドームカメラも選択可能</p></div></li></ul></div></div><h3>ワイヤレスカメラ詳細</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wb-5m6-1/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0412/tsp-wb-5m6-1_500.png\" alt=\"TSP-WB-5M6-1\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WB-5M6-1</p><p>ワイヤレスバレットカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wt-3m6-1/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0412/tsp-wt-3m6-1_600.png\" alt=\"TSP-WT-3M6-1\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WT-3M6-1</p><p>ワイヤレスタレットPTカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wd-5m6-1/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0412/tsp-wd-5m6-1_800.png\" alt=\"TSP-WD-5M6-1\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WD-5M6-1</p><p>【オプション】ワイヤレスドームPTカメラ</p></div></li></ul></div></div> \t</div>",
+    "detailImages": [
+      "/assets/products/tsp-w1-0412/tsp-w1-0412_set.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0415_aijk.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0415_yk_1000.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0415_at_1000.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0412_set_8.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-nvr12_1s.png",
+      "/assets/products/tsp-w1-0412/optioncamera0412.png",
+      "/assets/products/tsp-w1-0412/tsp-wb-5m6-1_500.png",
+      "/assets/products/tsp-w1-0412/tsp-wt-3m6-1_600.png",
+      "/assets/products/tsp-w1-0412/tsp-wd-5m6-1_800.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-w1-0412/tsp-w1-0412_set.png"
+  },
+  "TSP-W1-0415": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-w1-0415/",
+    "detailTitle": "TSPインスタント防犯ソリューション　ワイヤレスカメラセット",
+    "productName": "TSP-W1-0415",
+    "model": "TSP-W1-0415",
+    "supportedFunction": "モニターレコーダー＋ワイヤレスカメラ4台セット",
+    "detailHtml": "<h3>TSPインスタント防犯ソリューション　ワイヤレスカメラセット</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-w1-0415/tsp-w1-0415_500.png\" alt=\"TSP-W1-0415\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>主な特長</h3><p>◎パワーアップしたカメラ機能<br> 　人体検知・白色LED・内蔵スピーカーでより効果的な防犯対策<br> ◎必要に応じた増設<br> 　カメラは最大10台まで、オプションでドームカメラも選択可能<br> ◎WiFi６対応<br> 　2.4GHz帯/5GHz帯のデュアルバンド対応でより高速・安定した通信<br> ◎高機能<br> 　カメラ4台なら連続40日間録画OK、人体検知・防塵防水にも対応<br> ◎高画質<br> 　フルハイビジョン最大15fpsのカメラ採用<br> ◎設置が簡単<br> 　ワイヤレス接続だからコードの制限なく電源のみで設置可能</p></div></div></div></div><h3>AI機能搭載でより効果的な防犯対策　パワーアップしたカメラ機能</h3><figure class=\"block1\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0415_aijk.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0415_yk_1000.png\" alt=\"TSP-W1-0415　選べる夜間監視モード\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>選べる夜間監視モード</h3><p>ホワイトライト(白色LED)搭載モデルはAI機能と相まって主に３つのモードを利用可能です。<br> <br> ●赤外線モード<br> 赤外線のみで夜間監視を行うモード<br> <br> ●フルカラーモード<br> 夜間は常にホワイトライトを照射し、フルカラーで撮影するモード<br> <br> ●スマートモード<br> 通常は赤外線で夜間監視を行い、人物検知を行った場合のみホワイトライトを照射してフルカラー撮影を行うモード</p></div></div></div> <div class=\"flexbox rev column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-w1-0412/tsp-w1-0415_at_1000.png\" alt=\"TSP-W1-0415　オートトラッキング機能搭載\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>オートトラッキング機能搭載</h3><p>セット内のタレットPTカメラはオートトラッキング対応です。<br> <br> 人体検知されると、検知した人物を追尾して自動でカメラの向きを動かします。<br> 玄関先などに来た人物の行動を効率よく監視することができます。</p></div></div></div></div><h3>待望のWiFi６対応　同時接続10台までOK</h3><p>WiFi6では同時に複数のデバイスを接続した際の安定性が向上し、データ通信もより高速になり遅延の少ない映像の取得が可能です。<br> <br> 15インチモデルでは、カメラ10台同時接続が可能となりました。<br> <br> 【2.4GHz帯 / 5GHz帯のデュアルバンド対応】<br> 5GHz帯の電波は通信速度が速く、障害物に弱い特徴があり、2.4GHz帯は障害物に比較的強く通信速度は5GHzに比べて遅いという特徴があります。<br> カメラは電波状況を考慮しより安定した通信のできる周波数帯を自動で判別して切り替えるため、より安定した通信が可能です。</p><figure class=\"block1\"><img src=\"/assets/products/tsp-w1-0415/tsp-w1-0415_wf6.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><h3>セット内容</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col2_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-w1-nvr15/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0415/tsp-w1-nvr15_500.png\" alt=\"TSP-W1-NVR15\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">モニターレコーダー</p><p>○モニター一体型レコーダー <br> ●フルハイビジョン <br> ●スピーカー内蔵 <br> ○HDD標準2TB内蔵<br> 　※カメラ4台接続時：約40日間録画可能</p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/tsp-w1-0415/optioncamera-1.png\" alt=\"TSP-W1-0415　オプションカメラ\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">ワイヤレスカメラ</p><p>○標準セット4台：バレットカメラ3台+タレットカメラ1台 <br> 　※レコーダー1台に対してカメラは最大10台まで <br> ●AI機能搭載<br> ●ホワイトライト(白色LED)搭載<br> ○オートリピーター機能搭載 <br> ○防水防塵設計で屋外使用が可能　※軒下推奨 <br> ○オプションでドームカメラも選択可能</p></div></li></ul></div></div><h3>ワイヤレスカメラ詳細</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wb-5m6-1/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0412/tsp-wb-5m6-1_500.png\" alt=\"TSP-WB-5M6-1\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WB-5M6-1</p><p>ワイヤレスバレットカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wt-3m6-1/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0412/tsp-wt-3m6-1_600.png\" alt=\"TSP-WT-3M6-1\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WT-3M6-1</p><p>ワイヤレスタレットPTカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wd-5m6-1/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-w1-0412/tsp-wd-5m6-1_800.png\" alt=\"TSP-WD-5M6-1\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WD-5M6-1</p><p>【オプション】ワイヤレスドームPTカメラ</p></div></li></ul></div></div> \t</div>",
+    "detailImages": [
+      "/assets/products/tsp-w1-0415/tsp-w1-0415_600.png",
+      "/assets/products/tsp-w1-0415/tsp-w1-0415_500.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0415_aijk.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0415_yk_1000.png",
+      "/assets/products/tsp-w1-0412/tsp-w1-0415_at_1000.png",
+      "/assets/products/tsp-w1-0415/tsp-w1-0415_wf6.png",
+      "/assets/products/tsp-w1-0415/tsp-w1-nvr15_500.png",
+      "/assets/products/tsp-w1-0415/optioncamera-1.png",
+      "/assets/products/tsp-w1-0412/tsp-wb-5m6-1_500.png",
+      "/assets/products/tsp-w1-0412/tsp-wt-3m6-1_600.png",
+      "/assets/products/tsp-w1-0412/tsp-wd-5m6-1_800.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-w1-0415/tsp-w1-0415_600.png"
+  },
+  "TSP-W1-NVR12": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-w1-nvr12/",
+    "detailTitle": "ワイヤレスモニターレコーダー（TSP-W1-0412構成対象品）",
+    "productName": "TSP-W1-NVR12",
+    "model": "TSP-W1-NVR12",
+    "supportedFunction": "12インチ ワイヤレス HDD2TB",
+    "detailHtml": "<p class=\"txts\">■ 12インチ高精細モニター 一体型レコーダー<br /> 　約12インチのFHDモニターとHDD内蔵レコーダーが一体化、設置・操作が簡単<br /> ■ WiFi 6 対応<br /> 　WiFi6規格対応の無線通信方式を採用、専用カメラと安定した通信が可能<br /> ■ 最大8台のカメラが同時にワイヤレス接続可能<br /> ■ HDD標準 2TB搭載<br /> 　2TBの大容量HDDを標準で搭載しており、長期の連続録画が可能<br /> ■ 遠隔監視対応<br /> 　インターネットに接続することで、アプリケーション経由での遠隔監視が可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-w1-nvr12/tsp-w1-nvr12_1.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-w1-nvr12/tsp-w1-nvr12_1-300x200.png",
+      "/assets/products/tsp-w1-nvr12/tsp-w1-nvr12_2-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-w1-nvr12/tsp-w1-nvr12_1.png"
+  },
+  "TSP-W1-NVR15": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-w1-nvr15/",
+    "detailTitle": "ワイヤレスモニターレコーダー（TSP-W1-0415構成対象品）",
+    "productName": "TSP-W1-NVR15",
+    "model": "TSP-W1-NVR15",
+    "supportedFunction": "15インチ ワイヤレス HDD2TB",
+    "detailHtml": "<p class=\"txts\">■ 15インチ大画面モニター 一体型レコーダー<br> 　約15インチのFHDモニターとHDD内蔵レコーダーが一体化、設置・操作が簡単<br> ■ WiFi 6 対応<br> 　WiFi6規格対応の無線通信方式を採用、専用カメラと安定した通信が可能<br> ■ 最大10台のカメラが同時にワイヤレス接続可能<br> ■ HDD標準 2TB搭載<br> 　2TBの大容量HDDを標準で搭載しており、長期の連続録画が可能<br> ■ 遠隔監視対応<br> 　インターネットに接続することで、アプリケーション経由での遠隔監視が可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-w1-0415/tsp-w1-nvr15_500.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-w1-nvr15/tsp-w1-nvr15_500-300x200.png",
+      "/assets/products/tsp-w1-nvr15/tsp-w1-nvr15-line-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-w1-0415/tsp-w1-nvr15_500.png"
+  },
+  "TSP-WB-5M6-1": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wb-5m6-1/",
+    "detailTitle": "ワイヤレスバレットカメラ（TSP-W1-0415/0412構成対象品）",
+    "productName": "TSP-WB-5M6-1",
+    "model": "TSP-WB-5M6-1",
+    "supportedFunction": "ワイヤレス 5MP WiFi6対応 白色LED搭載",
+    "detailHtml": "<p class=\"txts\">■ WiFi 6 対応<br> 　2.4GHz帯・5GHz帯周波数を環境に応じて自動切換、より安定した通信が可能<br> ■ AI人体検知機能搭載<br> 　AI技術によって動体検知のみの場合より効率的な監視が可能<br> ■ マイク・スピーカー搭載<br> 　マイクでの音声の取得、スピーカーからの音声警告が可能<br> 　アプリケーション経由で遠隔からの声掛けも可能<br> ■ ホワイトLED搭載<br> 　赤外線LEDに加え、ホワイトLEDも搭載<br> 　ライトの発光による威嚇や、フルカラーでの夜間監視に対応<br> ■ 保護等級IP66<br> 　屋外設置でも安心　※軒下設置推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-w1-0412/tsp-wb-5m6-1_500.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-wb-5m6-1/tsp-wb-5m6-1_500-300x200.png",
+      "/assets/products/tsp-wb-5m6-1/tsp-wb-5m6-1-line-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-w1-0412/tsp-wb-5m6-1_500.png"
+  },
+  "TSP-WCB522": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wcb522/",
+    "detailTitle": "バレット型固定ワイヤレスカメラ（TSP-WCS2301P構成対象品）",
+    "productName": "【終売】TSP-WCB522",
+    "model": "TSP-WCB522",
+    "supportedFunction": "2MP ワイヤレス 固定焦点",
+    "detailHtml": "<p class=\"txts\">■ フルハイビジョン(1920ｘ1080)の高画質映像を最大30フレームで配信可能<br /> ■ 近赤外線LED照明搭載、暗闇環境下でも映像の取得が可能<br /> ■ マイク内蔵で、周辺音声の聴取、ネットワークビデオレコーダーによる録音が可能<br /> ■ カメラ付属ケーブルのLANコネクタで、有線LANによりモニターレコーダーと接続可能<br /> ■ 防塵・防水カメラケース(保護等級IP66)<br /> ■ ステーションモード(WiFi子機)、アクセスポイントモード(WiFi親機)、リピーターモード(WiFi中継機)の3種類のWiFi接続モードで、シチュエーションに合わせた運用が可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-wcb522/tsp-wcb522.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-wcb522/tsp-wcb522.png"
+  },
+  "TSP-WCB526Z": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wcb526z/",
+    "detailTitle": "バレット型PTZワイヤレスカメラ（TSP-WCS2301P構成対象品）",
+    "productName": "【終売】TSP-WCB526Z",
+    "model": "TSP-WCB526Z",
+    "supportedFunction": "2MP ワイヤレス PTZ",
+    "detailHtml": "<p class=\"txts\">■ 300万画素(2304ｘ1296)の高画質映像を最大20フレームで配信可能<br /> （TSP-WCS2301P構成時は最大200万画素の15フレーム）<br /> ■ 近赤外線LED照明搭載、暗闇環境下でも映像の取得が可能<br /> ■ マイク内蔵で、周辺音声の聴取、ネットワークビデオレコーダーによる録音が可能<br /> ■ カメラ付属ケーブルのLANコネクタで、有線LANによりモニターレコーダーと接続可能<br /> ■ 防塵・防水カメラケース(保護等級IP66)<br /> ■ ステーションモード(WiFi子機)、アクセスポイントモード(WiFi親機)、リピーターモード(WiFi中継機)の3種類のWiFi接続モードで、シチュエーションに合わせた運用が可能<br /> ■ スピーカー内蔵で、スマホまたはＰＣとの双方向通話が可能<br /> ■ モニターレコーダーまたはPC・スマホによるＰ(パン：水平)、Ｔ(チルト：上下)、Ｚ(ズーム：拡大縮小)操作が可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-wcb526z/tsp-wcb526z.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-wcb526z/tsp-wcb526z.png"
+  },
+  "TSP-WCD525": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wcd525/",
+    "detailTitle": "ドーム型固定ワイヤレスカメラ（TSP-WCS2301P構成対象品）",
+    "productName": "【終売】TSP-WCD525",
+    "model": "TSP-WCD525",
+    "supportedFunction": "2MP ワイヤレス 固定焦点",
+    "detailHtml": "<p class=\"txts\">■ フルハイビジョン(1920ｘ1080)の高画質映像を最大30フレームで配信可能<br /> ■ 近赤外線LED照明搭載、暗闇環境下でも映像の取得が可能<br /> ■ マイク内蔵で、周辺音声の聴取、ネットワークビデオレコーダーによる録音が可能<br /> ■ カメラ付属ケーブルのLANコネクタで、有線LANによりモニターレコーダーと接続可能<br /> ■ 防塵・防水カメラケース(保護等級IP66)<br /> ■ ステーションモード(WiFi子機)、アクセスポイントモード(WiFi親機)、リピーターモード(WiFi中継機)の3種類のWiFi接続モードで、シチュエーションに合わせた運用が可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-wcd525/tsp-wcd525.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-wcd525/tsp-wcd525.png"
+  },
+  "TSP-WCS2301P": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wcs2301p/",
+    "detailTitle": "TSPインスタント防犯ソリューション　ワイヤレスカメラセット",
+    "productName": "【終売】TSP-WCS2301P",
+    "model": "TSP-WCS2301P",
+    "supportedFunction": "モニターレコーダー＋ワイヤレスカメラ4台セット",
+    "detailHtml": "<h3>TSPインスタント防犯ソリューション　ワイヤレスカメラセット</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcs2301p.png\" alt=\"TSP-WCS2301P\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>主な特長</h3><p>◎家庭の中に溶け込むシンプルなデザイン<br> ◎無線接続・有線接続の選択が可能<br> ◎すべてのカメラが高画質2MP<br> ◎標準で4台のカメラを搭載<br> ◎モーション検知録画機能付き<br> ◎標準設定で安心の20日間連続録画<br> ◎PCやスマホでの遠隔監視が可能</p></div></div></div></div><h3>外出先でもスマホで遠隔監視</h3><p>モニターレコーダーをご家庭のネット環境に接続すれば、外出先からでもアプリケーション経由で映像が取得可能です。</p><figure class=\"block1\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcs2301p_sp-1.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><div class=\"column01\"> <div class=\"flexbox rev column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcs2301p_wifi_s.png\" alt=\"TSP-WCS2301P\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>ワイヤレス通信で設置工事も簡単</h3><p>カメラからモニターレコーダーへは、ワイヤレス通信で映像を送ります。<br> カメラとレコーダーの間に有線を引く必要がなく、設置工事も簡単です。<br> <br> 2.4Ghz帯Wi-Fi無線規格採用で、非常にきれいな映像を低遅延で取得できます。<br> <br> ※カメラには別途１００Vコンセント電源が必要です</p></div></div></div> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcs2301p_kj.png\" alt=\"TSP-WCS2301P\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>屋外コンセントがない場合は、<br> 屋内のコンセントからエアコンのダクト穴を通して屋外に引き出すなどの方法も可能です。<br> <br> お気軽にご相談ください。<br> </p></div></div></div></div><h3>セット内容</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col2_list\"><li><div class=\"imgarea\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcs2301p_mnt2.png\" alt=\"TSP-WCS2301P モニターレコーダー\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">ワイヤレスモニターレコーダー</p><p>●モニター/レコーダー/HDD一体型で、単体でライブ映像の監視・録画・各種操作が可能 <br> ●マウスで直感的な簡単操作 <br> ●12.5インチ液晶で、ライブ映像も綺麗に視聴 <br> ●HDD標準1TB内蔵<br> ※カメラ4台接続/常時録画時：約20日連続録画可能</p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcs2301p_c3_3.png\" alt=\"TSP-WCS2301P\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">ワイヤレスカメラ</p><p>●3種類から自由に選べるカメラ<br> ※モニターレコーダー1台に対してカメラは4台まで増設可能 <br> ●すべて2MP高解像度モデル採用 <br> ●全モデルIP66取得、屋外使用が可能※軒下推奨 <br> ●近赤外線LED搭載で夜間撮影も可能</p></div></li></ul></div></div><h3>選べるカメラ　３種類から最大４台 / 組合せ自由</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wcb522/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcb522_2.png\" alt=\"TSP-WCB522\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WCB522</p><p>バレット型固定ワイヤレスカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wcb526z/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcb526z_2.png\" alt=\"TSP-WCB526Z\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WCB526Z</p><p>バレット型PTZワイヤレスカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-wcd525/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-wcs2301p/tsp-wcd525_2.png\" alt=\"TSP-WCD525\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-WCD525</p><p>ドーム型固定ワイヤレスカメラ</p></div></li></ul></div></div> \t</div>",
+    "detailImages": [
+      "/assets/products/tsp-wcs2301p/tsp-wcs2301p.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcs2301p_sp-1.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcs2301p_wifi_s.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcs2301p_kj.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcs2301p_mnt2.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcs2301p_c3_3.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcb522_2.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcb526z_2.png",
+      "/assets/products/tsp-wcs2301p/tsp-wcd525_2.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/tsp-wcs2301p/tsp-wcs2301p.png"
+  },
+  "TSP-WD-5M6-1": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wd-5m6-1/",
+    "detailTitle": "ワイヤレスドームPTカメラ（TSP-W1-0415/0412オプション品）",
+    "productName": "TSP-WD-5M6-1",
+    "model": "TSP-WD-5M6-1",
+    "supportedFunction": "ワイヤレス 5MP WiFi6対応",
+    "detailHtml": "<p class=\"txts\">■ WiFi 6 対応<br /> 　2.4GHz帯・5GHz帯周波数を環境に応じて自動切換、より安定した通信が可能<br /> ■ AI人体検知機能搭載<br /> 　AI技術によって動体検知のみの場合より効率的な監視が可能<br /> ■ モータライズパンチルト搭載<br /> 　設置後にレコーダーから遠隔で画角の変更が可能<br /> ■ マイク・スピーカー搭載<br /> 　マイクでの音声の取得、スピーカーからの音声警告が可能<br /> 　アプリケーション経由で遠隔からの声掛けも可能<br /> ■ 保護等級IP66<br /> 　屋外設置でも安心　※軒下設置推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-wd-5m6-1/tsp-wd-5m6-1_500.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-wd-5m6-1/tsp-wd-5m6-1_500-300x200.png",
+      "/assets/products/tsp-wd-5m6-1/tsp-wd-5m6-1-line-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-wd-5m6-1/tsp-wd-5m6-1_500.png"
+  },
+  "TSP-WT-3M6-1": {
+    "pageUrl": "https://www.tspco.jp/products/tsp-wt-3m6-1/",
+    "detailTitle": "ワイヤレスタレットPTカメラ（TSP-W1-0415/0412構成対象品）",
+    "productName": "TSP-WT-3M6-1",
+    "model": "TSP-WT-3M6-1",
+    "supportedFunction": "ワイヤレス 3MP WiFi6対応 白色LED搭載",
+    "detailHtml": "<p class=\"txts\">■ WiFi 6 対応<br> 　2.4GHz帯・5GHz帯周波数を環境に応じて自動切換、より安定した通信が可能<br> ■ AI人体検知機能搭載<br> 　AI技術によって動体検知のみの場合より効率的な監視が可能<br> ■ モータライズパンチルト搭載<br> 　設置後にレコーダーから遠隔で画角の変更が可能<br> ■ マイク・スピーカー搭載<br> 　マイクでの音声の取得、スピーカーからの音声警告が可能<br> 　アプリケーション経由で遠隔からの声掛けも可能<br> ■ ホワイトLED搭載<br> 　赤外線LEDに加え、ホワイトLEDも搭載<br> 　ライトの発光による威嚇や、フルカラーでの夜間監視に対応<br> ■ 保護等級IP66<br> 　屋外設置でも安心　※軒下設置推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/tsp-w1-0412/tsp-wt-3m6-1_600.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/tsp-wt-3m6-1/tsp-wt-3m6-1_600-300x200.png",
+      "/assets/products/tsp-wt-3m6-1/tsp-wt-3m6-1-line-300x200.png"
+    ],
+    "cardImage": "/assets/products/tsp-w1-0412/tsp-wt-3m6-1_600.png"
+  },
+  "TWCB-501": {
+    "pageUrl": "https://www.tspco.jp/products/twcb-501/",
+    "detailTitle": "Wi-Fi バレットカメラ（TWCS-5101構成対象品）",
+    "productName": "TWCB-501",
+    "model": "TWCB-501",
+    "supportedFunction": "ワイヤレス 固定焦点 リピーター機能",
+    "detailHtml": "<p class=\"txts\">■ リピーター機能<br> 　カメラが中継器の役割をすることで、電波が通りにくい場所への設置も可能に<br> ■ 2.4Ghz帯Wi-Fi無線規格採用<br> 　きれいな映像が低遅延で取得可能<br> ■ 滑らかな映像<br> 　高解像度で滑らかな動きを再現できる30fps<br> ■ 夜間撮影でも高画質<br> 　自動で赤外線モードへ変更されるので操作不要<br> ■ カメラでも保存可能<br> 　カメラにもSDカードスロット搭載、万が一通信が途絶えても映像確認が可能<br> 　※SDカード別売り<br> ■ 防塵・防水<br> 　保護等級IP67と高い防塵防水性能、屋外設置でも安心　※軒下推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/twcb-501/twcb-501_2-1.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/twcb-501/twcb-501_2-1-300x200.png",
+      "/assets/products/twcb-501/night2-300x200.png"
+    ],
+    "cardImage": "/assets/products/twcb-501/twcb-501_2-1.png"
+  },
+  "TWCD-502": {
+    "pageUrl": "https://www.tspco.jp/products/twcd-502/",
+    "detailTitle": "Wi-Fi ドーム ネットワークカメラ（TWCS-5101オプション品）",
+    "productName": "TWCD-502",
+    "model": "TWCD-502",
+    "supportedFunction": "ワイヤレス リピーター機能",
+    "detailHtml": "<p class=\"txts\">■ リピーター機能<br /> 　カメラが中継器の役割をすることで、電波が通りにくい場所への設置も可能に<br /> ■ 2.4Ghz帯Wi-Fi無線規格採用<br /> 　きれいな映像が低遅延で取得可能<br /> ■ 滑らかな映像<br /> 　高解像度で滑らかな動きを再現できる30fps<br /> ■ 夜間撮影でも高画質<br /> 　自動で赤外線モードへ変更されるので操作不要<br /> ■ カメラでも保存可能<br /> 　カメラにもSDカードスロット搭載、万が一通信が途絶えても映像確認が可能<br /> 　※SDカード別売り<br /> ■ 防塵・防水<br /> 　保護等級IP67と高い防塵防水性能、屋外設置でも安心　※軒下推奨</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/twcd-502/twcd-502.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/twcd-502/twcd-502-300x200.png",
+      "/assets/products/twcb-501/night2-300x200.png"
+    ],
+    "cardImage": "/assets/products/twcd-502/twcd-502.png"
+  },
+  "TWCS-5101": {
+    "pageUrl": "https://www.tspco.jp/products/twcs-5101/",
+    "detailTitle": "TSPインスタント防犯ソリューション　ワイヤレスカメラセット",
+    "productName": "TWCS-5101",
+    "model": "TWCS-5101",
+    "supportedFunction": "レコーダー＋ワイヤレスカメラ1台セット",
+    "detailHtml": "<h3>TSPインスタント防犯ソリューション　ワイヤレスカメラセット</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/twcs-5101/twcs-5101set.png\" alt=\"TWCS-5101\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>主な特長</h3><p>◎設置が簡単<br> 　ワイヤレス接続だからコードの制限なく電源のみで設置可能<br> ◎必要に応じた増設<br> 　カメラは最大4台まで、モニター等選べるオプションも<br> ◎高機能<br> 　カメラ4台なら連続40日間録画OK、防塵防水・モーション検知にも対応<br> ◎高画質<br> 　フルハイビジョン最大30fpsのカメラ採用</p></div></div></div></div><h3>リピーター機能搭載で隅々までしっかり防犯</h3><p>【リピーター機能とは】<br> レコーダーとカメラの距離・物理的な障害などで電波が届かない場合、カメラが中継機の役割を果たし電波の送受信を助ける機能です。<br> <br> 今まで電波が通りづらくカメラが設置できなかった場所も、しっかり防犯・監視できます。</p><figure class=\"block1\"><img src=\"/assets/products/twcs-5101/twcs-5101_rp1.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><h3>外出先でもスマホで遠隔監視</h3><p>レコーダーをご家庭のネット環境に接続すれば、外出先からでもアプリケーション経由で映像が取得可能です。</p><figure class=\"block1\"><img src=\"/assets/products/twcs-5101/twcs-5101_enkk.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><h3>自由な閲覧方法</h3><p>レコーダー独立式で省スペース<br> ライブ映像や録画映像の閲覧方法はテレビやスマホ等、生活スタイルに合わせて自由に選択できます。<br> <br> ※スマートフォン・タブレットで映像の確認を行う場合は、レコーダー・スマートフォン・タブレットをインターネットに接続する必要があります。<br> 　また、アプリケーションもダウンロードする必要があります。</p><figure class=\"block1\"><img src=\"/assets/products/twcs-5101/twcs-5101_op.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><div class=\"column01\"> <div class=\"flexbox rev column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/twcs-5101/twcs-5101_wifi.png\" alt=\"TWCS-5101　無線接続\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><h3>無線接続で設置工事も簡単</h3><p>Wi-Fi無線接続だからカメラとレコーダー間に配線不要。<br> レコーダー本体・カメラもそれぞれコンパクト設計で、設置場所の選択肢が広がります。<br> <br> 2.4Ghz帯Wi-Fi無線規格採用で、非常にきれいな映像を低遅延で取得できます。<br> <br> ※別途１００Vコンセント電源が必要です</p></div></div></div> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/twcs-5101/twcs-5101_kj.png\" alt=\"TWCS-5101　設置工事\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>屋外コンセントなどからカメラ電源を引き、工事を行います。<br> <br> 屋外コンセントがない場合は、<br> 屋内のコンセントからエアコンのダクト穴を通して屋外に引き出すなどの方法も可能です。<br> <br> お気軽にご相談ください。<br> </p></div></div></div></div><h3>セット内容</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col2_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/twlnvr-54/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/twcs-5101/twlnvr-54_2_2.png\" alt=\"TWLNVR-54\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">レコーダー</p><p>●Wi-Fi接続により複雑な配線が不要 <br> ●ビデオ出力端子2種類搭載<br> 　お持ちのモニターでカメラの映像を確認可能 <br> ●マウスで直感的な簡単操作 <br> ●HDD2TB内蔵<br> ※カメラ1台接続/最大解像度・30fpsで録画時：約3ヶ月連続録画可能</p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/twcs-5101/optioncamera.png\" alt=\"TWCS-5101　オプションカメラ\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">ワイヤレスカメラ</p><p>●セットのバレットカメラ1台に加え、オプションでドームカメラも増設可能<br> ※レコーダー1台に対してカメラは最大4台まで <br> ●リピーター機能搭載で電波が通りづらい場所にも設置可能 <br> ●カメラにもSDカードスロット搭載<br> 　万一通信が途絶えても映像確認が可能 ※SDカード別売り <br> ●防水防塵設計で屋外使用が可能※軒下推奨 <br> ●赤外線モード自動切替で夜間撮影もスムーズ</p></div></li></ul></div></div><h3>オプション　カメラやモニターの増設もお好みで</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/twcb-501/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/twcb-501/twcb-501_2-1.png\" alt=\"TWCB-501\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TWCB-501</p><p>バレット型ワイヤレスカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/twcd-502/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/twcs-5101/twcd-502_2.png\" alt=\"TWCD-502\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TWCD-502</p><p>ドーム型ワイヤレスカメラ</p></div></li><li><div class=\"imgarea\"><a href=\"https://www.tspco.jp/products/tsp-pm1418/\" class=\"custom-link no-lightbox\" onclick=\"event.stopPropagation()\" target=\"_self\" rel=\"\" aria-label=\"\"><img src=\"/assets/products/tsp-pm1418/tsp-pm1418_2.png\" alt=\"TSP-PM1418　ポータブルモニター\"></a></div><div class=\"txtarea\"><p class=\"txtstyle02\">TSP-PM1418</p><p>ポータブルモニター</p></div></li></ul></div></div> \t</div>",
+    "detailImages": [
+      "/assets/products/twcs-5101/twcs-5101set.png",
+      "/assets/products/twcs-5101/twcs-5101_rp1.png",
+      "/assets/products/twcs-5101/twcs-5101_enkk.png",
+      "/assets/products/twcs-5101/twcs-5101_op.png",
+      "/assets/products/twcs-5101/twcs-5101_wifi.png",
+      "/assets/products/twcs-5101/twcs-5101_kj.png",
+      "/assets/products/twcs-5101/twlnvr-54_2_2.png",
+      "/assets/products/twcs-5101/optioncamera.png",
+      "/assets/products/twcb-501/twcb-501_2-1.png",
+      "/assets/products/twcs-5101/twcd-502_2.png",
+      "/assets/products/tsp-pm1418/tsp-pm1418_2.png",
+      "/assets/products/509220/scrolldpwn_circle.png"
+    ],
+    "cardImage": "/assets/products/twcs-5101/twcs-5101set.png"
+  },
+  "TWLNVR-54": {
+    "pageUrl": "https://www.tspco.jp/products/twlnvr-54/",
+    "detailTitle": "Wi-Fi NVR（TWCS-5101構成対象品）",
+    "productName": "TWLNVR-54",
+    "model": "TWLNVR-54",
+    "supportedFunction": "ワイヤレス HDD2TB",
+    "detailHtml": "<p class=\"txts\">■ Wi-Fi接続で複雑な配線不要<br> 　コンパクトな設計で、屋内外問わず設置場所の選択肢が広がります<br> ■ 増設・選択自由自在<br> 　カメラを最大4台まで増設可能<br> 　カメラの組み合わせも自由なので、現場に合わせて効果的に設置できます<br> ■ ビデオ出力端子2種類搭載<br> 　HDMI端子・VGA端子対応で、お持ちのモニターでカメラ映像を確認可能<br> 　各種アラームにも対応、マウス操作で簡単に設定変更が可能です<br> ■ 大容量HDD2TB<br> 　1台で最大解像度30fpsで録画した場合、約３ヶ月連続録画可能</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/twlnvr-54/twlnvr-54_2_2-1.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/twlnvr-54/twlnvr-54_2_2-1-300x200.png",
+      "/assets/products/twlnvr-54/twlnvr-54_3-249x200.png"
+    ],
+    "cardImage": "/assets/products/twlnvr-54/twlnvr-54_2_2-1.png"
+  },
+  "TXVR-161H": {
+    "pageUrl": "https://www.tspco.jp/products/txvr-161h/",
+    "detailTitle": "ハイブリッド XVR",
+    "productName": "TXVR-161H",
+    "model": "TXVR-161H",
+    "supportedFunction": "XVR 16CH",
+    "detailHtml": "<p class=\"txts\">■\tアナログ16CH,IPC最大16CH<br /> ■\t各種のアラーム対応<br /> ■\tSATA×2（各16TB）<br /> ■\tモバイル遠隔監視（iOS,Android）</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/txvr-161h/txvr-161h_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/txvr-161h/txvr-161h_s-300x200.png",
+      "/assets/products/txvr-161h/txvr-161h_r-300x129.png",
+      "/assets/products/txvr-161h/txvr-161h-haimentanshi-300x180.png",
+      "/assets/products/txvr-161h/txvr-161h_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/txvr-161h/txvr-161h_s.png"
+  },
+  "TXVR-401H": {
+    "pageUrl": "https://www.tspco.jp/products/txvr-401h/",
+    "detailTitle": "ハイブリッド XVR",
+    "productName": "TXVR-401H",
+    "model": "TXVR-401H",
+    "supportedFunction": "XVR 4CH",
+    "detailHtml": "<p class=\"txts\">■\tアナログ4CH,IPC最大6CH<br /> ■\t各種のアラーム対応<br /> ■\tSATA×1（16TB）<br /> ■\tモバイル遠隔監視（iOS,Android）</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/txvr-401h/txvr-401h_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/txvr-401h/txvr-401h_s-300x200.png",
+      "/assets/products/txvr-401h/txvr-401h_r-300x129.png",
+      "/assets/products/txvr-401h/txvr-401h-haimentanshi-300x200.png",
+      "/assets/products/txvr-401h/txvr-401h_gaikeisunpouzu-300x159.png"
+    ],
+    "cardImage": "/assets/products/txvr-401h/txvr-401h_s.png"
+  },
+  "TXVR-801H": {
+    "pageUrl": "https://www.tspco.jp/products/txvr-801h/",
+    "detailTitle": "ハイブリッド XVR",
+    "productName": "TXVR-801H",
+    "model": "TXVR-801H",
+    "supportedFunction": "XVR 8CH",
+    "detailHtml": "<p class=\"txts\">■\tアナログ8CH,IPC最大12CH<br /> ■\t各種のアラーム対応<br /> ■\tSATA×1（16TB）<br /> ■\tモバイル遠隔監視（iOS,Android）</p> \t\t</div>",
+    "detailImages": [
+      "/assets/products/txvr-801h/txvr-801h_s.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/txvr-801h/txvr-801h_s-300x200.png",
+      "/assets/products/txvr-801h/txvr-801h_r-300x129.png",
+      "/assets/products/txvr-801h/txvr-801h-haimentanshi-300x200.png",
+      "/assets/products/txvr-801h/txvr-801h_gaikeisunpouzu-300x200.png"
+    ],
+    "cardImage": "/assets/products/txvr-801h/txvr-801h_s.png"
+  },
+  "UBio-X Face Premium": {
+    "pageUrl": "https://www.tspco.jp/products/ubio-x-face-premium/",
+    "detailTitle": "ウォークスルー方式 8インチプレミアム顔認識端末",
+    "productName": "UBio-X Face Premium",
+    "model": "UBio-X Face Premium",
+    "supportedFunction": "入退管理システム",
+    "detailHtml": "<h3>最新の顔認識アルゴリズム搭載</h3><figure class=\"block1\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_06.png\"><p class=\"txtstyle02\"></p><figcaption>UBio-X Face Premium は最新の顔認識アルゴリズムを搭載しており、ウォークスルー機能を提供します。<br /> ユーザーがゲートを通過すると、最大4メートルの距離で顔検出と認証が行われます。<br /> <br /> 多様な生体認証方式<br /> - ゲート認証：ユーザーがゲートを通過する際に最大4メートルの距離から顔認証<br /> - マルチ認証：ユーザーがゲートを通過する際に同時に複数の顔認証</figcaption></figure><h3>幅広い認証オプション</h3><p>指紋および QR 認識センサー (UBio-X FQR) との統合により、顔、指紋、QRコード、モバイルアクセス カードなど、幅広い認証オプションが提供されます。 <br /> ユーザーのニーズに応じて認証方法を選択できるため、高いセキュリティレベルと使いやすさがユーザーに提供されます。</p><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_26.png\" alt=\"UBio-X-Face-Pro 顔認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">顔認証</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_28.png\" alt=\"UBio-X-Face-Pro RFカード認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">RFカード</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_30.png\" alt=\"UBio-X-Face-Pro モバイルキー認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">モバイルキー</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_35.png\" alt=\"UBio-X-Face-Pro 指紋認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">指紋認証</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_36.png\" alt=\"UBio-X-Face-Pro QRコード認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">QRコード</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_37.png\" alt=\"UBio-X-Face-Pro パスワード認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">パスワード</p><p></p></div></li></ul></div></div><figure class=\"block1\"><img src=\"/assets/products/ubio-x-face-premium/pro-premium_op.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><h3>サーマルモジュールとの連携</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_29_s.jpg\" alt=\"UBio-X Face Premium\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>サーマルモジュールと連携し、ユーザーの体温を測定します。<br /> 発熱している場合、ユーザーはアクセスを拒否され、ログデータがサーバーに記録されます。</p></div></div></div></div><h3>生体顔検出・なりすまし防止機能を備えた新時代の非接触ソリューション</h3><figure class=\"block1\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_fake-faces_2.png\"><p class=\"txtstyle02\"></p><figcaption>マスクを着用した状態でもユーザーの生体認証のニーズを満たし、3D フェイスマスク、顔写真、顔プリント紙などの偽の顔による認証を防止します。</figcaption></figure><h3>リアルタイムマスク検出機能</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_37.jpg\" alt=\"UBio-X Face Premium\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>ユーザーのフェイスマスクを検出します。<br /> マスクを着用していない場合や不適切に着用している場合は、アクセスが拒否され、ユーザーにマスクを正しく着用するよう警告します。</p></div></div></div></div><h3>様々な用途</h3><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col4_list\"><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_41.jpg\" alt=\"UBio-X Face Premium\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">オフィス</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_43.jpg\" alt=\"UBio-X Face Premium\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">金融機関</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_47.jpg\" alt=\"UBio-X Face Premium\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">官公庁</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/ubio-x-face-premium_51.jpg\" alt=\"UBio-X Face Premium\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">店舗</p><p></p></div></li></ul></div></div><p>UBio-X Face Premium は、高いセキュリティ、安全性、便利なオプションを備えており、オフィス、金融機関、官公庁、店舗など様々な分野で活用できます。</p><h3>製品紹介動画</h3><div class=\"youtubeArea\"><iframe title=\"[UBio-X Face Premium] We&#039;re Always the First to See You | Unioncomm\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/W09p7jNxPug?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><div class=\"youtubeArea\"><iframe title=\"[UBio X Face Premium] Product Demo : Various Operating Environments  | Unioncomm\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/ftBrSOKdl1Y?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><div class=\"youtubeArea\"><iframe title=\"[UBio-X Face Premium] Product Demo : Seminar Entrance | Unioncomm\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/CEvZHEnvdJ4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><div class=\"youtubeArea\"><iframe title=\"[UBio-X Face Premium] Product Demo : Seminar Entrance | Unioncomm\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/CEvZHEnvdJ4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><div class=\"youtubeArea\"><iframe title=\"[Webinar] Learn More about UBio X Face Premium 20221227 | Unioncomm\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/oeIJMjIa22c?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><h3>資料ダウンロード</h3><ul class=\"list link-lists\"><li><a href=\"/assets/products/ubio-x-face-premium/d7f9b262320c636b201ce1fb82027fd0.pdf.pdf\"><span>UBio-X Face Premium 簡易カタログ</span></a></li></ul> \t</div>",
+    "detailImages": [
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_02_s-1.png",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_06.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_26.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_28.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_30.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_35.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_36.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_37.png",
+      "/assets/products/ubio-x-face-premium/pro-premium_op.png",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_29_s.jpg",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_fake-faces_2.png",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_37.jpg",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_41.jpg",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_43.jpg",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_47.jpg",
+      "/assets/products/ubio-x-face-premium/ubio-x-face-premium_51.jpg",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_02_s-1-300x200.png",
+      "/assets/products/ubio-x-face-premium/638fd43cd89645d8fac72e458c01f244-300x200.png"
+    ],
+    "cardImage": "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_02_s-1.png"
+  },
+  "UBio-X Face Pro": {
+    "pageUrl": "https://www.tspco.jp/products/ubio-x-face-pro/",
+    "detailTitle": "次世代マルチパフォーマンス生体認証デバイス",
+    "productName": "UBio-X Face Pro",
+    "model": "UBio-X Face Pro",
+    "supportedFunction": "入退管理システム",
+    "detailHtml": "<h3>スリムでコンパクトなデザイン</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/ubio-x-face-pro/slim.png\" alt=\"UBio-X-Face-Pro\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>UBio-X Face Proは、場所や環境に制約されることなく 、小規模店舗から大規模ビルまであらゆる出入り口に設置・運用できるコンパクト設計が特徴です。<br /> <br /> – よりスリムなデザイン：92mm x 200mm x 21mm<br /> – より軽量化：336g</p></div></div></div></div><h3>様々な認証オプション</h3><p>指紋/QRセンサー Xscan-FQ5 または Xscan-FP5 を取り付けることで、顔・指紋・モバイルカード・QRコードなど、様々な認証方法を提供します。<br /> 好みや状況に応じて、ご希望の認証オプションを選択できます。</p><div class=\"card01_wrap\"><div class=\"card01_inner\"><ul class=\"card01_list col3_list\"><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_26.png\" alt=\"UBio-X-Face-Pro 顔認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">顔認証</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_28.png\" alt=\"UBio-X-Face-Pro RFカード認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">RFカード</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_30.png\" alt=\"UBio-X-Face-Pro モバイルキー認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">モバイルキー</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_35.png\" alt=\"UBio-X-Face-Pro 指紋認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">指紋認証</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_36.png\" alt=\"UBio-X-Face-Pro QRコード認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">QRコード</p><p></p></div></li><li><div class=\"imgarea\"><img src=\"/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_37.png\" alt=\"UBio-X-Face-Pro パスワード認証\"></div><div class=\"txtarea\"><p class=\"txtstyle02\">パスワード</p><p></p></div></li></ul></div></div><figure class=\"block1\"><img src=\"/assets/products/ubio-x-face-premium/pro-premium_op.png\"><p class=\"txtstyle02\"></p><figcaption></figcaption></figure><h3>先進的な利便性</h3><div class=\"column01\"> <div class=\"flexbox rev column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/ubio-x-face-pro/9c70cf32edee3edc1435e1077c9e9187.png\" alt=\"UBio-X-Face-Pro\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>【SC・RFm HID・Felica・NFCなどをサポートするオールインワン統合RFID機能搭載モデル】<br /> <br /> 以前のバージョンと比較してRF認識距離が2倍に拡張され、ユーザーにさらに大きな利便性を提供します。<br /> <br /> ※HID iClass対応（オプション）</p></div></div></div></div><h3>WiFiネットワークサポート</h3><div class=\"column01\"> <div class=\"flexbox column01_wrap\"><div class=\"w50 imgarea\"><img src=\"/assets/products/ubio-x-face-pro/31256be855529e31010ac01620899d98.png\" alt=\"UBio-X-Face-Pro\"></div><div class=\"w50 txtarea\"><div class=\"txtinner\"><p>有線ネットワークだけでなく無線 WiFi ネットワークもサポートすることで、信頼性の高い統合セキュリティサービスを提供します。<br /> <br /> ※ 2.4GHz周波数で動作し、802.11b/g/n規格をサポートします。</p></div></div></div></div><h3>製品紹介動画</h3><div class=\"youtubeArea\"><iframe title=\"[UBio-X Face Pro] Experience, beyond Security. | Unioncomm\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/duMx3NYhrmQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><div class=\"youtubeArea\"><iframe title=\"[UBio-X Face Pro] Product Demo : Key Performance | UNION biometrics\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/Z-phl287Q7Y?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div><h3>資料ダウンロード</h3><ul class=\"list link-lists\"><li><a href=\"/assets/products/ubio-x-face-pro/753e10b9012dac5b9a369ee9a920f670.pdf.pdf\"><span>UBio-X Face Pro 簡易カタログ</span></a></li></ul> \t</div>",
+    "detailImages": [
+      "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_02_s.png",
+      "/assets/products/ubio-x-face-pro/slim.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_26.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_28.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_30.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_35.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_36.png",
+      "/assets/products/ubio-x-face-premium/230905_ubio-x-face-pro_37.png",
+      "/assets/products/ubio-x-face-premium/pro-premium_op.png",
+      "/assets/products/ubio-x-face-pro/9c70cf32edee3edc1435e1077c9e9187.png",
+      "/assets/products/ubio-x-face-pro/31256be855529e31010ac01620899d98.png",
+      "/assets/products/509220/scrolldpwn_circle.png",
+      "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_02_s-300x200.png",
+      "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_45-300x200.png",
+      "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_47-300x200.png",
+      "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_51-300x200.png",
+      "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_52-300x200.png"
+    ],
+    "cardImage": "/assets/products/ubio-x-face-pro/230905_ubio-x-face-pro_02_s.png"
+  }
+}
