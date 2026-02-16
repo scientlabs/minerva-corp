@@ -119,11 +119,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                         </ul> */}
-                    </div>
-
-                    {/* Address + Map Column */}
-                    <div className="space-y-4">
-                      <div className="space-y-2 mb-4">
+                        <div className="space-y-2 mb-4">
                         <address className="not-italic text-sm text-gray-300 space-y-1" aria-label="company address">
                           <div>株式会社MINERVA</div>
                           <div>〒155-0031 東京都世田谷区北沢2丁目7-14</div>
@@ -132,6 +128,11 @@ const Footer = () => {
                         <p className="text-sm text-gray-300">TEL: 03-5738-7123</p>
                         <p className="text-sm text-gray-300">FAX: 03-5738-7674</p>
                       </div>
+                    </div>
+
+                    {/* Address + Map Column */}
+                    <div className="space-y-4">
+                      
                       <div className="w-full h-64 md:h-60 rounded overflow-hidden shadow">
                         <iframe
                           title="location-map"
