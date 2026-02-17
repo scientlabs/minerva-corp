@@ -182,7 +182,7 @@ const Products = () => {
             {
               name: "TIB-401",
               description: "IP AIバレットカメラ",
-              image: "",
+              image: "https://www.tspco.jp/wp-content/uploads/TIB-401_s2.png",
               category: "ネットワークカメラ"
             }
           ]
@@ -433,6 +433,10 @@ const Products = () => {
     // Keep inner markup/content but remove anchor tags to prevent redirects to external pages.
     return html.replace(/<a\b[^>]*>([\s\S]*?)<\/a>/gi, "$1");
   };
+  const normalizeDetailHtml = (html) => {
+    if (Array.isArray(html)) return html.join("\n");
+    return html || "";
+  };
 
   const upscaleImageUrl = (src = "") => src.replace(/-\d+x\d+(?=\.(png|jpe?g|webp|gif|avif)$)/i, "");
 
@@ -495,7 +499,7 @@ const Products = () => {
             productName: tspDetail?.productName || normalizedModel,
             model: tspDetail?.model || normalizedModel,
             supportedFunction: tspDetail?.supportedFunction || product.description,
-            detailHtml: sanitizeDetailHtml(stripExternalLinks(tspDetail?.detailHtml || "")),
+            detailHtml: sanitizeDetailHtml(stripExternalLinks(normalizeDetailHtml(tspDetail?.detailHtml))),
             detailPageUrl: tspDetail?.pageUrl || "",
             detailImages,
             description: tspDetail?.supportedFunction || product.description
@@ -806,8 +810,8 @@ const Products = () => {
                     <ProductImage product={selectedProduct} className="w-full h-[27rem] object-contain" />
                   )}
                 </div>
-                {validDetailImages.length > 1 && (
-                  <div className="grid grid-cols-3 gap-2 mt-4">
+                {validDetailImages.length > 0 && (
+                  <div className={`grid ${validDetailImages.length === 2 ? "grid-cols-2" : "grid-cols-3"} gap-2 mt-4`}>
                     {validDetailImages.slice(0, 6).map((img, idx) => (
                       <button
                         key={`${selectedProduct.slug}-detail-${idx}`}

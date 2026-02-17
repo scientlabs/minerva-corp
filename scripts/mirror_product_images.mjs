@@ -8,6 +8,11 @@ const PUBLIC_PREFIX = "/assets/products";
 
 const UPLOAD_RE = /https?:\/\/www\.tspco\.jp\/wp-content\/uploads\/[^"'<>\s)]+/g;
 
+function toHtmlString(html) {
+  if (Array.isArray(html)) return html.join("\n");
+  return html || "";
+}
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -43,7 +48,7 @@ function collectUrls(entry) {
   for (const img of entry.detailImages || []) {
     if (/^https?:\/\//.test(img)) urls.add(img);
   }
-  const html = entry.detailHtml || "";
+  const html = toHtmlString(entry.detailHtml);
   for (const m of html.matchAll(UPLOAD_RE)) {
     urls.add(m[0]);
   }
@@ -98,7 +103,13 @@ async function main() {
     }
     entry.detailImages = (entry.detailImages || []).map((img) => globalMap.get(img) || img);
     if (entry.detailHtml) {
-      entry.detailHtml = entry.detailHtml.replace(UPLOAD_RE, (url) => globalMap.get(url) || url);
+      if (Array.isArray(entry.detailHtml)) {
+        entry.detailHtml = entry.detailHtml.map((line) =>
+          String(line).replace(UPLOAD_RE, (url) => globalMap.get(url) || url)
+        );
+      } else {
+        entry.detailHtml = String(entry.detailHtml).replace(UPLOAD_RE, (url) => globalMap.get(url) || url);
+      }
     }
   }
 
@@ -112,4 +123,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-

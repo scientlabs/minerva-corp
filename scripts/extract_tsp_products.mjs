@@ -109,12 +109,12 @@ function extractProduct(html, pageUrl) {
 
   const pdfAnchorIdx = compact.indexOf('PDFはこちら');
   let startIdx = -1;
-  if (pdfAnchorIdx >= 0) {
-    const closeDivIdx = compact.indexOf('</div>', pdfAnchorIdx);
-    if (closeDivIdx >= 0) {
-      startIdx = closeDivIdx + '</div>'.length;
-    }
-  }
+  // if (pdfAnchorIdx >= 0) {
+  //   const closeDivIdx = compact.indexOf('</div>', pdfAnchorIdx);
+  //   if (closeDivIdx >= 0) {
+  //     startIdx = closeDivIdx + '</div>'.length;
+  //   }
+  // }
   if (startIdx < 0) {
     const startCandidates = [
       compact.indexOf('<h3>'),
@@ -143,7 +143,7 @@ function extractProduct(html, pageUrl) {
   detailHtml = normalizeSrc(detailHtml).trim();
   if (!detailHtml || /^<\/div>\s*$/i.test(detailHtml) || stripTags(detailHtml).length < 8) {
     // Some product pages only have a short feature/spec paragraph between <dl> and detail_image.
-    const preImageBlock = (compact.match(/<\/dl>\s*([\s\S]*?)<div class="detail_image">/i) || [,''])[1]
+    const preImageBlock = (compact.match(/<\/dl>\s*([\s\S]*?)<div class="detail_image">[\s\S]*?<\/div>/i) || [,''])[1]
       .replace(/<div class="link_btn[^>]*>[\s\S]*?<\/div>/gi, '')
       .replace(/<a[^>]*>PDFはこちら<\/a>/gi, '')
       .replace(/^\s*<p><\/p>\s*/i, '')
@@ -157,7 +157,8 @@ function extractProduct(html, pageUrl) {
   const allImages = [detailImage, ...detailHtmlImages, ...pageImages]
     .filter(Boolean)
     .map((src) => src.startsWith('http') ? src : `https://www.tspco.jp${src.startsWith('/') ? '' : '/'}${src}`)
-    .filter((src, idx, arr) => arr.indexOf(src) === idx);
+    .filter((src, idx, arr) => arr.indexOf(src) === idx)
+    .filter(url => !/-300x200\./.test(url));
 
   return {
     pageUrl,
