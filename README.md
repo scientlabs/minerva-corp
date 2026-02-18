@@ -11,6 +11,23 @@ git clone https://github.com/scientlabs/minerva-corp.git
 * npm install
 * npm start
 
+Action points
+
+1) 
+need to remove the download section 
+
+  "AC-2200": {
+    "pageUrl": "https://www.tspco.jp/products/ac-2200/",
+    "detailTitle": "IP65防塵防水、Bluetoothをサポートするプレミアム屋外指紋認識端末",
+    "productName": "AC-2200",
+    "model": "AC-2200",
+    "supportedFunction": "入退管理システム",
+    "detailHtml": [
+
+2) need to add the sub menu showing all products in the categorized list
+
+3) need to add the following website informaton as a reference
+https://asean1.jp/
 
 
 
