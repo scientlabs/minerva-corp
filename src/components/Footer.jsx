@@ -25,7 +25,7 @@ const Footer = () => {
         { label: t('ict_solution'), link: '/services#ict-solution' },
         { label: t('security'), link: '/services#engineering' },
         { label: t('engineering'), link: '/services#engineering' },
-        { label: t('global_talent'), link: '/services#global-talent' },
+    //    { label: t('global_talent'), link: '/services#global-talent' },
         { label: t('human_resource'), link: '/services#human-resource' },
         { label: t('entertainment'), link: '/services#entertainment' }
     ];

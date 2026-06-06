@@ -97,7 +97,7 @@ const Services = () => {
     { id: "mobile-communication", label: t("mobile_communication") },
     { id: "ict-solution", label: t("ict_solution") },
     { id: "engineering", label: t("engineering") },
-    { id: "global-talent", label: t("global_talent") },
+   // { id: "global-talent", label: t("global_talent") },
     { id: "human-resource", label: t("human_resource") },
     { id: "entertainment", label: t("entertainment") }
   ];
@@ -169,60 +169,60 @@ const Services = () => {
     { step: "11", title: t("completion") }
   ];
 
-  const globalTalentCards = [
-    {
-      title: t("global_talent_title_registration"),
-      image: applicationRegistrationImage,
-      alt: "Application Registration",
-      items: [
-        t("global_talent_registration"),
-        t("global_talent_job_posting_creation"),
-        t("global_talent_recruitment")
-      ]
-    },
-    {
-      title: t("global_talent_title_interview"),
-      image: interviewImage,
-      alt: "Interview",
-      items: [
-        t("global_talent_interview_support"),
-        t("global_talent_employment_contract"),
-        t("global_talent_onboarding_guidance")
-      ]
-    },
-    {
-      title: t("global_talent_title_contract"),
-      image: contractsLocalHousingImage,
-      alt: "Contracts and Local Housing",
-      items: [
-        t("global_talent_housing"),
-        t("global_talent_bank_phone_support"),
-        t("global_talent_airport_pickup"),
-        t("global_talent_life_orientation")
-      ]
-    },
-    {
-      title: t("global_talent_title_local_support"),
-      image: afterJoinConsultationsImage,
-      alt: "After Join Consultations",
-      items: [
-        t("global_talent_life_consultation"),
-        t("global_talent_regular_interviews"),
-        t("global_talent_hospital_support"),
-        t("global_talent_employment_contract"),
-        t("global_talent_trouble_mediation")
-      ]
-    },
-    {
-      title: t("global_talent_title_resignation"),
-      image: resignationTimeImage,
-      alt: "Resignation Time",
-      items: [
-        t("global_talent_public_procedure_support"),
-        t("global_talent_departure_airport")
-      ]
-    }
-  ];
+  // const globalTalentCards = [
+  //   {
+  //     title: t("global_talent_title_registration"),
+  //     image: applicationRegistrationImage,
+  //     alt: "Application Registration",
+  //     items: [
+  //       t("global_talent_registration"),
+  //       t("global_talent_job_posting_creation"),
+  //       t("global_talent_recruitment")
+  //     ]
+  //   },
+  //   {
+  //     title: t("global_talent_title_interview"),
+  //     image: interviewImage,
+  //     alt: "Interview",
+  //     items: [
+  //       t("global_talent_interview_support"),
+  //       t("global_talent_employment_contract"),
+  //       t("global_talent_onboarding_guidance")
+  //     ]
+  //   },
+  //   {
+  //     title: t("global_talent_title_contract"),
+  //     image: contractsLocalHousingImage,
+  //     alt: "Contracts and Local Housing",
+  //     items: [
+  //       t("global_talent_housing"),
+  //       t("global_talent_bank_phone_support"),
+  //       t("global_talent_airport_pickup"),
+  //       t("global_talent_life_orientation")
+  //     ]
+  //   },
+  //   {
+  //     title: t("global_talent_title_local_support"),
+  //     image: afterJoinConsultationsImage,
+  //     alt: "After Join Consultations",
+  //     items: [
+  //       t("global_talent_life_consultation"),
+  //       t("global_talent_regular_interviews"),
+  //       t("global_talent_hospital_support"),
+  //       t("global_talent_employment_contract"),
+  //       t("global_talent_trouble_mediation")
+  //     ]
+  //   },
+  //   {
+  //     title: t("global_talent_title_resignation"),
+  //     image: resignationTimeImage,
+  //     alt: "Resignation Time",
+  //     items: [
+  //       t("global_talent_public_procedure_support"),
+  //       t("global_talent_departure_airport")
+  //     ]
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -635,7 +635,7 @@ const Services = () => {
         </motion.section>
 
         {/* Global Talent Section */}
-        <motion.section
+        {/* <motion.section
           id="global-talent"
           className="bg-white"
           initial={{ opacity: 0, y: 30 }}
@@ -679,7 +679,7 @@ const Services = () => {
             </div>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-300"></div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Human Resource Solutions Section */}
         <motion.section
