@@ -27,3 +27,28 @@
     display: none;  /* Chrome, Safari and Opera */
   }
 }
+
+/* Ensure text can be selected/copied across all pages */
+html,
+body,
+#root,
+#root *,
+.tsp-clone-content,
+.tsp-clone-content * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}
+
+/* Make text selection visibly obvious across browsers */
+::selection {
+  background: #f9a8d4;
+  color: #111827;
+}
+
+::-moz-selection {
+  background: #f9a8d4;
+  color: #111827;
+}

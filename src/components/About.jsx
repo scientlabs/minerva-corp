@@ -196,7 +196,7 @@ const About = () => {
                   {/* Dropdown Menu */}
                   {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
                     <div
-                      className="absolute top-full left-0 pt-2 w-48 z-50"
+                      className="absolute top-full left-0 pt-2 w-72 z-50"
                       onMouseEnter={() => setHoveredNavItem(item.id)}
                       onMouseLeave={() => setHoveredNavItem(null)}
                     >
@@ -446,6 +446,10 @@ const About = () => {
               <div className="flex flex-col md:flex-row border-l-4 pl-6" style={{ borderColor: '#E02B8A' }}>
                 <div className="font-bold text-lg mb-2 md:mb-0 md:w-32 flex-shrink-0">2025年10月</div>
                 <div className="text-gray-700">{t("history_2025")}</div>
+              </div>
+              <div className="flex flex-col md:flex-row border-l-4 pl-6" style={{ borderColor: '#E02B8A' }}>
+                <div className="font-bold text-lg mb-2 md:mb-0 md:w-32 flex-shrink-0">2026年1月</div>
+                <div className="text-gray-700">{t("history_2026_1")}</div>
               </div>
             </div>
           </div>

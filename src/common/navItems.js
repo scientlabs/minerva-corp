@@ -30,6 +30,7 @@ export const getNavItems = (t) => {
         { label: t('ict_solution'), link: '/services#ict-solution' },
         { label: t('security'), link: '/services#engineering' },
         { label: t('engineering'), link: '/services#engineering' },
+        { label: t('global_talent'), link: '/services#global-talent' },
         { label: t('human_resource'), link: '/services#human-resource' },
         { label: t('entertainment'), link: '/services#entertainment' }
       ]
@@ -41,7 +42,10 @@ export const getNavItems = (t) => {
       path: "/products",
       subItems: [
         { label: t('product_survillence_camera_system'), link: '/products' },
-        { label: t('product_iot'), link: '/products' }
+        { label: t('security_camera_system'), link: '/products?category=security-camera' },
+        { label: t('security_camera_recorder'), link: '/products?category=security-recorder' },
+        { label: t('access_control_system'), link: '/products?category=access-control' },
+        { label: t('network_equipment'), link: '/products?category=network-equipment' }
       ]
     },
     { 

@@ -21,7 +21,7 @@ need to remove the download section
     "detailTitle": "IP65防塵防水、Bluetoothをサポートするプレミアム屋外指紋認識端末",
     "productName": "AC-2200",
     "model": "AC-2200",
-    "supportedFunction": "入退管理システム",
+    "supportedFunction": "入退管理システム"e
     "detailHtml": [
 
 2) need to add the sub menu showing all products in the categorized list

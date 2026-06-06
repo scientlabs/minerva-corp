@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import { getNavItems } from "../common/navItems";
 import tspProductDetails from "../data/tspProductDetails.json";
 import MinervaLogo from "../assets/MINERVA-logo.png";
 
 const Products = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredNavItem, setHoveredNavItem] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedDetailImage, setSelectedDetailImage] = useState("");
@@ -19,21 +18,12 @@ const Products = () => {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const navRef = useRef(null);
+  const productListTopRef = useRef(null);
   const [activeNavItem, setActiveNavItem] = useState('products');
   const { slug } = useParams();
+  const location = useLocation();
   
   const navItems = getNavItems(t);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navRef.current && !navRef.current.contains(event.target)) {
-        setActiveDropdown(null);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   const [currentLang, setCurrentLang] = useState('ja');
   useEffect(() => {
@@ -510,11 +500,56 @@ const Products = () => {
     return products;
   };
 
-  const allProducts = getAllProducts();
-  const filteredProducts = selectedCategory 
-    ? allProducts.filter(p => p.categoryId === selectedCategory)
-    : allProducts;
-  const selectedProduct = slug ? allProducts.find((p) => p.slug === slug) : null;
+  const allProducts = useMemo(() => getAllProducts(), [t]);
+  const modelToSlug = useMemo(() => {
+    const map = new Map();
+    allProducts.forEach((product) => {
+      const normalizedName = cleanModel(product.name).toUpperCase();
+      const normalizedModel = cleanModel(product.model || "").toUpperCase();
+      if (normalizedName) map.set(normalizedName, product.slug);
+      if (normalizedModel) map.set(normalizedModel, product.slug);
+    });
+    return map;
+  }, [allProducts]);
+  const productCategoryIds = new Set(productCategories.map((category) => category.id));
+
+  const scrollToProductListTop = () => {
+    const navElement = document.querySelector('nav');
+    const navOffset = (navElement?.getBoundingClientRect().height || 0) + 12;
+    const targetTop = productListTopRef.current
+      ? productListTopRef.current.getBoundingClientRect().top + window.scrollY
+      : 0;
+
+    window.scrollTo({
+      top: Math.max(targetTop - navOffset, 0),
+      behavior: 'smooth'
+    });
+  };
+
+  useEffect(() => {
+    if (slug) return;
+    const queryParams = new URLSearchParams(location.search);
+    const categoryFromQuery = queryParams.get("category");
+    if (categoryFromQuery && productCategoryIds.has(categoryFromQuery)) {
+      setSelectedCategory(categoryFromQuery);
+      return;
+    }
+    setSelectedCategory(null);
+  }, [location.search, slug]);
+
+  useEffect(() => {
+    if (slug) return;
+    scrollToProductListTop();
+  }, [location.search, slug]);
+
+  const filteredProducts = useMemo(
+    () => (selectedCategory ? allProducts.filter((p) => p.categoryId === selectedCategory) : allProducts),
+    [allProducts, selectedCategory]
+  );
+  const selectedProduct = useMemo(
+    () => (slug ? allProducts.find((p) => p.slug === slug) : null),
+    [allProducts, slug]
+  );
   const toPreviewSrc = (src) => src || "";
   const displayedMainImage = (
     selectedDetailImage ||
@@ -525,7 +560,7 @@ const Products = () => {
   const movedSummaryTextBySlug = {
     "tsp-dlc012u": "俯角付き魚眼レンズ / プロモーション動画 / 撮影レンズ / 寸法"
   };
-  const renderedDetailHtml = (selectedProduct?.detailHtml || "")
+  const renderedDetailHtmlBase = (selectedProduct?.detailHtml || "")
     .replace(
       /<li>\s*<div class="imgarea">[\s\S]*?<p class="txtstyle02">\s*(俯角付き魚眼レンズ|プロモーション動画|撮影レンズ|寸法)\s*<\/p>[\s\S]*?<\/li>/gi,
       ""
@@ -539,6 +574,7 @@ const Products = () => {
     .replace(/<h3>\s*セット内容\s*<\/h3>/gi, '<h3 class="tsp-highlight-set">セット内容</h3>')
     .replace(/<h3>\s*オプション[\s\S]*?<\/h3>/gi, (m) => m.replace("<h3>", '<h3 class="tsp-highlight-option">'))
     .replace(/<p class="txtstyle02">\s*(レコーダー|ワイヤレスカメラ)\s*<\/p>/gi, '<p class="txtstyle02 tsp-highlight-col2-title">$1</p>')
+    .replace(/<p class="txtstyle02">\s*モニターレコーダー\s*<\/p>/gi, '<p class="txtstyle02 tsp-highlight-monitor-recorder">モニターレコーダー</p>')
     .replace(/【リピーター機能とは】/g, '<span class="tsp-repeater-label">【リピーター機能とは】</span>')
     .replace(/※レコーダー1台に対してカメラは最大4台まで/g, '<span class="tsp-subline">※レコーダー1台に対してカメラは最大4台まで</span>')
     .replace(/万一通信が途絶えても映像確認が可能 ※SDカード別売り/g, '<span class="tsp-subline">万一通信が途絶えても映像確認が可能 ※SDカード別売り</span>')
@@ -548,7 +584,16 @@ const Products = () => {
     )
     .replace(/<p class="txtstyle02">\s*(TWCB-501|TWCD-502|TSP-PM1418)\s*<\/p>/gi, (_, model) => (
       `<p class="txtstyle02"><a class="internal-product-link" href="/#/products/${toSlug(model)}">${model}</a></p>`
-    ));
+    ))
+    .replace(/<p class="txtstyle02">\s*([A-Za-z0-9\-\/]+)\s*<\/p>/gi, (full, model) => {
+      const key = cleanModel(model).toUpperCase();
+      const slugFromCatalog = modelToSlug.get(key);
+      if (!slugFromCatalog) return full;
+      return `<p class="txtstyle02"><a class="internal-product-link" href="/#/products/${slugFromCatalog}">${model}</a></p>`;
+    });
+  const renderedDetailHtml = selectedProduct?.slug === "tsp-w1-0415"
+    ? renderedDetailHtmlBase.replace(/○/g, "●")
+    : renderedDetailHtmlBase;
 
   useEffect(() => {
     setSelectedDetailImage("");
@@ -651,7 +696,7 @@ const Products = () => {
                   {/* Dropdown Menu */}
                   {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
                     <div 
-                      className="absolute top-full left-0 pt-2 w-48 z-50"
+                      className="absolute top-full left-0 pt-2 w-72 z-50"
                       onMouseEnter={() => setHoveredNavItem(item.id)}
                       onMouseLeave={() => setHoveredNavItem(null)}
                     >
@@ -663,6 +708,11 @@ const Products = () => {
                               <li key={index}>
                                 <Link
                                   to={subItem.link}
+                                  onClick={() => {
+                                    if (subItem.link.startsWith('/products')) {
+                                      requestAnimationFrame(scrollToProductListTop);
+                                    }
+                                  }}
                                   className={`block px-4 py-2 text-sm transition-colors ${
                                     isActive
                                       ? 'bg-pink-50 text-pink-600 font-medium'
@@ -703,7 +753,7 @@ const Products = () => {
       </nav>
 
       {!slug && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div ref={productListTopRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -865,12 +915,24 @@ const Products = () => {
               <div className={`px-8 pb-8 product-detail-${selectedProduct.slug}`}>
                 <div
                   className="tsp-clone-content text-gray-800 leading-relaxed [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-3 [&_p]:mb-4 [&_table]:w-full [&_table]:border-collapse [&_table]:my-4 [&_th]:text-left [&_th]:align-top [&_th]:border [&_th]:border-gray-200 [&_th]:bg-gray-50 [&_th]:p-2 [&_td]:border [&_td]:border-gray-200 [&_td]:p-2 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
+                  onMouseDown={(e) => e.stopPropagation()}
+                  onMouseUp={(e) => e.stopPropagation()}
+                  onClick={(e) => e.stopPropagation()}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  onPointerUp={(e) => e.stopPropagation()}
                   dangerouslySetInnerHTML={{ __html: renderedDetailHtml }}
                 />
               </div>
             )}
             {!renderedDetailHtml && (
-              <div className="px-8 pb-8">
+              <div
+                className="px-8 pb-8"
+                onMouseDown={(e) => e.stopPropagation()}
+                onMouseUp={(e) => e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()}
+                onPointerDown={(e) => e.stopPropagation()}
+                onPointerUp={(e) => e.stopPropagation()}
+              >
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">詳細仕様</h3>
                 <p className="text-gray-700 leading-relaxed">{selectedProduct.description}</p>
               </div>
@@ -999,6 +1061,11 @@ const Products = () => {
         .tsp-clone-content .txtinner,
         .tsp-clone-content .txtarea {
           text-align: left !important;
+          position: relative !important;
+          z-index: 2 !important;
+          pointer-events: auto !important;
+          -webkit-user-select: text !important;
+          user-select: text !important;
         }
         .tsp-clone-content table {
           table-layout: fixed !important;
@@ -1033,6 +1100,23 @@ const Products = () => {
           padding-left: 0.75rem !important;
           text-align: left !important;
           line-height: 1.8 !important;
+          position: relative !important;
+          z-index: 3 !important;
+          pointer-events: auto !important;
+          -webkit-user-select: text !important;
+          user-select: text !important;
+          cursor: text !important;
+        }
+        .tsp-clone-content .txtarea p,
+        .tsp-clone-content .txts p,
+        .tsp-clone-content p.txts {
+          pointer-events: auto !important;
+          -webkit-user-select: text !important;
+          user-select: text !important;
+          cursor: text !important;
+        }
+        .tsp-clone-content .imgarea img {
+          pointer-events: none !important;
         }
         .tsp-clone-content .card01_list .txtarea,
         .tsp-clone-content .card01_list .txtinner {
@@ -1065,6 +1149,9 @@ const Products = () => {
         }
         .tsp-clone-content .tsp-highlight-col2-title {
           font-size: 1.4rem !important;
+          font-weight: 700 !important;
+        }
+        .tsp-clone-content .tsp-highlight-monitor-recorder {
           font-weight: 700 !important;
         }
         .tsp-clone-content .tsp-subline {

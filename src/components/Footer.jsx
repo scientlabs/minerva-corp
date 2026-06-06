@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import MinervaLogo from "../assets/MINERVA-logo.png";
+import { getNavItems } from "../common/navItems";
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -24,15 +25,13 @@ const Footer = () => {
         { label: t('ict_solution'), link: '/services#ict-solution' },
         { label: t('security'), link: '/services#engineering' },
         { label: t('engineering'), link: '/services#engineering' },
+        { label: t('global_talent'), link: '/services#global-talent' },
         { label: t('human_resource'), link: '/services#human-resource' },
         { label: t('entertainment'), link: '/services#entertainment' }
     ];
     
     // Products items
-    const productsItems = [
-        { label: t('product_survillence_camera_system'), link: '/products' },
-        { label: t('product_iot'), link: '/products' }
-    ];
+    const productsItems = getNavItems(t).find((item) => item.id === "products")?.subItems || [];
 
 
     return (

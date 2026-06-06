@@ -231,7 +231,7 @@ const Inquiry = () => {
                   {/* Dropdown Menu */}
                   {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
                     <div 
-                      className="absolute top-full left-0 pt-2 w-48 z-50"
+                      className="absolute top-full left-0 pt-2 w-72 z-50"
                       onMouseEnter={() => setHoveredNavItem(item.id)}
                       onMouseLeave={() => setHoveredNavItem(null)}
                     >

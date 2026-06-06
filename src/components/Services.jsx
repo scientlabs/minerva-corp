@@ -20,6 +20,11 @@ import entertainmentImage from "../assets/entertainment_event.jpg";
 import engineeringNetworkCameraImage from "../assets/engineering_network_camera.jpg";
 import engineeringAccessControlSystemImage from "../assets/engineering_access_control.jpg";
 import engineeringLanElectricalWorkImage from "../assets/engineering_lan.jpg";
+import applicationRegistrationImage from "../assets/1.application_registration.png";
+import interviewImage from "../assets/2.Interview.png";
+import contractsLocalHousingImage from "../assets/3.Contracts_Local_housing.png";
+import afterJoinConsultationsImage from "../assets/4.after_join_consultations.png";
+import resignationTimeImage from "../assets/5.resignation_time.png";
 import MinervaLogo from "../assets/MINERVA-logo.png";
 
 const Services = () => {
@@ -92,12 +97,13 @@ const Services = () => {
     { id: "mobile-communication", label: t("mobile_communication") },
     { id: "ict-solution", label: t("ict_solution") },
     { id: "engineering", label: t("engineering") },
+    { id: "global-talent", label: t("global_talent") },
     { id: "human-resource", label: t("human_resource") },
     { id: "entertainment", label: t("entertainment") }
   ];
 
   // Section IDs (static, never change)
-  const sectionIds = ["mobile-communication", "ict-solution", "engineering", "human-resource", "entertainment"];
+  const sectionIds = ["mobile-communication", "ict-solution", "engineering", "global-talent", "human-resource", "entertainment"];
 
   // Intersection Observer to track active section
   useEffect(() => {
@@ -163,6 +169,61 @@ const Services = () => {
     { step: "11", title: t("completion") }
   ];
 
+  const globalTalentCards = [
+    {
+      title: t("global_talent_title_registration"),
+      image: applicationRegistrationImage,
+      alt: "Application Registration",
+      items: [
+        t("global_talent_registration"),
+        t("global_talent_job_posting_creation"),
+        t("global_talent_recruitment")
+      ]
+    },
+    {
+      title: t("global_talent_title_interview"),
+      image: interviewImage,
+      alt: "Interview",
+      items: [
+        t("global_talent_interview_support"),
+        t("global_talent_employment_contract"),
+        t("global_talent_onboarding_guidance")
+      ]
+    },
+    {
+      title: t("global_talent_title_contract"),
+      image: contractsLocalHousingImage,
+      alt: "Contracts and Local Housing",
+      items: [
+        t("global_talent_housing"),
+        t("global_talent_bank_phone_support"),
+        t("global_talent_airport_pickup"),
+        t("global_talent_life_orientation")
+      ]
+    },
+    {
+      title: t("global_talent_title_local_support"),
+      image: afterJoinConsultationsImage,
+      alt: "After Join Consultations",
+      items: [
+        t("global_talent_life_consultation"),
+        t("global_talent_regular_interviews"),
+        t("global_talent_hospital_support"),
+        t("global_talent_employment_contract"),
+        t("global_talent_trouble_mediation")
+      ]
+    },
+    {
+      title: t("global_talent_title_resignation"),
+      image: resignationTimeImage,
+      alt: "Resignation Time",
+      items: [
+        t("global_talent_public_procedure_support"),
+        t("global_talent_departure_airport")
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
@@ -203,7 +264,7 @@ const Services = () => {
                   {/* Dropdown Menu */}
                   {hoveredNavItem === item.id && item.subItems && item.subItems.length > 0 && (
                     <div 
-                      className="absolute top-full left-0 pt-2 w-48 z-50"
+                      className="absolute top-full left-0 pt-2 w-72 z-50"
                       onMouseEnter={() => setHoveredNavItem(item.id)}
                       onMouseLeave={() => setHoveredNavItem(null)}
                     >
@@ -568,6 +629,53 @@ const Services = () => {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-300"></div>
+        </motion.section>
+
+        {/* Global Talent Section */}
+        <motion.section
+          id="global-talent"
+          className="bg-white"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="bg-blue-900 py-4">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">{t("global_talent")}</h2>
+            </div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10">
+              {globalTalentCards.map((card, index) => (
+                <div key={index} className="space-y-2">
+                  <h3
+                    className="text-2xl xl:text-2xl font-extrabold text-center leading-tight whitespace-pre-line break-keep min-h-[96px] flex items-end justify-center"
+                    style={{ color: "#1e3a8a" }}
+                  >
+                    {card.title}
+                  </h3>
+                  <div className="rounded-lg overflow-hidden bg-gray-50 shadow-sm h-64 flex items-center justify-center p-4">
+                    <img
+                      src={card.image}
+                      alt={card.alt}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <ul className="space-y-4">
+                    {card.items.map((item, itemIndex) => (
+                      <li key={`${index}-${itemIndex}`} className="flex items-start gap-2 text-lg text-gray-700 leading-relaxed">
+                        <span aria-hidden>✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-300"></div>
